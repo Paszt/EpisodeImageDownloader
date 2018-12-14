@@ -1,0 +1,40 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <!--Foreground-->
+    <SolidColorBrush x:Key="Foreground" Color="#FFD8D8D8"/>
+    <SolidColorBrush x:Key="ForegroundDark" Color="#FF9E9E9E"/>
+
+    <!--Background-->
+    <SolidColorBrush x:Key="Background" Color="#2D2D30"/>
+    <SolidColorBrush x:Key="BackgroundNormal" Color="#3F3F46"/>
+    <SolidColorBrush x:Key="BackgroundDark" Color="#1C1C1C"/>
+    <SolidColorBrush x:Key="LightBackground" Color="#2D2D30"/>
+    <SolidColorBrush x:Key="BackgroundHighlighted" Color="#54545C"/>
+    <SolidColorBrush x:Key="BackgroundSelected" Color="#007ACC"/>
+
+    <!--Border-->
+    <SolidColorBrush x:Key="BorderBrushNormal" Color="#54545C"/>
+    <SolidColorBrush x:Key="BorderBrushHighlighted" Color="#6A6A75"/>
+    <SolidColorBrush x:Key="BorderBrushSelected" Color="#1C97EA"/>
+
+    <!--Text Box-->
+    <SolidColorBrush x:Key="TextBoxBackground" Color="#333337"/>
+    <SolidColorBrush x:Key="TextBoxBackgroundSelected" Color="#3F3F46"/>
+    
+    <!--Scroll Bar-->
+    <SolidColorBrush x:Key="ScrollBarPageButtonBackgroundHighlighted" Color="#05FFFFFF"/>
+
+    <!-- CheckBox Brushes -->
+    <SolidColorBrush x:Key="CheckBoxInvalidUnfocusedBackgroundBrush" Color="#FFFFFFFF" />
+    <SolidColorBrush x:Key="CheckBoxInvalidFocusedBackgroundBrush" Color="#FFFFFFFF" />
+    <SolidColorBrush x:Key="CheckBoxInvalidUnfocusedBorderBrush" Color="#FFF55E7F" />
+    <SolidColorBrush x:Key="CheckBoxInvalidFocusedBorderBrush" Color="#FFD0284C" />
+    <SolidColorBrush x:Key="CheckBoxIndeterminateCheckBackgroundBrush" Color="#FF858585" />
+    <SolidColorBrush x:Key="CheckBoxCheckBackgroundBrush" Color="#FF00AADE" />
+
+    <SolidColorBrush x:Key="BusyBorderBrush" Color="#FFCA5100" />
+    <SolidColorBrush x:Key="ErrorBrush" Color="#FF362325" />
+    <SolidColorBrush x:Key="NewImageBrush" Color="#FF2D4030" />
+
+</ResourceDictionary>

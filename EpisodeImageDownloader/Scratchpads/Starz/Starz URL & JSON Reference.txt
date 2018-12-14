@@ -1,0 +1,1190 @@
+Most example data is for Outlander
+
+First, get number of seasons given the main show's id:
+https://www.starz.com/api/model.json?paths=[["contentById",21796,"childContent","length"]]&method=get
+
+result json:
+{
+  "jsonGraph": {
+    "contentById": {
+      "21796": {
+        "childContent": {
+          "length": {
+            "$expires": -300000,
+            "$type": "atom",
+            "value": 4
+          }
+        }
+      }
+    }
+  }
+}
+
+then you can get the season ids:
+https://www.starz.com/api/model.json?paths=[["contentById",21796,"childContent",{"from":0,"to":3},"contentId"]]&method=get
+
+result json:
+{
+  "jsonGraph": {
+    "contentById": {
+      "21796": {
+        "childContent": {
+          "0": {
+            "$type": "ref",
+            "value": [
+              "contentById",
+              21894
+            ]
+          },
+          "1": {
+            "$type": "ref",
+            "value": [
+              "contentById",
+              25849
+            ]
+          },
+          "2": {
+            "$type": "ref",
+            "value": [
+              "contentById",
+              33371
+            ]
+          },
+          "3": {
+            "$type": "ref",
+            "value": [
+              "contentById",
+              37504
+            ]
+          }
+        }
+      },
+      "21894": {
+        "contentId": {
+          "$expires": -300000,
+          "$type": "atom",
+          "value": 21894
+        }
+      },
+      "25849": {
+        "contentId": {
+          "$expires": -300000,
+          "$type": "atom",
+          "value": 25849
+        }
+      },
+      "33371": {
+        "contentId": {
+          "$expires": -300000,
+          "$type": "atom",
+          "value": 33371
+        }
+      },
+      "37504": {
+        "contentId": {
+          "$expires": -300000,
+          "$type": "atom",
+          "value": 37504
+        }
+      }
+    }
+  }
+}
+
+then get the number of episodes in seasons:
+https://www.starz.com/api/model.json?paths=[["contentById",[21894,25849,33371,37504],["childContent","title"],"length"]]&method=get
+
+result json:
+{
+  "jsonGraph": {
+    "contentById": {
+      "21894": {
+        "childContent": {
+          "length": {
+            "$expires": -300000,
+            "$type": "atom",
+            "value": 16
+          }
+        },
+        "title": {
+          "$expires": -300000,
+          "$type": "atom",
+          "value": "Season 1"
+        }
+      },
+      "25849": {
+        "childContent": {
+          "length": {
+            "$expires": -300000,
+            "$type": "atom",
+            "value": 13
+          }
+        },
+        "title": {
+          "$expires": -300000,
+          "$type": "atom",
+          "value": "Season 2"
+        }
+      },
+      "33371": {
+        "childContent": {
+          "length": {
+            "$expires": -300000,
+            "$type": "atom",
+            "value": 13
+          }
+        },
+        "title": {
+          "$expires": -300000,
+          "$type": "atom",
+          "value": "Season 3"
+        }
+      },
+      "37504": {
+        "childContent": {
+          "length": {
+            "$expires": -300000,
+            "$type": "atom",
+            "value": 13
+          }
+        },
+        "title": {
+          "$expires": -300000,
+          "$type": "atom",
+          "value": "Season 4"
+        }
+      }
+    }
+  }
+}
+
+
+then get episodes given season ids and number of episodes:
+https://www.starz.com/api/model.json?paths=[["contentById",21894,"childContent",{"from":0,"to":15},["contentId","contentType","images","logLine","order","properCaseTitle","releaseYear","startDate","title"]]]&method=get
+
+result json:
+{
+  "jsonGraph": {
+    "contentById": {
+      "21894": {
+        "childContent": {
+          "0": {
+            "$type": "ref",
+            "value": Array[2][
+              "contentById",
+              21896
+            ]
+          },
+          "1": {
+            "$type": "ref",
+            "value": Array[2][
+              "contentById",
+              21897
+            ]
+          },
+          "2": {
+            "$type": "ref",
+            "value": Array[2][
+              "contentById",
+              21898
+            ]
+          },
+          "3": {
+            "$type": "ref",
+            "value": Array[2][
+              "contentById",
+              21899
+            ]
+          },
+          "4": {
+            "$type": "ref",
+            "value": Array[2][
+              "contentById",
+              21900
+            ]
+          },
+          "5": {
+            "$type": "ref",
+            "value": Array[2][
+              "contentById",
+              21901
+            ]
+          },
+          "6": {
+            "$type": "ref",
+            "value": Array[2][
+              "contentById",
+              21902
+            ]
+          },
+          "7": {
+            "$type": "ref",
+            "value": Array[2][
+              "contentById",
+              21903
+            ]
+          },
+          "8": {
+            "$type": "ref",
+            "value": Array[2][
+              "contentById",
+              23382
+            ]
+          },
+          "9": {
+            "$type": "ref",
+            "value": Array[2][
+              "contentById",
+              23383
+            ]
+          },
+          "10": {
+            "$type": "ref",
+            "value": Array[2][
+              "contentById",
+              23384
+            ]
+          },
+          "11": {
+            "$type": "ref",
+            "value": Array[2][
+              "contentById",
+              23385
+            ]
+          },
+          "12": {
+            "$type": "ref",
+            "value": Array[2][
+              "contentById",
+              23378
+            ]
+          },
+          "13": {
+            "$type": "ref",
+            "value": Array[2][
+              "contentById",
+              23379
+            ]
+          },
+          "14": {
+            "$type": "ref",
+            "value": Array[2][
+              "contentById",
+              23380
+            ]
+          },
+          "15": {
+            "$type": "ref",
+            "value": Array[2][
+              "contentById",
+              23381
+            ]
+          }
+        }
+      },
+      "21896": {
+        "contentId": {
+          "$expires": -300000,
+          "$type": "atom",
+          "value": 21896
+        },
+        "contentType": {
+          "$expires": -300000,
+          "$type": "atom",
+          "value": "Episode"
+        },
+        "logLine": {
+          "$expires": -300000,
+          "$type": "atom",
+          "value": "While on her honeymoon, WWII combat nurse Claire Randall is mysteriously transported back to 1743 Scotland, where she is kidnapped by a group of Highlanders - and meets an injured young man named Jamie."
+        },
+        "order": {
+          "$expires": -300000,
+          "$type": "atom",
+          "value": 101
+        },
+        "properCaseTitle": {
+          "$expires": -300000,
+          "$type": "atom",
+          "value": "Ep 101 - Sassenach"
+        },
+        "releaseYear": {
+          "$expires": -300000,
+          "$type": "atom",
+          "value": "2014"
+        },
+        "startDate": {
+          "$expires": -300000,
+          "$type": "atom",
+          "value": "2018-12-09T00:00:00.000-0500"
+        },
+        "title": {
+          "$expires": -300000,
+          "$type": "atom",
+          "value": "Outlander: Ep 101 - Sassenach"
+        },
+        "images": {
+          "$expires": -300000,
+          "$type": "atom",
+          "value": {
+            "landscape": "https://stz1.imgix.net/web/contentId/21896/type/KEY/dimension/1920x1080",
+            "landscape2560": "https://stz1.imgix.net/web/contentId/21896/type/KEY/dimension/2560x1440",
+            "portrait": "https://stz1.imgix.net/web/contentId/21896/type/KEY/dimension/1536x2048",
+            "portrait1200": "https://stz1.imgix.net/web/contentId/21896/type/KEY/dimension/1200x1600",
+            "landscapeBg": "https://stz1.imgix.net/web/contentId/21896/type/STUDIO/dimension/2560x1440",
+            "portraitSchedule": "https://stz1.imgix.net/web/contentId/21896/type/KEY/dimension/182x270",
+            "square": "https://stz1.imgix.net/web/contentId/21896/type/STUDIO/dimension/1000x1000"
+          }
+        }
+      },
+      "21897": {
+        "contentId": {
+          "$expires": -300000,
+          "$type": "atom",
+          "value": 21897
+        },
+        "contentType": {
+          "$expires": -300000,
+          "$type": "atom",
+          "value": "Episode"
+        },
+        "logLine": {
+          "$expires": -300000,
+          "$type": "atom",
+          "value": "Claire is taken to meet the Laird. As suspicions about her grow, Claire befriends the mysterious Geillis Duncan. When the clan discover her medical skills, Claire goes from guest to prisoner."
+        },
+        "order": {
+          "$expires": -300000,
+          "$type": "atom",
+          "value": 102
+        },
+        "properCaseTitle": {
+          "$expires": -300000,
+          "$type": "atom",
+          "value": "Ep 102 - Castle Leoch"
+        },
+        "releaseYear": {
+          "$expires": -300000,
+          "$type": "atom",
+          "value": "2014"
+        },
+        "startDate": {
+          "$expires": -300000,
+          "$type": "atom",
+          "value": "2018-12-09T00:00:00.000-0500"
+        },
+        "title": {
+          "$expires": -300000,
+          "$type": "atom",
+          "value": "Outlander: Ep 102 - Castle Leoch"
+        },
+        "images": {
+          "$expires": -300000,
+          "$type": "atom",
+          "value": {
+            "landscape": "https://stz1.imgix.net/web/contentId/21897/type/KEY/dimension/1920x1080",
+            "landscape2560": "https://stz1.imgix.net/web/contentId/21897/type/KEY/dimension/2560x1440",
+            "portrait": "https://stz1.imgix.net/web/contentId/21897/type/KEY/dimension/1536x2048",
+            "portrait1200": "https://stz1.imgix.net/web/contentId/21897/type/KEY/dimension/1200x1600",
+            "landscapeBg": "https://stz1.imgix.net/web/contentId/21897/type/STUDIO/dimension/2560x1440",
+            "portraitSchedule": "https://stz1.imgix.net/web/contentId/21897/type/KEY/dimension/182x270",
+            "square": "https://stz1.imgix.net/web/contentId/21897/type/STUDIO/dimension/1000x1000"
+          }
+        }
+      },
+      "21898": {
+        "contentId": {
+          "$expires": -300000,
+          "$type": "atom",
+          "value": 21898
+        },
+        "contentType": {
+          "$expires": -300000,
+          "$type": "atom",
+          "value": "Episode"
+        },
+        "logLine": {
+          "$expires": -300000,
+          "$type": "atom",
+          "value": "Claire decides to use her medical skills to aid her escape from Castle Leoch - with Jamie's help, she tends to an ill child. During an evening's entertainment, a story gives Claire hope for her freedom."
+        },
+        "order": {
+          "$expires": -300000,
+          "$type": "atom",
+          "value": 103
+        },
+        "properCaseTitle": {
+          "$expires": -300000,
+          "$type": "atom",
+          "value": "Ep 103 - The Way Out"
+        },
+        "releaseYear": {
+          "$expires": -300000,
+          "$type": "atom",
+          "value": "2014"
+        },
+        "startDate": {
+          "$expires": -300000,
+          "$type": "atom",
+          "value": "2018-12-09T00:00:00.000-0500"
+        },
+        "title": {
+          "$expires": -300000,
+          "$type": "atom",
+          "value": "Outlander: Ep 103 - The Way Out"
+        },
+        "images": {
+          "$expires": -300000,
+          "$type": "atom",
+          "value": {
+            "landscape": "https://stz1.imgix.net/web/contentId/21898/type/KEY/dimension/1920x1080",
+            "landscape2560": "https://stz1.imgix.net/web/contentId/21898/type/KEY/dimension/2560x1440",
+            "portrait": "https://stz1.imgix.net/web/contentId/21898/type/KEY/dimension/1536x2048",
+            "portrait1200": "https://stz1.imgix.net/web/contentId/21898/type/KEY/dimension/1200x1600",
+            "landscapeBg": "https://stz1.imgix.net/web/contentId/21898/type/STUDIO/dimension/2560x1440",
+            "portraitSchedule": "https://stz1.imgix.net/web/contentId/21898/type/KEY/dimension/182x270",
+            "square": "https://stz1.imgix.net/web/contentId/21898/type/STUDIO/dimension/1000x1000"
+          }
+        }
+      },
+      "21899": {
+        "contentId": {
+          "$expires": -300000,
+          "$type": "atom",
+          "value": 21899
+        },
+        "contentType": {
+          "$expires": -300000,
+          "$type": "atom",
+          "value": "Episode"
+        },
+        "logLine": {
+          "$expires": -300000,
+          "$type": "atom",
+          "value": "As the Castle prepares for The Gathering, Claire plots her escape. But after a dangerous encounter with a drunken Dougal and an unexpected run-in with Jamie, her plans are dashed."
+        },
+        "order": {
+          "$expires": -300000,
+          "$type": "atom",
+          "value": 104
+        },
+        "properCaseTitle": {
+          "$expires": -300000,
+          "$type": "atom",
+          "value": "Ep 104 - The Gathering"
+        },
+        "releaseYear": {
+          "$expires": -300000,
+          "$type": "atom",
+          "value": "2014"
+        },
+        "startDate": {
+          "$expires": -300000,
+          "$type": "atom",
+          "value": "2018-12-09T00:00:00.000-0500"
+        },
+        "title": {
+          "$expires": -300000,
+          "$type": "atom",
+          "value": "Outlander: Ep 104 - The Gathering"
+        },
+        "images": {
+          "$expires": -300000,
+          "$type": "atom",
+          "value": {
+            "landscape": "https://stz1.imgix.net/web/contentId/21899/type/KEY/dimension/1920x1080",
+            "landscape2560": "https://stz1.imgix.net/web/contentId/21899/type/KEY/dimension/2560x1440",
+            "portrait": "https://stz1.imgix.net/web/contentId/21899/type/KEY/dimension/1536x2048",
+            "portrait1200": "https://stz1.imgix.net/web/contentId/21899/type/KEY/dimension/1200x1600",
+            "landscapeBg": "https://stz1.imgix.net/web/contentId/21899/type/STUDIO/dimension/2560x1440",
+            "portraitSchedule": "https://stz1.imgix.net/web/contentId/21899/type/KEY/dimension/182x270",
+            "square": "https://stz1.imgix.net/web/contentId/21899/type/STUDIO/dimension/1000x1000"
+          }
+        }
+      },
+      "21900": {
+        "contentId": {
+          "$expires": -300000,
+          "$type": "atom",
+          "value": 21900
+        },
+        "contentType": {
+          "$expires": -300000,
+          "$type": "atom",
+          "value": "Episode"
+        },
+        "logLine": {
+          "$expires": -300000,
+          "$type": "atom",
+          "value": "Claire joins the MacKenzie rent-collecting trip. To her horror, Dougal uses Jamie's scars to gain sympathy for the Jacobite cause. Claire recalls that a defining moment in Scottish history is fast approaching."
+        },
+        "order": {
+          "$expires": -300000,
+          "$type": "atom",
+          "value": 105
+        },
+        "properCaseTitle": {
+          "$expires": -300000,
+          "$type": "atom",
+          "value": "Ep 105 - Rent"
+        },
+        "releaseYear": {
+          "$expires": -300000,
+          "$type": "atom",
+          "value": "2014"
+        },
+        "startDate": {
+          "$expires": -300000,
+          "$type": "atom",
+          "value": "2018-12-09T00:00:00.000-0500"
+        },
+        "title": {
+          "$expires": -300000,
+          "$type": "atom",
+          "value": "Outlander: Ep 105 - Rent"
+        },
+        "images": {
+          "$expires": -300000,
+          "$type": "atom",
+          "value": {
+            "landscape": "https://stz1.imgix.net/web/contentId/21900/type/KEY/dimension/1920x1080",
+            "landscape2560": "https://stz1.imgix.net/web/contentId/21900/type/KEY/dimension/2560x1440",
+            "portrait": "https://stz1.imgix.net/web/contentId/21900/type/KEY/dimension/1536x2048",
+            "portrait1200": "https://stz1.imgix.net/web/contentId/21900/type/KEY/dimension/1200x1600",
+            "landscapeBg": "https://stz1.imgix.net/web/contentId/21900/type/STUDIO/dimension/2560x1440",
+            "portraitSchedule": "https://stz1.imgix.net/web/contentId/21900/type/KEY/dimension/182x270",
+            "square": "https://stz1.imgix.net/web/contentId/21900/type/STUDIO/dimension/1000x1000"
+          }
+        }
+      },
+      "21901": {
+        "contentId": {
+          "$expires": -300000,
+          "$type": "atom",
+          "value": 21901
+        },
+        "contentType": {
+          "$expires": -300000,
+          "$type": "atom",
+          "value": "Episode"
+        },
+        "logLine": {
+          "$expires": -300000,
+          "$type": "atom",
+          "value": "Claire's unexpected meeting with a British general turns tense when Captain Jack Randall arrives. Claire finds herself alone with Randall - a dangerous man determined to uncover her secrets."
+        },
+        "order": {
+          "$expires": -300000,
+          "$type": "atom",
+          "value": 106
+        },
+        "properCaseTitle": {
+          "$expires": -300000,
+          "$type": "atom",
+          "value": "Ep 106 - The Garrison Commander"
+        },
+        "releaseYear": {
+          "$expires": -300000,
+          "$type": "atom",
+          "value": "2014"
+        },
+        "startDate": {
+          "$expires": -300000,
+          "$type": "atom",
+          "value": "2018-12-09T00:00:00.000-0500"
+        },
+        "title": {
+          "$expires": -300000,
+          "$type": "atom",
+          "value": "Outlander: Ep 106 - The Garrison Commander"
+        },
+        "images": {
+          "$expires": -300000,
+          "$type": "atom",
+          "value": {
+            "landscape": "https://stz1.imgix.net/web/contentId/21901/type/KEY/dimension/1920x1080",
+            "landscape2560": "https://stz1.imgix.net/web/contentId/21901/type/KEY/dimension/2560x1440",
+            "portrait": "https://stz1.imgix.net/web/contentId/21901/type/KEY/dimension/1536x2048",
+            "portrait1200": "https://stz1.imgix.net/web/contentId/21901/type/KEY/dimension/1200x1600",
+            "landscapeBg": "https://stz1.imgix.net/web/contentId/21901/type/STUDIO/dimension/2560x1440",
+            "portraitSchedule": "https://stz1.imgix.net/web/contentId/21901/type/KEY/dimension/182x270",
+            "square": "https://stz1.imgix.net/web/contentId/21901/type/STUDIO/dimension/1000x1000"
+          }
+        }
+      },
+      "21902": {
+        "contentId": {
+          "$expires": -300000,
+          "$type": "atom",
+          "value": 21902
+        },
+        "contentType": {
+          "$expires": -300000,
+          "$type": "atom",
+          "value": "Episode"
+        },
+        "logLine": {
+          "$expires": -300000,
+          "$type": "atom",
+          "value": "Claire and Jamie are thrown together in marriage, but as their emotional and physical relationship unfolds, deeper feelings arise. Claire is ultimately torn between two men in two very different times."
+        },
+        "order": {
+          "$expires": -300000,
+          "$type": "atom",
+          "value": 107
+        },
+        "properCaseTitle": {
+          "$expires": -300000,
+          "$type": "atom",
+          "value": "Ep 107 - The Wedding"
+        },
+        "releaseYear": {
+          "$expires": -300000,
+          "$type": "atom",
+          "value": "2014"
+        },
+        "startDate": {
+          "$expires": -300000,
+          "$type": "atom",
+          "value": "2018-12-09T00:00:00.000-0500"
+        },
+        "title": {
+          "$expires": -300000,
+          "$type": "atom",
+          "value": "Outlander: Ep 107 - The Wedding"
+        },
+        "images": {
+          "$expires": -300000,
+          "$type": "atom",
+          "value": {
+            "landscape": "https://stz1.imgix.net/web/contentId/21902/type/KEY/dimension/1920x1080",
+            "landscape2560": "https://stz1.imgix.net/web/contentId/21902/type/KEY/dimension/2560x1440",
+            "portrait": "https://stz1.imgix.net/web/contentId/21902/type/KEY/dimension/1536x2048",
+            "portrait1200": "https://stz1.imgix.net/web/contentId/21902/type/KEY/dimension/1200x1600",
+            "landscapeBg": "https://stz1.imgix.net/web/contentId/21902/type/STUDIO/dimension/2560x1440",
+            "portraitSchedule": "https://stz1.imgix.net/web/contentId/21902/type/KEY/dimension/182x270",
+            "square": "https://stz1.imgix.net/web/contentId/21902/type/STUDIO/dimension/1000x1000"
+          }
+        }
+      },
+      "21903": {
+        "contentId": {
+          "$expires": -300000,
+          "$type": "atom",
+          "value": 21903
+        },
+        "contentType": {
+          "$expires": -300000,
+          "$type": "atom",
+          "value": "Episode"
+        },
+        "logLine": {
+          "$expires": -300000,
+          "$type": "atom",
+          "value": "Frank desperately searches for his missing wife, while Claire tries to come to terms with her new marriage. Claire is faced with an emotional quandry as a life-altering opportunity presents itself."
+        },
+        "order": {
+          "$expires": -300000,
+          "$type": "atom",
+          "value": 108
+        },
+        "properCaseTitle": {
+          "$expires": -300000,
+          "$type": "atom",
+          "value": "Ep 108 - Both Sides Now"
+        },
+        "releaseYear": {
+          "$expires": -300000,
+          "$type": "atom",
+          "value": "2014"
+        },
+        "startDate": {
+          "$expires": -300000,
+          "$type": "atom",
+          "value": "2018-12-09T00:00:00.000-0500"
+        },
+        "title": {
+          "$expires": -300000,
+          "$type": "atom",
+          "value": "Outlander: Ep 108 - Both Sides Now"
+        },
+        "images": {
+          "$expires": -300000,
+          "$type": "atom",
+          "value": {
+            "landscape": "https://stz1.imgix.net/web/contentId/21903/type/KEY/dimension/1920x1080",
+            "landscape2560": "https://stz1.imgix.net/web/contentId/21903/type/KEY/dimension/2560x1440",
+            "portrait": "https://stz1.imgix.net/web/contentId/21903/type/KEY/dimension/1536x2048",
+            "portrait1200": "https://stz1.imgix.net/web/contentId/21903/type/KEY/dimension/1200x1600",
+            "landscapeBg": "https://stz1.imgix.net/web/contentId/21903/type/STUDIO/dimension/2560x1440",
+            "portraitSchedule": "https://stz1.imgix.net/web/contentId/21903/type/KEY/dimension/182x270",
+            "square": "https://stz1.imgix.net/web/contentId/21903/type/STUDIO/dimension/1000x1000"
+          }
+        }
+      },
+      "23378": {
+        "contentId": {
+          "$expires": -300000,
+          "$type": "atom",
+          "value": 23378
+        },
+        "contentType": {
+          "$expires": -300000,
+          "$type": "atom",
+          "value": "Episode"
+        },
+        "logLine": {
+          "$expires": -300000,
+          "$type": "atom",
+          "value": "Jamie finds himself between a rock and a hard place when a redcoat deserter from his past resurfaces. Claire tends to a laboring Jenny while Jamie and Ian join The Watch, resulting in devastating consequences."
+        },
+        "order": {
+          "$expires": -300000,
+          "$type": "atom",
+          "value": 113
+        },
+        "properCaseTitle": {
+          "$expires": -300000,
+          "$type": "atom",
+          "value": "Ep 113 - The Watch"
+        },
+        "releaseYear": {
+          "$expires": -300000,
+          "$type": "atom",
+          "value": "2015"
+        },
+        "startDate": {
+          "$expires": -300000,
+          "$type": "atom",
+          "value": "2018-12-09T00:00:00.000-0500"
+        },
+        "title": {
+          "$expires": -300000,
+          "$type": "atom",
+          "value": "Outlander: Ep 113 - The Watch"
+        },
+        "images": {
+          "$expires": -300000,
+          "$type": "atom",
+          "value": {
+            "landscape": "https://stz1.imgix.net/web/contentId/23378/type/KEY/dimension/1920x1080",
+            "landscape2560": "https://stz1.imgix.net/web/contentId/23378/type/KEY/dimension/2560x1440",
+            "portrait": "https://stz1.imgix.net/web/contentId/23378/type/KEY/dimension/1536x2048",
+            "portrait1200": "https://stz1.imgix.net/web/contentId/23378/type/KEY/dimension/1200x1600",
+            "landscapeBg": "https://stz1.imgix.net/web/contentId/23378/type/STUDIO/dimension/2560x1440",
+            "portraitSchedule": "https://stz1.imgix.net/web/contentId/23378/type/KEY/dimension/182x270",
+            "square": "https://stz1.imgix.net/web/contentId/23378/type/STUDIO/dimension/1000x1000"
+          }
+        }
+      },
+      "23379": {
+        "contentId": {
+          "$expires": -300000,
+          "$type": "atom",
+          "value": 23379
+        },
+        "contentType": {
+          "$expires": -300000,
+          "$type": "atom",
+          "value": "Episode"
+        },
+        "logLine": {
+          "$expires": -300000,
+          "$type": "atom",
+          "value": "Claire and Jenny set out to rescue Jamie from his redcoat captors. When Murtagh joins up, they turn to unorthodox tactics to send word to Jamie. When word finally arrives, the news isn't what anyone had hoped."
+        },
+        "order": {
+          "$expires": -300000,
+          "$type": "atom",
+          "value": 114
+        },
+        "properCaseTitle": {
+          "$expires": -300000,
+          "$type": "atom",
+          "value": "Ep 114 - The Search"
+        },
+        "releaseYear": {
+          "$expires": -300000,
+          "$type": "atom",
+          "value": "2015"
+        },
+        "startDate": {
+          "$expires": -300000,
+          "$type": "atom",
+          "value": "2018-12-09T00:00:00.000-0500"
+        },
+        "title": {
+          "$expires": -300000,
+          "$type": "atom",
+          "value": "Outlander: Ep 114 - The Search"
+        },
+        "images": {
+          "$expires": -300000,
+          "$type": "atom",
+          "value": {
+            "landscape": "https://stz1.imgix.net/web/contentId/23379/type/KEY/dimension/1920x1080",
+            "landscape2560": "https://stz1.imgix.net/web/contentId/23379/type/KEY/dimension/2560x1440",
+            "portrait": "https://stz1.imgix.net/web/contentId/23379/type/KEY/dimension/1536x2048",
+            "portrait1200": "https://stz1.imgix.net/web/contentId/23379/type/KEY/dimension/1200x1600",
+            "landscapeBg": "https://stz1.imgix.net/web/contentId/23379/type/STUDIO/dimension/2560x1440",
+            "portraitSchedule": "https://stz1.imgix.net/web/contentId/23379/type/KEY/dimension/182x270",
+            "square": "https://stz1.imgix.net/web/contentId/23379/type/STUDIO/dimension/1000x1000"
+          }
+        }
+      },
+      "23380": {
+        "contentId": {
+          "$expires": -300000,
+          "$type": "atom",
+          "value": 23380
+        },
+        "contentType": {
+          "$expires": -300000,
+          "$type": "atom",
+          "value": "Episode"
+        },
+        "logLine": {
+          "$expires": -300000,
+          "$type": "atom",
+          "value": "Jamie awaits his death sentence at Wentworth Prison, while Claire and the Highlanders search for a rescue plan. When Jamie is visited by Black Jack, he realizes there is a fate worse than death."
+        },
+        "order": {
+          "$expires": -300000,
+          "$type": "atom",
+          "value": 115
+        },
+        "properCaseTitle": {
+          "$expires": -300000,
+          "$type": "atom",
+          "value": "Ep 115 - Wentworth Prison"
+        },
+        "releaseYear": {
+          "$expires": -300000,
+          "$type": "atom",
+          "value": "2015"
+        },
+        "startDate": {
+          "$expires": -300000,
+          "$type": "atom",
+          "value": "2018-12-09T00:00:00.000-0500"
+        },
+        "title": {
+          "$expires": -300000,
+          "$type": "atom",
+          "value": "Outlander: Ep 115 - Wentworth Prison"
+        },
+        "images": {
+          "$expires": -300000,
+          "$type": "atom",
+          "value": {
+            "landscape": "https://stz1.imgix.net/web/contentId/23380/type/KEY/dimension/1920x1080",
+            "landscape2560": "https://stz1.imgix.net/web/contentId/23380/type/KEY/dimension/2560x1440",
+            "portrait": "https://stz1.imgix.net/web/contentId/23380/type/KEY/dimension/1536x2048",
+            "portrait1200": "https://stz1.imgix.net/web/contentId/23380/type/KEY/dimension/1200x1600",
+            "landscapeBg": "https://stz1.imgix.net/web/contentId/23380/type/STUDIO/dimension/2560x1440",
+            "portraitSchedule": "https://stz1.imgix.net/web/contentId/23380/type/KEY/dimension/182x270",
+            "square": "https://stz1.imgix.net/web/contentId/23380/type/STUDIO/dimension/1000x1000"
+          }
+        }
+      },
+      "23381": {
+        "contentId": {
+          "$expires": -300000,
+          "$type": "atom",
+          "value": 23381
+        },
+        "contentType": {
+          "$expires": -300000,
+          "$type": "atom",
+          "value": "Episode"
+        },
+        "logLine": {
+          "$expires": -300000,
+          "$type": "atom",
+          "value": "A desperate plan manages to free Jamie, but his wounds are more than just physical. At a nearby monastery, Claire attempts to save both Jamie's heart and soul, as his mind lingers on the torture."
+        },
+        "order": {
+          "$expires": -300000,
+          "$type": "atom",
+          "value": 116
+        },
+        "properCaseTitle": {
+          "$expires": -300000,
+          "$type": "atom",
+          "value": "Ep 116 - To Ransom A Man's Soul"
+        },
+        "releaseYear": {
+          "$expires": -300000,
+          "$type": "atom",
+          "value": "2015"
+        },
+        "startDate": {
+          "$expires": -300000,
+          "$type": "atom",
+          "value": "2018-12-09T00:00:00.000-0500"
+        },
+        "title": {
+          "$expires": -300000,
+          "$type": "atom",
+          "value": "Outlander: Ep 116 - To Ransom A Man's Soul"
+        },
+        "images": {
+          "$expires": -300000,
+          "$type": "atom",
+          "value": {
+            "landscape": "https://stz1.imgix.net/web/contentId/23381/type/KEY/dimension/1920x1080",
+            "landscape2560": "https://stz1.imgix.net/web/contentId/23381/type/KEY/dimension/2560x1440",
+            "portrait": "https://stz1.imgix.net/web/contentId/23381/type/KEY/dimension/1536x2048",
+            "portrait1200": "https://stz1.imgix.net/web/contentId/23381/type/KEY/dimension/1200x1600",
+            "landscapeBg": "https://stz1.imgix.net/web/contentId/23381/type/STUDIO/dimension/2560x1440",
+            "portraitSchedule": "https://stz1.imgix.net/web/contentId/23381/type/KEY/dimension/182x270",
+            "square": "https://stz1.imgix.net/web/contentId/23381/type/STUDIO/dimension/1000x1000"
+          }
+        }
+      },
+      "23382": {
+        "contentId": {
+          "$expires": -300000,
+          "$type": "atom",
+          "value": 23382
+        },
+        "contentType": {
+          "$expires": -300000,
+          "$type": "atom",
+          "value": "Episode"
+        },
+        "logLine": {
+          "$expires": -300000,
+          "$type": "atom",
+          "value": "Jamie and the Highlanders rescue Claire from Black Jack Randall. Back at the castle, politics threaten to tear Clan MacKenzie apart and Jamie's scorned lover, Laoghaire, attempts to win him back."
+        },
+        "order": {
+          "$expires": -300000,
+          "$type": "atom",
+          "value": 109
+        },
+        "properCaseTitle": {
+          "$expires": -300000,
+          "$type": "atom",
+          "value": "Ep 109 - The Reckoning"
+        },
+        "releaseYear": {
+          "$expires": -300000,
+          "$type": "atom",
+          "value": "2015"
+        },
+        "startDate": {
+          "$expires": -300000,
+          "$type": "atom",
+          "value": "2018-12-09T00:00:00.000-0500"
+        },
+        "title": {
+          "$expires": -300000,
+          "$type": "atom",
+          "value": "Outlander: Ep 109 - The Reckoning"
+        },
+        "images": {
+          "$expires": -300000,
+          "$type": "atom",
+          "value": {
+            "landscape": "https://stz1.imgix.net/web/contentId/23382/type/KEY/dimension/1920x1080",
+            "landscape2560": "https://stz1.imgix.net/web/contentId/23382/type/KEY/dimension/2560x1440",
+            "portrait": "https://stz1.imgix.net/web/contentId/23382/type/KEY/dimension/1536x2048",
+            "portrait1200": "https://stz1.imgix.net/web/contentId/23382/type/KEY/dimension/1200x1600",
+            "landscapeBg": "https://stz1.imgix.net/web/contentId/23382/type/STUDIO/dimension/2560x1440",
+            "portraitSchedule": "https://stz1.imgix.net/web/contentId/23382/type/KEY/dimension/182x270",
+            "square": "https://stz1.imgix.net/web/contentId/23382/type/STUDIO/dimension/1000x1000"
+          }
+        }
+      },
+      "23383": {
+        "contentId": {
+          "$expires": -300000,
+          "$type": "atom",
+          "value": 23383
+        },
+        "contentType": {
+          "$expires": -300000,
+          "$type": "atom",
+          "value": "Episode"
+        },
+        "logLine": {
+          "$expires": -300000,
+          "$type": "atom",
+          "value": "Jamie hopes the newly arrived Duke of Sandringham will help lift the price from his head, while Claire attempts to save an abandoned child."
+        },
+        "order": {
+          "$expires": -300000,
+          "$type": "atom",
+          "value": 110
+        },
+        "properCaseTitle": {
+          "$expires": -300000,
+          "$type": "atom",
+          "value": "Ep 110 - By The Pricking Of My Thumbs"
+        },
+        "releaseYear": {
+          "$expires": -300000,
+          "$type": "atom",
+          "value": "2015"
+        },
+        "startDate": {
+          "$expires": -300000,
+          "$type": "atom",
+          "value": "2018-12-09T00:00:00.000-0500"
+        },
+        "title": {
+          "$expires": -300000,
+          "$type": "atom",
+          "value": "Outlander: Ep 110 - By The Pricking Of My Thumbs"
+        },
+        "images": {
+          "$expires": -300000,
+          "$type": "atom",
+          "value": {
+            "landscape": "https://stz1.imgix.net/web/contentId/23383/type/KEY/dimension/1920x1080",
+            "landscape2560": "https://stz1.imgix.net/web/contentId/23383/type/KEY/dimension/2560x1440",
+            "portrait": "https://stz1.imgix.net/web/contentId/23383/type/KEY/dimension/1536x2048",
+            "portrait1200": "https://stz1.imgix.net/web/contentId/23383/type/KEY/dimension/1200x1600",
+            "landscapeBg": "https://stz1.imgix.net/web/contentId/23383/type/STUDIO/dimension/2560x1440",
+            "portraitSchedule": "https://stz1.imgix.net/web/contentId/23383/type/KEY/dimension/182x270",
+            "square": "https://stz1.imgix.net/web/contentId/23383/type/STUDIO/dimension/1000x1000"
+          }
+        }
+      },
+      "23384": {
+        "contentId": {
+          "$expires": -300000,
+          "$type": "atom",
+          "value": 23384
+        },
+        "contentType": {
+          "$expires": -300000,
+          "$type": "atom",
+          "value": "Episode"
+        },
+        "logLine": {
+          "$expires": -300000,
+          "$type": "atom",
+          "value": "Claire and Geillis are on trial for witchcraft. Jamie manages to rescue Claire, but not before she discovers a secret about Geillis's past."
+        },
+        "order": {
+          "$expires": -300000,
+          "$type": "atom",
+          "value": 111
+        },
+        "properCaseTitle": {
+          "$expires": -300000,
+          "$type": "atom",
+          "value": "Ep 111 - The Devil's Mark"
+        },
+        "releaseYear": {
+          "$expires": -300000,
+          "$type": "atom",
+          "value": "2015"
+        },
+        "startDate": {
+          "$expires": -300000,
+          "$type": "atom",
+          "value": "2018-12-09T00:00:00.000-0500"
+        },
+        "title": {
+          "$expires": -300000,
+          "$type": "atom",
+          "value": "Outlander: Ep 111 - The Devil's Mark"
+        },
+        "images": {
+          "$expires": -300000,
+          "$type": "atom",
+          "value": {
+            "landscape": "https://stz1.imgix.net/web/contentId/23384/type/KEY/dimension/1920x1080",
+            "landscape2560": "https://stz1.imgix.net/web/contentId/23384/type/KEY/dimension/2560x1440",
+            "portrait": "https://stz1.imgix.net/web/contentId/23384/type/KEY/dimension/1536x2048",
+            "portrait1200": "https://stz1.imgix.net/web/contentId/23384/type/KEY/dimension/1200x1600",
+            "landscapeBg": "https://stz1.imgix.net/web/contentId/23384/type/STUDIO/dimension/2560x1440",
+            "portraitSchedule": "https://stz1.imgix.net/web/contentId/23384/type/KEY/dimension/182x270",
+            "square": "https://stz1.imgix.net/web/contentId/23384/type/STUDIO/dimension/1000x1000"
+          }
+        }
+      },
+      "23385": {
+        "contentId": {
+          "$expires": -300000,
+          "$type": "atom",
+          "value": 23385
+        },
+        "contentType": {
+          "$expires": -300000,
+          "$type": "atom",
+          "value": "Episode"
+        },
+        "logLine": {
+          "$expires": -300000,
+          "$type": "atom",
+          "value": "Reunited, Claire and Jamie make their way to Lallybroch - Jamie's family home. Reality quickly sets in, and old wounds are reopened between Jamie and his sister, Jenny."
+        },
+        "order": {
+          "$expires": -300000,
+          "$type": "atom",
+          "value": 112
+        },
+        "properCaseTitle": {
+          "$expires": -300000,
+          "$type": "atom",
+          "value": "Ep 112 - Lallybroch"
+        },
+        "releaseYear": {
+          "$expires": -300000,
+          "$type": "atom",
+          "value": "2015"
+        },
+        "startDate": {
+          "$expires": -300000,
+          "$type": "atom",
+          "value": "2018-12-09T00:00:00.000-0500"
+        },
+        "title": {
+          "$expires": -300000,
+          "$type": "atom",
+          "value": "Outlander: Ep 112 - Lallybroch"
+        },
+        "images": {
+          "$expires": -300000,
+          "$type": "atom",
+          "value": {
+            "landscape": "https://stz1.imgix.net/web/contentId/23385/type/KEY/dimension/1920x1080",
+            "landscape2560": "https://stz1.imgix.net/web/contentId/23385/type/KEY/dimension/2560x1440",
+            "portrait": "https://stz1.imgix.net/web/contentId/23385/type/KEY/dimension/1536x2048",
+            "portrait1200": "https://stz1.imgix.net/web/contentId/23385/type/KEY/dimension/1200x1600",
+            "landscapeBg": "https://stz1.imgix.net/web/contentId/23385/type/STUDIO/dimension/2560x1440",
+            "portraitSchedule": "https://stz1.imgix.net/web/contentId/23385/type/KEY/dimension/182x270",
+            "square": "https://stz1.imgix.net/web/contentId/23385/type/STUDIO/dimension/1000x1000"
+          }
+        }
+      }
+    }
+  }
+}
+
+
+Get episode airdate:
+https://www.starz.com/api/schedule/search/43512
+
+result json:
+{
+  "scheduledItemId": 1855350,
+  "contentId": 43512,
+  "start": "2019-01-13T20:00:00.000-0500",
+  "end": "2019-01-13T21:01:00.000-0500",
+  "code": "STZ1",
+  "name": "STARZ"
+}
+
+or if no schedule found:
+https://www.starz.com/api/schedule/search/21896
+
+{
+  "message": "Item does not appear in the schedule at this time."
+}
+
+

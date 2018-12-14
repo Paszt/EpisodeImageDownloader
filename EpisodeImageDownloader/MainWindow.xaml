@@ -1,0 +1,306 @@
+﻿<local:FlatWindow x:Class="MainWindow"
+                  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                  xmlns:local="clr-namespace:EpisodeImageDownloader"
+                  xmlns:views="clr-namespace:EpisodeImageDownloader.Views"
+                  Background="{StaticResource Background}"
+                  Title="Episode Image Downloader"
+                  Height="830"
+                  MinHeight="530"
+                  Width="625"
+                  MinWidth="625"
+                  StatusBarText="{Binding StatusMessage, Source={x:Static Application.Current}}"
+                  ShowStatusBar="{Binding ShowStatusBar, Source={x:Static Application.Current}}"
+                  BorderColor="{Binding BorderColor, Source={x:Static Application.Current}}">
+    <Grid>
+        <TabControl x:Name="MainTabControl"
+                    TabStripPlacement="Left">
+            <TabItem>
+                <TabItem.Header>
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="{DynamicResource HBODrawingImage}"
+                               Height="16"
+                               HorizontalAlignment="Left" />
+                        <TextBlock Text=" (New)" />
+                    </StackPanel>
+                </TabItem.Header>
+                <views:HboNewView MaxWidth="600" />
+            </TabItem>
+            <TabItem>
+                <TabItem.Header>
+                    <Image Source="{DynamicResource NprTinyDeskDrawingImage}"
+                           Height="16"
+                           HorizontalAlignment="Left" />
+                </TabItem.Header>
+                <views:NprTinyDeskView />
+            </TabItem>
+            <TabItem>
+                <TabItem.Header>
+                    <Image Source="{DynamicResource PbsDrawingImage}"
+                           Height="18"
+                           HorizontalAlignment="Left" />
+                </TabItem.Header>
+                <views:PbsView />
+            </TabItem>
+            <TabItem>
+                <TabItem.Header>
+                    <Image Source="{DynamicResource StarzeDrawingImage}"
+                           Height="18"
+                           HorizontalAlignment="Left" />
+                </TabItem.Header>
+                <views:StarzView />
+            </TabItem>
+            <TabItem Visibility="Collapsed">
+                <TabItem.Header>
+                    <Image Source="{DynamicResource HBODrawingImage}"
+                           Height="16"
+                           HorizontalAlignment="Left" />
+                </TabItem.Header>
+                <views:HboView MaxWidth="600" />
+            </TabItem>
+            <TabItem Header="The Daily Show">
+                <views:TheDailyShowView />
+            </TabItem>
+            <!--<TabItem Header="The Colbert Report">
+                <views:TheColbertReportView />
+            </TabItem>-->
+            <TabItem>
+                <TabItem.Header>
+                    <TextBlock Text="THE OPPOSITION"
+                               FontFamily="DIN"
+                               FontSize="14" />
+                </TabItem.Header>
+                <views:TheOppositionView />
+            </TabItem>
+            <TabItem>
+                <TabItem.Header>
+                    <Image Source="{DynamicResource NBCDrawingImage}"
+                           Height="16"
+                           HorizontalAlignment="Left" />
+                </TabItem.Header>
+                <views:NbcSelectorView />
+            </TabItem>
+            <TabItem>
+                <TabItem.Header>
+                    <Image Source="{DynamicResource CBSDrawingImage}"
+                           Height="16"
+                           HorizontalAlignment="Left" />
+                </TabItem.Header>
+                <views:CbsSelectorView />
+            </TabItem>
+            <!--<TabItem Header="Crunchyroll">
+				<views:CrunchrollView />
+			</TabItem>-->
+            <TabItem>
+                <TabItem.Header>
+                    <Image Source="{DynamicResource CrunchyrollDrawingImage}"
+                           Height="16" />
+                </TabItem.Header>
+                <views:CrunchyrollHtmlView />
+            </TabItem>
+            <TabItem>
+                <TabItem.Header>
+                    <Image Source="{DynamicResource huluDrawingImage}"
+                           Height="16"
+                           HorizontalAlignment="Left" />
+                </TabItem.Header>
+                <views:HuluView />
+            </TabItem>
+            <TabItem>
+                <TabItem.Header>
+                    <Image Source="{DynamicResource SyfyDrawingImage}"
+                           Height="18"
+                           HorizontalAlignment="Left" />
+                </TabItem.Header>
+                <views:SyfyView />
+            </TabItem>
+            <TabItem Header="FarFarAwaySite">
+                <views:FarFarAwaySiteView />
+            </TabItem>
+            <TabItem>
+                <TabItem.Header>
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="{DynamicResource BBCDrawingImage}"
+                               Height="16" />
+                    </StackPanel>
+                </TabItem.Header>
+                <views:BbcNewView />
+            </TabItem>
+            <TabItem>
+                <TabItem.Header>
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="{DynamicResource BBCDrawingImage}"
+                               Height="16" />
+                        <TextBlock Text=" (By Year)" />
+                    </StackPanel>
+                </TabItem.Header>
+                <views:BbcByYearView />
+            </TabItem>
+            <TabItem>
+                <TabItem.Header>
+                    <Grid>
+                        <Rectangle Width="100"
+                                   ToolTip="Channel 4"
+                                   Fill="Transparent" />
+                        <Image Height="18"
+                               Source="{DynamicResource Channel4DrawingImage}"
+                               HorizontalAlignment="Left"
+                               ToolTip="Channel 4" />
+                    </Grid>
+                </TabItem.Header>
+                <views:Channel4View />
+            </TabItem>
+            <TabItem>
+                <TabItem.Header>
+                    <Grid>
+                        <Rectangle Width="100"
+                                   ToolTip="Channel 5"
+                                   Fill="Transparent" />
+                        <Image Height="18"
+                               Source="{DynamicResource Channel5DrawingImage}"
+                               HorizontalAlignment="Left"
+                               ToolTip="Channel 4" />
+                    </Grid>
+                </TabItem.Header>
+                <views:Channel5View />
+            </TabItem>
+            <TabItem>
+                <TabItem.Header>
+                    <Image Source="{DynamicResource DisneyABCDrawingImage}"
+                           Height="18"
+                           HorizontalAlignment="Left" />
+                </TabItem.Header>
+                <views:DisneyAbcSelectorView />
+            </TabItem>
+            <TabItem>
+                <TabItem.Header>
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="{DynamicResource AandEDrawingImage}"
+                               Height="16"
+                               HorizontalAlignment="Left"
+                               Margin="0,0,5,0" />
+                        <Image Source="{DynamicResource HistoryChannelDrawingImage}"
+                               Height="16"
+                               HorizontalAlignment="Left"
+                               Margin="0,0,5,0" />
+                        <Image Source="{DynamicResource LifetimeDrawingImage}"
+                               Height="16"
+                               HorizontalAlignment="Left" />
+                    </StackPanel>
+                </TabItem.Header>
+                <views:AandE_NetworksView />
+            </TabItem>
+            <!--<TabItem>
+                <TabItem.Header>
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="{DynamicResource HistoryChannelDrawingImage}"
+                               Height="16"
+                               HorizontalAlignment="Left" />
+                    </StackPanel>
+                </TabItem.Header>
+                <views:HistoryView />
+            </TabItem>
+            <TabItem>
+                <TabItem.Header>
+                    <Image Source="{DynamicResource AandEDrawingImage}"
+                           Height="16"
+                           HorizontalAlignment="Left" />
+                </TabItem.Header>
+                <views:AandEView />
+            </TabItem>-->
+            <TabItem>
+                <TabItem.Header>
+                    <Image Source="{DynamicResource NetflixDrawingImage}"
+                           Height="16"
+                           HorizontalAlignment="Left" />
+                </TabItem.Header>
+                <views:NetflixView />
+            </TabItem>
+            <TabItem>
+                <TabItem.Header>
+                    <Image Source="{DynamicResource ShowtimeDrawingImage}"
+                           Height="16"
+                           HorizontalAlignment="Left" />
+                </TabItem.Header>
+                <views:ShowtimeView />
+            </TabItem>
+            <TabItem>
+                <TabItem.Header>
+                    <Image Source="{DynamicResource BravoDrawingImage}"
+                           Height="18"
+                           HorizontalAlignment="Left" />
+                </TabItem.Header>
+                <views:BravoView />
+            </TabItem>
+            <TabItem>
+                <TabItem.Header>
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="{DynamicResource DiscoveryDrawingImage}"
+                               Height="16" />
+                        <TextBlock Text=" JSON" />
+                    </StackPanel>
+                </TabItem.Header>
+                <views:DiscoveryJsonView />
+            </TabItem>
+            <TabItem>
+                <TabItem.Header>
+                    <Image Source="{DynamicResource EpixDrawingImage}"
+                           Height="16"
+                           HorizontalAlignment="Left" />
+                </TabItem.Header>
+                <views:EpixView />
+            </TabItem>
+            <TabItem>
+                <TabItem.Header>
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="{DynamicResource YouTubeDrawingImage}"
+                               Height="16"
+                               HorizontalAlignment="Left" />
+                        <TextBlock Text=" Playlist" />
+                    </StackPanel>
+                </TabItem.Header>
+                <views:YouTubePlaylistView />
+            </TabItem>
+            <TabItem>
+                <TabItem.Header>
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="{DynamicResource DnaDrawingImage}"
+                               Height="16" />
+                        <TextBlock Text=" Sequential" />
+                    </StackPanel>
+                </TabItem.Header>
+                <views:SequentialView />
+            </TabItem>
+            <TabItem Header="Random">
+                <Grid>
+                    <Button x:Name="RandomDownloadButton"
+                            Width="100"
+                            Height="35"
+                            Content="Download" />
+                </Grid>
+            </TabItem>
+            <TabItem x:Name="OptionsTabItem">
+                <TabItem.Header>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="Options" />
+                        <Image Source="{DynamicResource OptionsDrawingImage}"
+                               Width="18"
+                               Margin="5,0,0,0" />
+                    </StackPanel>
+                </TabItem.Header>
+                <views:OptionsView />
+            </TabItem>
+            <TabItem>
+                <TabItem.Header>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="Upload" />
+                        <Image Source="{DynamicResource UploadDrawingImage}"
+                               Width="18"
+                               Margin="5,0,0,0" />
+                    </StackPanel>
+                </TabItem.Header>
+                <views:UploadView />
+            </TabItem>
+        </TabControl>
+    </Grid>
+</local:FlatWindow>

@@ -1,0 +1,166 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:EpisodeImageDownloader">
+
+    <Style TargetType="{x:Type local:FlatWindow}">
+        <Style.Resources>
+            <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter" />
+        </Style.Resources>
+        <Setter Property="WindowStyle" Value="None"/>
+        <Setter Property="AllowsTransparency" Value="True"/>
+        <Setter Property="ResizeMode" Value="CanResizeWithGrip"/>
+        <Setter Property="BorderThickness" Value="5"/>
+        <Setter Property="Background" Value="{DynamicResource Background}" />
+        <Setter Property="Foreground" Value="{DynamicResource Foreground}" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type local:FlatWindow}">
+                    <Border x:Name="PART_BorderOutline" 
+                            BorderThickness="1" 
+                            BorderBrush="{Binding BorderColor, RelativeSource={RelativeSource TemplatedParent}, Mode=OneWay}" 
+                            Background="{DynamicResource Background}" Margin="5">
+                        <Border.Effect>
+                            <DropShadowEffect BlurRadius="7" Color="#007ACC" Opacity="1" ShadowDepth="0.5" />
+                        </Border.Effect>
+                        <Grid>
+                            <AdornerDecorator>
+                                <Grid Background="{TemplateBinding Background}">
+                                    <Grid.ColumnDefinitions>
+                                        <!-- icon -->
+                                        <ColumnDefinition Width="Auto" />
+                                        <!-- left window commands -->
+                                        <ColumnDefinition Width="Auto" />
+                                        <!-- title -->
+                                        <ColumnDefinition Width="*" />
+                                        <!-- right window commands -->
+                                        <ColumnDefinition Width="Auto" />
+                                        <!-- min,max,close buttons -->
+                                        <ColumnDefinition Width="Auto" />
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="34" />
+                                        <RowDefinition Height="*" />
+                                        <RowDefinition Height="Auto" />
+                                    </Grid.RowDefinitions>
+                                    <Rectangle x:Name="PART_WindowTitleBackground"
+                                           Fill="{DynamicResource Background}"
+                                           Height="{Binding TitlebarHeight, RelativeSource={RelativeSource TemplatedParent}, Mode=OneWay}"
+                                           Grid.Column="0"
+                                           Grid.ColumnSpan="5"
+                                           StrokeThickness="0" />
+                                    <!-- icon -->
+                                    <Border x:Name="PART_Icon"  Margin="5,-5,2,3" Width="30" Height="28" VerticalAlignment="Center">
+                                        <Border.Background>
+                                            <DrawingBrush Stretch="Uniform">
+                                                <DrawingBrush.Drawing>
+                                                    <DrawingGroup>
+                                                        <DrawingGroup.Children>
+                                                            <GeometryDrawing Brush="#E0FFFFFF" Geometry="F1 M 504,369.333L 61.3333,369.333L 61.3333,64L 504,64M 540,46.6666C 540,35.6213 531.045,26.6666 520,26.6666L 48,26.6666C 36.9547,26.6666 28,35.6213 28,46.6666L 28,385.333C 28,396.379 36.9547,405.333 48,405.333L 520,405.333C 531.045,405.333 540,396.379 540,385.333L 540,46.6666 Z "/>
+                                                            <GeometryDrawing Brush="#E0FFFFFF" Geometry="F1 M 229.334,174.888C 229.334,201.4 207.843,222.889 181.334,222.889C 154.823,222.889 133.333,201.4 133.333,174.888C 133.333,148.379 154.823,126.888 181.334,126.888C 207.843,126.888 229.334,148.379 229.334,174.888 Z "/>
+                                                            <GeometryDrawing Brush="#E0FFFFFF" Geometry="F1 M 96,325.333C 100,294.667 144,243.223 248.889,265.889L 328.889,143.944L 392,234.305L 425.333,188.597L 471.112,325.333L 96,325.333 Z "/>
+                                                            <GeometryDrawing Brush="{Binding BorderColor, RelativeSource={RelativeSource TemplatedParent}, Mode=OneWay}" 
+                                                                             Geometry="F1 M 309.333,89.3333L 309.333,-54.6667L 258.667,-54.6667L 258.667,89.3333L 212.161,89.3333L 284,161.085L 355.839,89.3333L 309.333,89.3333 Z "/>
+                                                        </DrawingGroup.Children>
+                                                    </DrawingGroup>
+                                                </DrawingBrush.Drawing>
+                                            </DrawingBrush>
+                                        </Border.Background>
+                                    </Border>
+
+                                    <TextBlock x:Name="PART_TitleBar" 
+                                           Grid.Row="0" 
+                                           Grid.Column="2"
+                                           Text="{TemplateBinding Title}"
+                                           Focusable="False"
+                                           VerticalAlignment="Center"
+                                           Margin="8,-1,0,0"
+                                           Foreground="{DynamicResource ForegroundDark}" />
+
+                                    <!-- the window button commands -->
+                                    <StackPanel Orientation="Horizontal" Grid.Column="4" Grid.RowSpan="2" VerticalAlignment="Top">
+                                        <!--Minimize Button-->
+                                        <Button x:Name="PART_Min" 
+                                                Style="{DynamicResource WindowButtonStyle}"
+                                                Visibility="{Binding ShowMinMax, RelativeSource={RelativeSource TemplatedParent}, Converter={StaticResource BooleanToVisibilityConverter}}">
+                                            <Path Data="F1M0,6L0,9 9,9 9,6 0,6z" SnapsToDevicePixels="True" Fill="{DynamicResource Foreground}" />
+                                        </Button>
+                                        <!--Maximize/Restore Button-->
+                                        <Button x:Name="PART_Max" 
+                                                Style="{DynamicResource WindowButtonStyle}"
+                                                Visibility="{Binding ShowMinMax, RelativeSource={RelativeSource TemplatedParent}, Converter={StaticResource BooleanToVisibilityConverter}}">
+                                            <Grid>
+                                                <Path x:Name="MaximisePath" SnapsToDevicePixels="True" 
+                                                  Data="F1M0,0L0,9 9,9 9,0 0,0 0,3 8,3 8,8 1,8 1,3z" 
+                                                  Fill="{DynamicResource Foreground}" />
+                                                <Path x:Name="RestorePath" SnapsToDevicePixels="True" 
+                                                      Data="F1M0,10L0,3 3,3 3,0 10,0 10,2 4,2 4,3 7,3 7,6 6,6 6,5 1,5 1,10z 
+                                                            M1,10L7,10 7,7 10,7 10,2 9,2 9,6 6,6 6,9 1,9z" 
+                                                      Fill="{DynamicResource Foreground}" />
+                                            </Grid>
+                                        </Button>
+                                        <!--Close Button-->
+                                        <Button x:Name="PART_Close" Style="{DynamicResource WindowButtonStyle}">
+                                            <Path Data="F1M0,0L2,0 5,3 8,0 10,0 6,4 10,8 8,8 5,5 2,8 0,8 4,4 0,0z" 
+                                                  SnapsToDevicePixels="True" 
+                                                  Fill="{DynamicResource Foreground}" />
+                                        </Button>
+                                    </StackPanel>
+
+                                    <!-- the main window content -->
+                                    <Grid Background="{TemplateBinding Background}" Grid.Row="1" Grid.ColumnSpan="5">
+                                        <AdornerDecorator>
+                                            <ContentPresenter />
+                                        </AdornerDecorator>
+                                    </Grid>
+                                    <!--StatusBar-->
+                                    <Grid Grid.Row="2" 
+                                          Background="{Binding BorderColor, RelativeSource={RelativeSource TemplatedParent}, Mode=OneWay}" 
+                                          Visibility="{Binding ShowStatusBar, RelativeSource={RelativeSource TemplatedParent}, Converter={StaticResource BooleanToVisibilityConverter}}"
+                                          Grid.ColumnSpan="5">
+                                        <TextBlock Text="{Binding StatusBarText, RelativeSource={RelativeSource TemplatedParent}}" Margin="5"/>
+                                    </Grid>
+
+                                    <!-- Window Resizing -->
+                                    <Grid x:Name="resizeGrid" Grid.ColumnSpan="5" Grid.RowSpan="3">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="5"/>
+                                            <RowDefinition Height="*"/>
+                                            <RowDefinition Height="5"/>
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="5"/>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="5"/>
+                                        </Grid.ColumnDefinitions>
+                                        <Rectangle Grid.Column="0" Grid.Row="0" Tag="4" Cursor="SizeNWSE" Fill="Transparent" x:Name="TopLeftRec" />
+                                        <Rectangle Grid.Column="1" Grid.Row="0" Tag="3" Cursor="SizeNS"   Fill="Transparent" x:Name="TopRec" />
+                                        <Rectangle Grid.Column="2" Grid.Row="0" Tag="5" Cursor="SizeNESW" Fill="Transparent" x:Name="TopRightRec" />
+
+                                        <Rectangle Grid.Column="0" Grid.Row="1" Tag="1" Cursor="SizeWE"   Fill="Transparent" x:Name="LeftRec" />
+                                        <Rectangle Grid.Column="2" Grid.Row="1" Tag="2" Cursor="SizeWE"   Fill="Transparent" x:Name="RightRec" />
+
+                                        <Rectangle Grid.Column="0" Grid.Row="2" Tag="7" Cursor="SizeNESW" Fill="Transparent" x:Name="BottomLeftRec" />
+                                        <Rectangle Grid.Column="1" Grid.Row="2" Tag="6" Cursor="SizeNS"   Fill="Transparent" x:Name="BottomRec" />
+                                        <Rectangle Grid.Column="2" Grid.Row="2" Tag="8" Cursor="SizeNWSE" Fill="Transparent" x:Name="BottomRightRec" />
+
+                                        <!--<Grid Grid.ColumnSpan="3" Grid.RowSpan="3">
+
+                                    </Grid>-->
+                                    </Grid>
+
+                                </Grid>
+                            </AdornerDecorator>
+                        </Grid>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <!-- handle active/inactive state -->
+                        <Trigger Property="IsActive" Value="False">
+                            <Setter TargetName="PART_BorderOutline" Property="BorderBrush" Value="{DynamicResource BackgroundHighlighted}" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+</ResourceDictionary>

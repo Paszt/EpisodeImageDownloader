@@ -1,0 +1,125 @@
+﻿<UserControl x:Class="Views.NbcEpisodesView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:sys="clr-namespace:System;assembly=mscorlib"
+             xmlns:viewmodels="clr-namespace:EpisodeImageDownloader.ViewModels"
+             mc:Ignorable="d"
+             d:DesignHeight="300"
+             d:DesignWidth="600">
+    <UserControl.DataContext>
+        <viewmodels:NbcEpisodesViewModel />
+    </UserControl.DataContext>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="45" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <!--Row 0-->
+        <StackPanel Orientation="Horizontal"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center">
+            <Image Height="30"
+                   Source="{DynamicResource NBCDrawingImage}" />
+            <TextBlock Text="Episodes"
+                       FontWeight="Bold"
+                       FontSize="32"
+                       Margin="10,0,0,4" />
+        </StackPanel>
+
+        <!--Row 1 (Configuration Information)-->
+        <StackPanel Grid.Row="1"
+                    Margin="10"
+                    IsEnabled="{Binding NotBusy}">
+            <!--Show Name-->
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.Resources>
+                    <Style TargetType="TextBlock">
+                        <Setter Property="VerticalAlignment"
+                                Value="Center" />
+                    </Style>
+                </Grid.Resources>
+                <TextBlock Text="Show Name:" />
+                <!--<TextBox Text="{Binding ShowName, UpdateSourceTrigger=PropertyChanged}" 
+                         Margin="5,5,0,5" 
+                         HorizontalAlignment="Stretch" 
+                         Grid.Column="1"/>-->
+                <ComboBox Grid.Column="1"
+                          Margin="5,5,0,5"
+                          Height="28"
+                          IsEditable="True"
+                          IsTextSearchEnabled="True"
+                          ItemsSource="{Binding ShowFolders, Source={x:Static Application.Current}}"
+                          Text="{Binding ShowName, UpdateSourceTrigger=PropertyChanged}" />
+                <TextBlock Text="Oldest Episode to get (leave blank to get all available):"
+                           Grid.Row="1"
+                           Grid.ColumnSpan="2"
+                           Margin="0,5,0,0" />
+                <!--Row 2-->
+                <StackPanel Grid.Row="2"
+                            Grid.Column="1"
+                            Grid.ColumnSpan="2"
+                            Orientation="Horizontal">
+                    <TextBlock Text="Season: " />
+                    <TextBox Width="80"
+                             Margin="5"
+                             Text="{Binding OldestSeasonNumber, TargetNullValue={x:Static sys:String.Empty}, UpdateSourceTrigger=PropertyChanged}" />
+                    <TextBlock Text="Episode: " />
+                    <TextBox Width="80"
+                             Margin="5"
+                             Text="{Binding OldestEpisodeNumber, TargetNullValue={x:Static sys:String.Empty}, UpdateSourceTrigger=PropertyChanged}" />
+                </StackPanel>
+                <TextBlock Text="{Binding StatusMessage}"
+                           Grid.Row="3"
+                           Margin="5" />
+            </Grid>
+            <!--Buttons-->
+            <Grid Margin="0,10,0,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <Button Command="{Binding DownloadImagesCommand}"
+                        Grid.Column="2"
+                        Content="Download"
+                        Height="28"
+                        Width="150"
+                        HorizontalAlignment="Right" />
+            </Grid>
+        </StackPanel>
+        <Button Command="{Binding OpenFolderCommand}"
+                Grid.Row="1"
+                VerticalAlignment="Bottom"
+                Margin="10"
+                Content="Open Folder"
+                Height="28"
+                Width="150"
+                HorizontalAlignment="Left" />
+        <!--Row 2-->
+        <DataGrid Grid.Row="2"
+                  ItemsSource="{Binding EpisodeImageResults}"
+                  Style="{DynamicResource ResultsDataGrid}">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="File Name"
+                                    Binding="{Binding FileName}"
+                                    Width="Auto" />
+                <DataGridTextColumn Header="Message"
+                                    Binding="{Binding Message}"
+                                    Width="*" />
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</UserControl>
