@@ -48,8 +48,11 @@
                     <TextBlock Text="HTML:"
                                VerticalAlignment="Center"
                                Margin="0,0,5,0" />
-                    <TextBox Width="300"
-                             Text="&lt;div class=&quot;select-content-wrapper&quot;" />
+                    <TextBlock>                        
+                        <TextBlock Text="&lt;div class=&quot;" />
+                        <TextBlock Text="seasons-and-episodes-list-container" />
+                        <TextBlock Text="&quot;" />
+                    </TextBlock>
                 </StackPanel>
                 <TextBox Text="{Binding InputHtml, UpdateSourceTrigger=PropertyChanged}"
                          Margin="0,5"

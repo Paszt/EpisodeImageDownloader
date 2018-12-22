@@ -82,17 +82,17 @@ Namespace ViewModels
             tvData = New TvDataSeries()
 
             Dim doc = CQ.CreateDocument(InputHtml)
-            For Each ep In doc.Find("div.title-episode")
+            For Each ep In doc.Find("div.episode")
                 Dim cqEp = ep.Cq
                 Dim tvEp As New TvDataEpisode() With {
-                    .Overview = cqEp.Find(".title-episode-synopsis").Text().Trim(),
-                    .EpisodeName = cqEp.Find("h3.title-episode-name").Text()
+                    .Overview = cqEp.Find(".epsiode-synopsis").Text().Trim(),
+                    .EpisodeName = cqEp.Find("h3.episode-title").Text()
                 }
                 'remove number+dot (1., 2., ...) from beginning of title
                 tvEp.EpisodeName = Regex.Replace(tvEp.EpisodeName, "^\d+\s*.?\s+", String.Empty)
                 'find season & episode numbers from alt attribute on the image
                 'Dim seasonEpisodeMatch = Regex.Match(cqEp.Find("img.title-episode-img").Attr("alt"), "(?:Episode|Épisode) (\d+) (?:of|af|de la) (?:Season|sæson|saison) (\d)")
-                Dim seasonEpisodeMatch = Regex.Match(cqEp.Find("img.title-episode-img").Attr("alt"), "\.[^0-9]+(\d+)[^0-9]+(\d+)")
+                Dim seasonEpisodeMatch = Regex.Match(cqEp.Find("img.episode-thumbnail-image").Attr("alt"), "\.[^0-9]+(\d+)[^0-9]+(\d+)")
                 If seasonEpisodeMatch.Success Then
                     tvEp.EpisodeNumber = CInt(seasonEpisodeMatch.Groups(1).Value)
                     tvEp.SeasonNumber = CInt(seasonEpisodeMatch.Groups(2).Value)
