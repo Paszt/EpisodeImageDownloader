@@ -117,6 +117,7 @@
     <Compile Include="ViewModels\NbcEpisodesViewModel.vb" />
     <Compile Include="ViewModels\NprTinyDeskViewModel.vb" />
     <Compile Include="ViewModels\PbsViewModel.vb" />
+    <Compile Include="ViewModels\RokuViewModel.vb" />
     <Compile Include="ViewModels\StarzViewModel.vb" />
     <Compile Include="ViewModels\Support\SeasonNumberUrlInfo.vb" />
     <Compile Include="Extensions\Extensions.vb" />
@@ -329,6 +330,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\PbsView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\RokuView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

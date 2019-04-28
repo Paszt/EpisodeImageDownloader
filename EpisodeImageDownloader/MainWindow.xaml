@@ -15,155 +15,7 @@
     <Grid>
         <TabControl x:Name="MainTabControl"
                     TabStripPlacement="Left">
-            <TabItem>
-                <TabItem.Header>
-                    <StackPanel Orientation="Horizontal">
-                        <Image Source="{DynamicResource HBODrawingImage}"
-                               Height="16"
-                               HorizontalAlignment="Left" />
-                        <TextBlock Text=" (New)" />
-                    </StackPanel>
-                </TabItem.Header>
-                <views:HboNewView MaxWidth="600" />
-            </TabItem>
-            <TabItem>
-                <TabItem.Header>
-                    <Image Source="{DynamicResource NprTinyDeskDrawingImage}"
-                           Height="16"
-                           HorizontalAlignment="Left" />
-                </TabItem.Header>
-                <views:NprTinyDeskView />
-            </TabItem>
-            <TabItem>
-                <TabItem.Header>
-                    <Image Source="{DynamicResource PbsDrawingImage}"
-                           Height="18"
-                           HorizontalAlignment="Left" />
-                </TabItem.Header>
-                <views:PbsView />
-            </TabItem>
-            <TabItem>
-                <TabItem.Header>
-                    <Image Source="{DynamicResource StarzeDrawingImage}"
-                           Height="18"
-                           HorizontalAlignment="Left" />
-                </TabItem.Header>
-                <views:StarzView />
-            </TabItem>
-            <TabItem Visibility="Collapsed">
-                <TabItem.Header>
-                    <Image Source="{DynamicResource HBODrawingImage}"
-                           Height="16"
-                           HorizontalAlignment="Left" />
-                </TabItem.Header>
-                <views:HboView MaxWidth="600" />
-            </TabItem>
-            <TabItem Header="The Daily Show">
-                <views:TheDailyShowView />
-            </TabItem>
-            <!--<TabItem Header="The Colbert Report">
-                <views:TheColbertReportView />
-            </TabItem>-->
-            <TabItem>
-                <TabItem.Header>
-                    <TextBlock Text="THE OPPOSITION"
-                               FontFamily="DIN"
-                               FontSize="14" />
-                </TabItem.Header>
-                <views:TheOppositionView />
-            </TabItem>
-            <TabItem>
-                <TabItem.Header>
-                    <Image Source="{DynamicResource NBCDrawingImage}"
-                           Height="16"
-                           HorizontalAlignment="Left" />
-                </TabItem.Header>
-                <views:NbcSelectorView />
-            </TabItem>
-            <TabItem>
-                <TabItem.Header>
-                    <Image Source="{DynamicResource CBSDrawingImage}"
-                           Height="16"
-                           HorizontalAlignment="Left" />
-                </TabItem.Header>
-                <views:CbsSelectorView />
-            </TabItem>
-            <!--<TabItem Header="Crunchyroll">
-				<views:CrunchrollView />
-			</TabItem>-->
-            <TabItem>
-                <TabItem.Header>
-                    <Image Source="{DynamicResource CrunchyrollDrawingImage}"
-                           Height="16" />
-                </TabItem.Header>
-                <views:CrunchyrollHtmlView />
-            </TabItem>
-            <TabItem>
-                <TabItem.Header>
-                    <Image Source="{DynamicResource huluDrawingImage}"
-                           Height="16"
-                           HorizontalAlignment="Left" />
-                </TabItem.Header>
-                <views:HuluView />
-            </TabItem>
-            <TabItem>
-                <TabItem.Header>
-                    <Image Source="{DynamicResource SyfyDrawingImage}"
-                           Height="18"
-                           HorizontalAlignment="Left" />
-                </TabItem.Header>
-                <views:SyfyView />
-            </TabItem>
-            <TabItem Header="FarFarAwaySite">
-                <views:FarFarAwaySiteView />
-            </TabItem>
-            <TabItem>
-                <TabItem.Header>
-                    <StackPanel Orientation="Horizontal">
-                        <Image Source="{DynamicResource BBCDrawingImage}"
-                               Height="16" />
-                    </StackPanel>
-                </TabItem.Header>
-                <views:BbcNewView />
-            </TabItem>
-            <TabItem>
-                <TabItem.Header>
-                    <StackPanel Orientation="Horizontal">
-                        <Image Source="{DynamicResource BBCDrawingImage}"
-                               Height="16" />
-                        <TextBlock Text=" (By Year)" />
-                    </StackPanel>
-                </TabItem.Header>
-                <views:BbcByYearView />
-            </TabItem>
-            <TabItem>
-                <TabItem.Header>
-                    <Grid>
-                        <Rectangle Width="100"
-                                   ToolTip="Channel 4"
-                                   Fill="Transparent" />
-                        <Image Height="18"
-                               Source="{DynamicResource Channel4DrawingImage}"
-                               HorizontalAlignment="Left"
-                               ToolTip="Channel 4" />
-                    </Grid>
-                </TabItem.Header>
-                <views:Channel4View />
-            </TabItem>
-            <TabItem>
-                <TabItem.Header>
-                    <Grid>
-                        <Rectangle Width="100"
-                                   ToolTip="Channel 5"
-                                   Fill="Transparent" />
-                        <Image Height="18"
-                               Source="{DynamicResource Channel5DrawingImage}"
-                               HorizontalAlignment="Left"
-                               ToolTip="Channel 4" />
-                    </Grid>
-                </TabItem.Header>
-                <views:Channel5View />
-            </TabItem>
+            <!--Disney ABC-->
             <TabItem>
                 <TabItem.Header>
                     <Image Source="{DynamicResource DisneyABCDrawingImage}"
@@ -172,6 +24,7 @@
                 </TabItem.Header>
                 <views:DisneyAbcSelectorView />
             </TabItem>
+            <!--A&E History Lifetime-->
             <TabItem>
                 <TabItem.Header>
                     <StackPanel Orientation="Horizontal">
@@ -208,22 +61,27 @@
                 </TabItem.Header>
                 <views:AandEView />
             </TabItem>-->
+            <!--BBC--> 
             <TabItem>
                 <TabItem.Header>
-                    <Image Source="{DynamicResource NetflixDrawingImage}"
-                           Height="16"
-                           HorizontalAlignment="Left" />
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="{DynamicResource BBCDrawingImage}"
+                               Height="16" />
+                    </StackPanel>
                 </TabItem.Header>
-                <views:NetflixView />
+                <views:BbcNewView />
             </TabItem>
             <TabItem>
                 <TabItem.Header>
-                    <Image Source="{DynamicResource ShowtimeDrawingImage}"
-                           Height="16"
-                           HorizontalAlignment="Left" />
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="{DynamicResource BBCDrawingImage}"
+                               Height="16" />
+                        <TextBlock Text=" (By Year)" />
+                    </StackPanel>
                 </TabItem.Header>
-                <views:ShowtimeView />
+                <views:BbcByYearView />
             </TabItem>
+            <!--Bravo-->
             <TabItem>
                 <TabItem.Header>
                     <Image Source="{DynamicResource BravoDrawingImage}"
@@ -232,6 +90,62 @@
                 </TabItem.Header>
                 <views:BravoView />
             </TabItem>
+            <!--CBS-->
+            <TabItem>
+                <TabItem.Header>
+                    <Image Source="{DynamicResource CBSDrawingImage}"
+                           Height="16"
+                           HorizontalAlignment="Left" />
+                </TabItem.Header>
+                <views:CbsSelectorView />
+            </TabItem>
+            <!--Channel 4-->
+            <TabItem>
+                <TabItem.Header>
+                    <Grid>
+                        <Rectangle Width="100"
+                                   ToolTip="Channel 4"
+                                   Fill="Transparent" />
+                        <Image Height="18"
+                               Source="{DynamicResource Channel4DrawingImage}"
+                               HorizontalAlignment="Left"
+                               ToolTip="Channel 4" />
+                    </Grid>
+                </TabItem.Header>
+                <views:Channel4View />
+            </TabItem>
+            <!--Channel 5-->
+            <TabItem>
+                <TabItem.Header>
+                    <Grid>
+                        <Rectangle Width="100"
+                                   ToolTip="Channel 5"
+                                   Fill="Transparent" />
+                        <Image Height="18"
+                               Source="{DynamicResource Channel5DrawingImage}"
+                               HorizontalAlignment="Left"
+                               ToolTip="Channel 4" />
+                    </Grid>
+                </TabItem.Header>
+                <views:Channel5View />
+            </TabItem>
+            <!--The Colbert Report-->
+            <!--<TabItem Header="The Colbert Report">
+                <views:TheColbertReportView />
+            </TabItem>-->
+            <!--Crunchyroll-->
+            <TabItem>
+                <TabItem.Header>
+                    <Image Source="{DynamicResource CrunchyrollDrawingImage}"
+                           Height="16" />
+                </TabItem.Header>
+                <views:CrunchyrollHtmlView />
+            </TabItem>
+            <!--The Daily Show-->
+            <TabItem Header="The Daily Show">
+                <views:TheDailyShowView />
+            </TabItem>
+            <!--Discovery-->
             <TabItem>
                 <TabItem.Header>
                     <StackPanel Orientation="Horizontal">
@@ -242,6 +156,7 @@
                 </TabItem.Header>
                 <views:DiscoveryJsonView />
             </TabItem>
+            <!--Epix-->
             <TabItem>
                 <TabItem.Header>
                     <Image Source="{DynamicResource EpixDrawingImage}"
@@ -250,6 +165,121 @@
                 </TabItem.Header>
                 <views:EpixView />
             </TabItem>
+            <!--Farfaraway-->
+            <TabItem Header="FarFarAwaySite">
+                <views:FarFarAwaySiteView />
+            </TabItem>
+            <!--HBO-->
+            <TabItem>
+                <TabItem.Header>
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="{DynamicResource HBODrawingImage}"
+                               Height="16"
+                               HorizontalAlignment="Left" />
+                        <TextBlock Text=" (New)" />
+                    </StackPanel>
+                </TabItem.Header>
+                <views:HboNewView MaxWidth="600" />
+            </TabItem>
+            <TabItem Visibility="Collapsed">
+                <TabItem.Header>
+                    <Image Source="{DynamicResource HBODrawingImage}"
+                           Height="16"
+                           HorizontalAlignment="Left" />
+                </TabItem.Header>
+                <views:HboView MaxWidth="600" />
+            </TabItem>
+            <!--Hulu-->
+            <TabItem>
+                <TabItem.Header>
+                    <Image Source="{DynamicResource huluDrawingImage}"
+                           Height="16"
+                           HorizontalAlignment="Left" />
+                </TabItem.Header>
+                <views:HuluView />
+            </TabItem>
+            <!--NBC-->
+            <TabItem>
+                <TabItem.Header>
+                    <Image Source="{DynamicResource NBCDrawingImage}"
+                           Height="16"
+                           HorizontalAlignment="Left" />
+                </TabItem.Header>
+                <views:NbcSelectorView />
+            </TabItem>
+            <!--NPR-->
+            <TabItem>
+                <TabItem.Header>
+                    <Image Source="{DynamicResource NprTinyDeskDrawingImage}"
+                           Height="16"
+                           HorizontalAlignment="Left" />
+                </TabItem.Header>
+                <views:NprTinyDeskView />
+            </TabItem>
+            <!--Netflix--> 
+            <TabItem>
+                <TabItem.Header>
+                    <Image Source="{DynamicResource NetflixDrawingImage}"
+                           Height="16"
+                           HorizontalAlignment="Left" />
+                </TabItem.Header>
+                <views:NetflixView />
+            </TabItem>
+            <!--The Opposition-->
+            <!--<TabItem>
+                <TabItem.Header>
+                    <TextBlock Text="THE OPPOSITION"
+                               FontFamily="DIN"
+                               FontSize="14" />
+                </TabItem.Header>
+                <views:TheOppositionView />
+            </TabItem>-->
+            <!--PBS-->
+            <TabItem>
+                <TabItem.Header>
+                    <Image Source="{DynamicResource PbsDrawingImage}"
+                           Height="18"
+                           HorizontalAlignment="Left" />
+                </TabItem.Header>
+                <views:PbsView />
+            </TabItem>
+            <!--Roku-->
+            <TabItem>
+                <TabItem.Header>
+                    <Image Source="{DynamicResource RokuDrawingImage}"
+                           Height="18"
+                           HorizontalAlignment="Left" />
+                </TabItem.Header>
+                <views:RokuView />
+            </TabItem>
+            <!--Showtime-->
+            <TabItem>
+                <TabItem.Header>
+                    <Image Source="{DynamicResource ShowtimeDrawingImage}"
+                           Height="16"
+                           HorizontalAlignment="Left" />
+                </TabItem.Header>
+                <views:ShowtimeView />
+            </TabItem>
+            <!--Starz-->
+            <TabItem>
+                <TabItem.Header>
+                    <Image Source="{DynamicResource StarzeDrawingImage}"
+                           Height="18"
+                           HorizontalAlignment="Left" />
+                </TabItem.Header>
+                <views:StarzView />
+            </TabItem>
+            <!--Syfy-->
+            <TabItem>
+                <TabItem.Header>
+                    <Image Source="{DynamicResource SyfyDrawingImage}"
+                           Height="18"
+                           HorizontalAlignment="Left" />
+                </TabItem.Header>
+                <views:SyfyView />
+            </TabItem>
+            <!--Youtube Playlist-->
             <TabItem>
                 <TabItem.Header>
                     <StackPanel Orientation="Horizontal">
@@ -261,6 +291,7 @@
                 </TabItem.Header>
                 <views:YouTubePlaylistView />
             </TabItem>
+            
             <TabItem>
                 <TabItem.Header>
                     <StackPanel Orientation="Horizontal">
