@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+	<DrawingBrush x:Key="Layer_1" Stretch="Uniform"/>
+	<DrawingBrush x:Key="Layer_1_0" Stretch="Uniform">
+		<DrawingBrush.Drawing>
+			<DrawingGroup>
+				<DrawingGroup.Children>
+					<GeometryDrawing Brush="#FFFFFFFF" Geometry="F1 M 210.665,0.00012207C 217.095,0.00012207 222.892,3.76672 225.351,9.54272C 227.809,15.3187 226.445,21.9667 221.896,26.384C 217.347,30.8014 210.507,32.1188 204.569,29.7201C 198.631,27.3228 194.764,21.6827 194.773,15.4308C 194.773,11.3347 196.448,7.40674 199.429,4.51208C 202.409,1.61877 206.452,-0.00524902 210.665,0.00012207 Z "/>
+					<GeometryDrawing Geometry="F1 M 0,88.4585C 0,119.768 17.6413,136.725 37.6307,142.248L 68.1187,142.248C 84.0467,137.817 96.5093,126.409 101.952,110.242L 73.692,105.833C 69.496,113.479 61.248,118.193 52.3373,118.038L 52.3373,118.038C 40.8747,118.324 30.976,110.294 29.2093,99.2811L 104.364,99.2811C 104.508,97.8185 104.839,94.2305 104.839,90.5438L 104.839,90.5438C 104.839,59.5812 86.08,32.6265 52.7907,32.6265L 52.7907,32.6265C 20.4067,32.6265 -0.02,55.8331 0,88.4585 Z M 52.7907,58.6584C 65.9613,58.6584 74.66,68.0972 75.9387,76.3745L 29.6,76.3745C 31.784,65.7212 41.6267,58.2025 52.7907,58.6584 Z M 153.795,34.6705L 107.353,34.6705L 107.353,142.248L 135.633,142.248L 135.633,112.808L 155.257,112.808C 178.303,112.808 193.783,92.6078 193.783,73.7291L 193.783,73.7291C 194.061,63.3212 189.944,53.2557 182.389,45.8759L 182.389,45.8759C 175.032,38.6904 165.04,34.6611 154.635,34.6611L 154.635,34.6611C 154.355,34.6611 154.075,34.6638 153.795,34.6705 Z M 135.675,60.6024L 154.02,60.6024C 159.731,60.6024 165.481,64.4905 165.481,73.1879L 165.481,73.1879C 165.481,80.6024 160.927,85.7944 154.392,85.7944L 135.675,85.7944L 135.675,60.6024 Z ">
+						<GeometryDrawing.Brush>
+							<RadialGradientBrush RadiusX="1.44066" RadiusY="1.81199" Center="1.07151,-3.34069e-006" GradientOrigin="1.07151,-3.34069e-006">
+								<RadialGradientBrush.GradientStops>
+									<GradientStop Color="#FFFFFFFF" Offset="0"/>
+									<GradientStop Color="#FFDFC379" Offset="0.289453"/>
+									<GradientStop Color="#FFC6AA59" Offset="0.516469"/>
+									<GradientStop Color="#FF8C6E2F" Offset="0.751997"/>
+									<GradientStop Color="#FF8C6E2F" Offset="1"/>
+								</RadialGradientBrush.GradientStops>
+								<RadialGradientBrush.RelativeTransform>
+									<TransformGroup>
+										<SkewTransform CenterX="1.07151" CenterY="-3.34069e-006" AngleX="-25.2867" AngleY="0"/>
+										<RotateTransform CenterX="1.07151" CenterY="-3.34069e-006" Angle="139.353"/>
+									</TransformGroup>
+								</RadialGradientBrush.RelativeTransform>
+							</RadialGradientBrush>
+						</GeometryDrawing.Brush>
+					</GeometryDrawing>
+					<GeometryDrawing Geometry="F1 M 294.828,34.6705L 278.069,63.4279L 262.507,34.6705L 229.937,34.6705L 261.827,85.1718L 224.744,138.54L 224.744,34.6705L 196.483,34.6705L 196.483,142.248L 222.167,142.248L 256.468,142.248L 278.069,109.762L 299.672,142.248L 333.333,142.248L 294.313,85.1718L 327.892,34.6705L 294.828,34.6705 Z ">
+						<GeometryDrawing.Brush>
+							<RadialGradientBrush RadiusX="1.77177" RadiusY="2.01096" Center="0.0813328,-2.26944e-006" GradientOrigin="0.0813328,-2.26944e-006">
+								<RadialGradientBrush.GradientStops>
+									<GradientStop Color="#FFFFFFFF" Offset="0"/>
+									<GradientStop Color="#FFDFC379" Offset="0.161167"/>
+									<GradientStop Color="#FFC6AA59" Offset="0.319146"/>
+									<GradientStop Color="#FF8C6E2F" Offset="0.477715"/>
+									<GradientStop Color="#FF8C6E2F" Offset="1"/>
+								</RadialGradientBrush.GradientStops>
+								<RadialGradientBrush.RelativeTransform>
+									<TransformGroup>
+										<SkewTransform CenterX="0.0813328" CenterY="-2.26944e-006" AngleX="-10.9077" AngleY="0"/>
+										<RotateTransform CenterX="0.0813328" CenterY="-2.26944e-006" Angle="147.917"/>
+									</TransformGroup>
+								</RadialGradientBrush.RelativeTransform>
+							</RadialGradientBrush>
+						</GeometryDrawing.Brush>
+					</GeometryDrawing>
+				</DrawingGroup.Children>
+			</DrawingGroup>
+		</DrawingBrush.Drawing>
+	</DrawingBrush>
+</ResourceDictionary>
