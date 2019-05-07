@@ -81,6 +81,8 @@ Namespace ViewModels
             IsHtmlInputVisible = False
             tvData = New TvDataSeries()
 
+            Dim language As String = String.Empty
+
             Dim doc = CQ.CreateDocument(InputHtml)
             For Each ep In doc.Find("div.episode")
                 Dim cqEp = ep.Cq
@@ -91,12 +93,23 @@ Namespace ViewModels
                 'remove number+dot (1., 2., ...) from beginning of title
                 tvEp.EpisodeName = Regex.Replace(tvEp.EpisodeName, "^\d+\s*.?\s+", String.Empty)
                 'find season & episode numbers from alt attribute on the image
-                'Dim seasonEpisodeMatch = Regex.Match(cqEp.Find("img.title-episode-img").Attr("alt"), "(?:Episode|Épisode) (\d+) (?:of|af|de la) (?:Season|sæson|saison) (\d)")
-                Dim seasonEpisodeMatch = Regex.Match(cqEp.Find("img.episode-thumbnail-image").Attr("alt"), "\.[^0-9]+(\d+)[^0-9]+(\d+)")
-                If seasonEpisodeMatch.Success Then
-                    tvEp.EpisodeNumber = CInt(seasonEpisodeMatch.Groups(1).Value)
-                    tvEp.SeasonNumber = CInt(seasonEpisodeMatch.Groups(2).Value)
-                End If
+                'Dim seasonEpisodeMatch = Regex.Match(cqEp.Find("img.episode-thumbnail-image").Attr("alt"), "\.[^0-9]+(\d+)[^0-9]+(\d+)")
+                'If seasonEpisodeMatch.Success Then
+                '    tvEp.EpisodeNumber = CInt(seasonEpisodeMatch.Groups(1).Value)
+                '    tvEp.SeasonNumber = CInt(seasonEpisodeMatch.Groups(2).Value)
+                'End If
+
+                Dim seasonEpisodeMatch As Match
+                Dim imageAlt = cqEp.Find("img.episode-thumbnail-image").Attr("alt")
+                For Each regLang In regexLanguageList
+                    seasonEpisodeMatch = regLang.Regex.Match(imageAlt)
+                    If seasonEpisodeMatch.Success Then
+                        tvEp.EpisodeNumber = CInt(seasonEpisodeMatch.Groups("episodeNo").Value)
+                        tvEp.SeasonNumber = CInt(seasonEpisodeMatch.Groups("seasonNo").Value)
+                        language = regLang.Language
+                        Exit For
+                    End If
+                Next
 
                 tvData.Episodes.Add(tvEp)
                 AddEpisodeImageResult(New EpisodeImageResult() With {
@@ -114,7 +127,7 @@ Namespace ViewModels
                                                             OrderBy(Function(t) t.SeasonNumber).
                                                             ThenBy(Function(t) t.EpisodeNumber).ToList()
                     }
-                    seasonTvdata.SaveToFile(ShowDownloadFolder, ShowName & " " & "Season " & seasonNo)
+                    seasonTvdata.SaveToFile(ShowDownloadFolder, ShowName & " " & "Season " & seasonNo & "_" & language)
                 Next
             Else
                 MessageWindow.ShowDialog("No episodes were found", "No Episodes Found")
@@ -140,6 +153,41 @@ Namespace ViewModels
                                                        End Sub)
             End Get
         End Property
+
+        Private ReadOnly regexLanguageList As New List(Of RegexLanguage) From {
+            New RegexLanguage("episode\s(?<episodeNo>\d+)\sof\sseason\s(?<seasonNo>\d+)", "English"),
+            New RegexLanguage("episodio\s(?<episodeNo>\d+)\sde la\stemporada\s(?<seasonNo>\d+)", "Spanish"),
+            New RegexLanguage("episódio\s(?<episodeNo>\d+)\sda\stemporada\s(?<seasonNo>\d+)", "Portuguese"),
+            New RegexLanguage("épisode\s(?<episodeNo>\d+)\sde la\ssaison\s(?<seasonNo>\d+)", "French"),
+            New RegexLanguage("avsnitt\s(?<episodeNo>\d+)\sfrån\ssäsong\s(?<seasonNo>\d+)", "Swedish"),
+            New RegexLanguage("episode\s(?<episodeNo>\d+)\sav\ssesong\s(?<seasonNo>\d+)", "Norwegian Bokmål"),
+            New RegexLanguage("jakso\s(?<episodeNo>\d+),\skausi\s(?<seasonNo>\d+)", "Finnish"),
+            New RegexLanguage("episode\s(?<episodeNo>\d+)\saf\ssæson\s(?<seasonNo>\d+)", "Danish"),
+            New RegexLanguage("aflevering\s(?<episodeNo>\d+)\svan\sseizoen\s(?<seasonNo>\d+)", "Dutch"),
+            New RegexLanguage("folge\s(?<episodeNo>\d+)\sder\s(?<seasonNo>\d+)\.\sstaffel\.", "German"),
+            New RegexLanguage("シ﻿ー﻿ズ﻿ン(?<seasonNo>\d+)\﻿のエ﻿ピ﻿ソ﻿ー﻿ド(?<episodeNo>\d+)", "Japanese"),
+            New RegexLanguage("episodio\s(?<episodeNo>\d+)\sdella\sstagione\s(?<seasonNo>\d+)", "Italian"),
+            New RegexLanguage("第\s(?<seasonNo>\d+)\s季第\s(?<episodeNo>\d+)\s集", "Chinese"),
+            New RegexLanguage("시즌\s(?<seasonNo>\d+):\s(?<episodeNo>\d+)화", "Korean"),
+            New RegexLanguage("(?<episodeNo>\d+)\sمن موسم\s(?<seasonNo>\d+)", "Arabic"),
+            New RegexLanguage("odcinek\s(?<episodeNo>\d+)\ssezonu\s(?<seasonNo>\d+)", "Polish"),
+            New RegexLanguage("(?<seasonNo>\d+)\.\ssezon\s(?<episodeNo>\d+)\.\sbölüm", "Turkish"),
+            New RegexLanguage("ตอน\s(?<episodeNo>\d+)\sของซีซั่น\s(?<seasonNo>\d+)", "Thai"),
+            New RegexLanguage("episodul\s(?<episodeNo>\d+)\sdin\ssezonul\s(?<seasonNo>\d+)", "Romanian"),
+            New RegexLanguage("פרק\s(?<episodeNo>\d+)\sבעונה\s(?<seasonNo>\d+)", "Hebrew"),
+            New RegexLanguage("Επεισόδιο\s(?<episodeNo>\d+)\sτης\sΣεζόν\s(?<seasonNo>\d+)", "Greek"),
+            New RegexLanguage("episode\s(?<episodeNo>\d+)\sseason\s(?<seasonNo>\d+)", "Indonesian")
+        }
+
+        Private Class RegexLanguage
+            Public Property Regex As Regex
+            Public Property Language As String
+
+            Public Sub New(regexPattern As String, language As String)
+                Regex = New Regex(regexPattern, RegexOptions.IgnoreCase)
+                Me.Language = language
+            End Sub
+        End Class
 
     End Class
 
