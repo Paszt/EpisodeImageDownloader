@@ -100,7 +100,7 @@ Namespace ViewModels
                                              episodesBag As Concurrent.ConcurrentBag(Of TvDataEpisode),
                                              seasonNo As Integer)
             Dim doc = CQ.CreateDocument(html)
-            doc("div.tv_episode").Each(
+            doc("article.teaser--episode-guide-teaser").Each(
                 Sub(epDiv As IDomObject)
                     Dim epTitle = epDiv.Cq.Find("h2.headline").Text()
                     Dim epNoMatch = Regex.Match(epTitle, "Ep (\d+):", RegexOptions.IgnoreCase)
@@ -133,7 +133,7 @@ Namespace ViewModels
                 Dim tvEp As New TvDataEpisode() With {
                     .EpisodeName = titleMatch.Groups(2).Value,
                     .EpisodeNumber = CInt(titleMatch.Groups(1).Value),
-                    .ImageUrl = GetLargeImage(CqEpContiainer.Find("img:first").Attr("src")),
+                    .ImageUrl = EnsureAbsoluteUrl(GetLargeImage(CqEpContiainer.Find("img:first").Attr("src"))),
                     .Overview = CqEpContiainer.Find("div.tv-episode__description").Text()}
                 Return tvEp
             End If
