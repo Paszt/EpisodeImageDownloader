@@ -1,0 +1,1372 @@
+{
+	"data": {
+		"showId": "umc.cmc.38ljpgdyam8q0ufwla0e3n0g8",
+		"episodes": [
+			{
+				"id": "umc.cmc.1v5pteqpqyy1x9jtmk54ez61t",
+				"type": "Episode",
+				"isEntitledToPlay": false,
+				"title": "Ties That Bind",
+				"description": "Mary recruits Frankie and Trudy to find a missing teacher, but their investigation leads them to family secrets, Chinatown, and murder.",
+				"releaseDate": 1515369600000,
+				"ratingValue": 500,
+				"ratingSystemType": "tv",
+				"rating": {
+					"name": "TV_14",
+					"value": 500,
+					"system": "us_tv",
+					"systemType": "tv",
+					"displayName": "TV-14"
+				},
+				"images": {
+					"previewFrame": {
+						"width": 1920,
+						"height": 1080,
+						"url": "https://is5-ssl.mzstatic.com/image/thumb/og8aah7a6aM460p23Pp0Hw/{w}x{h}.{f}",
+						"joeColor": "b:rgb(41,26,5) p:rgb(228,176,108) s:rgb(220,162,78) t:rgb(191,146,87) q:rgb(184,135,64)"
+					},
+					"coverArt16X9": {
+						"width": 1920,
+						"height": 1080,
+						"url": "https://is5-ssl.mzstatic.com/image/thumb/og8aah7a6aM460p23Pp0Hw/{w}x{h}.{f}",
+						"joeColor": "b:rgb(41,26,5) p:rgb(228,176,108) s:rgb(220,162,78) t:rgb(191,146,87) q:rgb(184,135,64)"
+					}
+				},
+				"url": "https://tv.apple.com/us/episode/ties-that-bind/umc.cmc.1v5pteqpqyy1x9jtmk54ez61t?showId=umc.cmc.38ljpgdyam8q0ufwla0e3n0g8",
+				"duration": 2460,
+				"seasonId": "umc.cmc.4angunllb6jwdljube67kaesc",
+				"showId": "umc.cmc.38ljpgdyam8q0ufwla0e3n0g8",
+				"showTitle": "Frankie Drake Mysteries",
+				"showImages": {
+					"coverArt": {
+						"width": 3000,
+						"height": 3000,
+						"url": "https://is1-ssl.mzstatic.com/image/thumb/Video113/v4/71/41/5c/71415cb2-6bc6-924c-ebdc-84cc16c216ed/mzl.hcxwizow.lsr/{w}x{h}.{f}",
+						"supportsLayeredImage": true,
+						"joeColor": "b:rgb(0,0,0) p:rgb(253,252,254) s:rgb(250,217,200) t:rgb(202,201,203) q:rgb(200,173,160)"
+					},
+					"keyframe": {
+						"width": 1920,
+						"height": 1080,
+						"url": "https://is1-ssl.mzstatic.com/image/thumb/c-9FYd8AMrUaBbJqeRxzMA/{w}x{h}.{f}",
+						"joeColor": "b:rgb(0,0,0) p:rgb(223,179,126) s:rgb(214,157,91) t:rgb(179,143,101) q:rgb(171,126,73)"
+					},
+					"coverArt16X9": {
+						"width": 3840,
+						"height": 2160,
+						"url": "https://is3-ssl.mzstatic.com/image/thumb/Video113/v4/2a/bc/a9/2abca978-4e08-1ef4-3d78-97bb0e0923a2/pr_source.lsr/{w}x{h}.{f}",
+						"supportsLayeredImage": true,
+						"joeColor": "b:rgb(0,0,0) p:rgb(249,238,248) s:rgb(245,237,221) t:rgb(199,191,198) q:rgb(196,189,177)"
+					}
+				},
+				"seasonImages": {
+					"coverArt": {
+						"width": 3000,
+						"height": 3000,
+						"url": "https://is2-ssl.mzstatic.com/image/thumb/Video128/v4/a4/f1/f2/a4f1f2cb-e1b7-b681-57c5-461c1dfb51ad/mzl.qvslahif.lsr/{w}x{h}.{f}",
+						"supportsLayeredImage": true,
+						"joeColor": "b:rgb(0,170,235) p:rgb(0,3,12) s:rgb(37,21,20) t:rgb(0,36,56) q:rgb(29,51,63)"
+					},
+					"bannerUberImage": {
+						"width": 4320,
+						"height": 1080,
+						"url": "https://is4-ssl.mzstatic.com/image/thumb/Features128/v4/2b/12/3c/2b123c5d-d03d-d1e2-1b28-29d92f814a88/mzl.phovwroy.png/{w}x{h}sr.{f}",
+						"joeColor": "b:rgb(1,1,0) p:rgb(225,210,174) s:rgb(209,205,194) t:rgb(180,168,139) q:rgb(167,164,155)"
+					}
+				},
+				"episodeNumber": 7,
+				"seasonNumber": 1,
+				"seasonUrl": "https://tv.apple.com/us/season/season-1/umc.cmc.4angunllb6jwdljube67kaesc?showId=umc.cmc.38ljpgdyam8q0ufwla0e3n0g8",
+				"showUrl": "https://tv.apple.com/us/show/frankie-drake-mysteries/umc.cmc.38ljpgdyam8q0ufwla0e3n0g8",
+				"episodeIndex": 6
+			},
+			{
+				"id": "umc.cmc.3hit3al50v8afibcfba600hpg",
+				"type": "Episode",
+				"isEntitledToPlay": false,
+				"title": "The Pilot",
+				"description": "A day off turns into a day at the office for Frankie and Trudy when the infant son of a charismatic aviator is kidnapped during an air show.",
+				"releaseDate": 1515974400000,
+				"ratingValue": 500,
+				"ratingSystemType": "tv",
+				"rating": {
+					"name": "TV_14",
+					"value": 500,
+					"system": "us_tv",
+					"systemType": "tv",
+					"displayName": "TV-14"
+				},
+				"images": {
+					"previewFrame": {
+						"width": 3840,
+						"height": 2160,
+						"url": "https://is2-ssl.mzstatic.com/image/thumb/YBGfPjNJALMu2ZvXsAB-ww/{w}x{h}.{f}",
+						"joeColor": "b:rgb(18,18,16) p:rgb(205,201,180) s:rgb(194,196,171) t:rgb(168,164,147) q:rgb(159,160,140)"
+					},
+					"coverArt16X9": {
+						"width": 3840,
+						"height": 2160,
+						"url": "https://is2-ssl.mzstatic.com/image/thumb/YBGfPjNJALMu2ZvXsAB-ww/{w}x{h}.{f}",
+						"joeColor": "b:rgb(18,18,16) p:rgb(205,201,180) s:rgb(194,196,171) t:rgb(168,164,147) q:rgb(159,160,140)"
+					}
+				},
+				"url": "https://tv.apple.com/us/episode/the-pilot/umc.cmc.3hit3al50v8afibcfba600hpg?showId=umc.cmc.38ljpgdyam8q0ufwla0e3n0g8",
+				"duration": 2460,
+				"seasonId": "umc.cmc.4angunllb6jwdljube67kaesc",
+				"showId": "umc.cmc.38ljpgdyam8q0ufwla0e3n0g8",
+				"showTitle": "Frankie Drake Mysteries",
+				"showImages": {
+					"coverArt": {
+						"width": 3000,
+						"height": 3000,
+						"url": "https://is1-ssl.mzstatic.com/image/thumb/Video113/v4/71/41/5c/71415cb2-6bc6-924c-ebdc-84cc16c216ed/mzl.hcxwizow.lsr/{w}x{h}.{f}",
+						"supportsLayeredImage": true,
+						"joeColor": "b:rgb(0,0,0) p:rgb(253,252,254) s:rgb(250,217,200) t:rgb(202,201,203) q:rgb(200,173,160)"
+					},
+					"keyframe": {
+						"width": 1920,
+						"height": 1080,
+						"url": "https://is1-ssl.mzstatic.com/image/thumb/c-9FYd8AMrUaBbJqeRxzMA/{w}x{h}.{f}",
+						"joeColor": "b:rgb(0,0,0) p:rgb(223,179,126) s:rgb(214,157,91) t:rgb(179,143,101) q:rgb(171,126,73)"
+					},
+					"coverArt16X9": {
+						"width": 3840,
+						"height": 2160,
+						"url": "https://is3-ssl.mzstatic.com/image/thumb/Video113/v4/2a/bc/a9/2abca978-4e08-1ef4-3d78-97bb0e0923a2/pr_source.lsr/{w}x{h}.{f}",
+						"supportsLayeredImage": true,
+						"joeColor": "b:rgb(0,0,0) p:rgb(249,238,248) s:rgb(245,237,221) t:rgb(199,191,198) q:rgb(196,189,177)"
+					}
+				},
+				"seasonImages": {
+					"coverArt": {
+						"width": 3000,
+						"height": 3000,
+						"url": "https://is2-ssl.mzstatic.com/image/thumb/Video128/v4/a4/f1/f2/a4f1f2cb-e1b7-b681-57c5-461c1dfb51ad/mzl.qvslahif.lsr/{w}x{h}.{f}",
+						"supportsLayeredImage": true,
+						"joeColor": "b:rgb(0,170,235) p:rgb(0,3,12) s:rgb(37,21,20) t:rgb(0,36,56) q:rgb(29,51,63)"
+					},
+					"bannerUberImage": {
+						"width": 4320,
+						"height": 1080,
+						"url": "https://is4-ssl.mzstatic.com/image/thumb/Features128/v4/2b/12/3c/2b123c5d-d03d-d1e2-1b28-29d92f814a88/mzl.phovwroy.png/{w}x{h}sr.{f}",
+						"joeColor": "b:rgb(1,1,0) p:rgb(225,210,174) s:rgb(209,205,194) t:rgb(180,168,139) q:rgb(167,164,155)"
+					}
+				},
+				"episodeNumber": 8,
+				"seasonNumber": 1,
+				"seasonUrl": "https://tv.apple.com/us/season/season-1/umc.cmc.4angunllb6jwdljube67kaesc?showId=umc.cmc.38ljpgdyam8q0ufwla0e3n0g8",
+				"showUrl": "https://tv.apple.com/us/show/frankie-drake-mysteries/umc.cmc.38ljpgdyam8q0ufwla0e3n0g8",
+				"episodeIndex": 7
+			},
+			{
+				"id": "umc.cmc.39ln0jcd2izvynfl027ub6dmc",
+				"type": "Episode",
+				"isEntitledToPlay": false,
+				"title": "Ghosts",
+				"description": "The horrors of war haunt Frankie when an investigation into a soldier’s murder reunites her with a friend left traumatized by his tour of duty.",
+				"releaseDate": 1516579200000,
+				"ratingValue": 500,
+				"ratingSystemType": "tv",
+				"rating": {
+					"name": "TV_14",
+					"value": 500,
+					"system": "us_tv",
+					"systemType": "tv",
+					"displayName": "TV-14"
+				},
+				"images": {
+					"previewFrame": {
+						"width": 1920,
+						"height": 1080,
+						"url": "https://is4-ssl.mzstatic.com/image/thumb/OWMKylnENcRCFmJ3Bl3Otg/{w}x{h}.{f}",
+						"joeColor": "b:rgb(25,22,17) p:rgb(207,177,145) s:rgb(214,153,127) t:rgb(171,146,119) q:rgb(176,127,105)"
+					},
+					"coverArt16X9": {
+						"width": 1920,
+						"height": 1080,
+						"url": "https://is4-ssl.mzstatic.com/image/thumb/OWMKylnENcRCFmJ3Bl3Otg/{w}x{h}.{f}",
+						"joeColor": "b:rgb(25,22,17) p:rgb(207,177,145) s:rgb(214,153,127) t:rgb(171,146,119) q:rgb(176,127,105)"
+					}
+				},
+				"url": "https://tv.apple.com/us/episode/ghosts/umc.cmc.39ln0jcd2izvynfl027ub6dmc?showId=umc.cmc.38ljpgdyam8q0ufwla0e3n0g8",
+				"duration": 2460,
+				"seasonId": "umc.cmc.4angunllb6jwdljube67kaesc",
+				"showId": "umc.cmc.38ljpgdyam8q0ufwla0e3n0g8",
+				"showTitle": "Frankie Drake Mysteries",
+				"showImages": {
+					"coverArt": {
+						"width": 3000,
+						"height": 3000,
+						"url": "https://is1-ssl.mzstatic.com/image/thumb/Video113/v4/71/41/5c/71415cb2-6bc6-924c-ebdc-84cc16c216ed/mzl.hcxwizow.lsr/{w}x{h}.{f}",
+						"supportsLayeredImage": true,
+						"joeColor": "b:rgb(0,0,0) p:rgb(253,252,254) s:rgb(250,217,200) t:rgb(202,201,203) q:rgb(200,173,160)"
+					},
+					"keyframe": {
+						"width": 1920,
+						"height": 1080,
+						"url": "https://is1-ssl.mzstatic.com/image/thumb/c-9FYd8AMrUaBbJqeRxzMA/{w}x{h}.{f}",
+						"joeColor": "b:rgb(0,0,0) p:rgb(223,179,126) s:rgb(214,157,91) t:rgb(179,143,101) q:rgb(171,126,73)"
+					},
+					"coverArt16X9": {
+						"width": 3840,
+						"height": 2160,
+						"url": "https://is3-ssl.mzstatic.com/image/thumb/Video113/v4/2a/bc/a9/2abca978-4e08-1ef4-3d78-97bb0e0923a2/pr_source.lsr/{w}x{h}.{f}",
+						"supportsLayeredImage": true,
+						"joeColor": "b:rgb(0,0,0) p:rgb(249,238,248) s:rgb(245,237,221) t:rgb(199,191,198) q:rgb(196,189,177)"
+					}
+				},
+				"seasonImages": {
+					"coverArt": {
+						"width": 3000,
+						"height": 3000,
+						"url": "https://is2-ssl.mzstatic.com/image/thumb/Video128/v4/a4/f1/f2/a4f1f2cb-e1b7-b681-57c5-461c1dfb51ad/mzl.qvslahif.lsr/{w}x{h}.{f}",
+						"supportsLayeredImage": true,
+						"joeColor": "b:rgb(0,170,235) p:rgb(0,3,12) s:rgb(37,21,20) t:rgb(0,36,56) q:rgb(29,51,63)"
+					},
+					"bannerUberImage": {
+						"width": 4320,
+						"height": 1080,
+						"url": "https://is4-ssl.mzstatic.com/image/thumb/Features128/v4/2b/12/3c/2b123c5d-d03d-d1e2-1b28-29d92f814a88/mzl.phovwroy.png/{w}x{h}sr.{f}",
+						"joeColor": "b:rgb(1,1,0) p:rgb(225,210,174) s:rgb(209,205,194) t:rgb(180,168,139) q:rgb(167,164,155)"
+					}
+				},
+				"episodeNumber": 9,
+				"seasonNumber": 1,
+				"seasonUrl": "https://tv.apple.com/us/season/season-1/umc.cmc.4angunllb6jwdljube67kaesc?showId=umc.cmc.38ljpgdyam8q0ufwla0e3n0g8",
+				"showUrl": "https://tv.apple.com/us/show/frankie-drake-mysteries/umc.cmc.38ljpgdyam8q0ufwla0e3n0g8",
+				"episodeIndex": 8
+			},
+			{
+				"id": "umc.cmc.4ymuw9cbngmowepvxiavvzf0c",
+				"type": "Episode",
+				"isEntitledToPlay": false,
+				"title": "Anastasia",
+				"description": "Frankie is hired to confirm the identity of a young woman claiming to be a Russian princess and protect her from those who want her dead.",
+				"releaseDate": 1517184000000,
+				"ratingValue": 500,
+				"ratingSystemType": "tv",
+				"rating": {
+					"name": "TV_14",
+					"value": 500,
+					"system": "us_tv",
+					"systemType": "tv",
+					"displayName": "TV-14"
+				},
+				"images": {
+					"previewFrame": {
+						"width": 1920,
+						"height": 1080,
+						"url": "https://is4-ssl.mzstatic.com/image/thumb/0zyhCIacrZyWSuYf1Wmp2A/{w}x{h}.{f}",
+						"joeColor": "b:rgb(35,19,3) p:rgb(226,187,108) s:rgb(229,142,84) t:rgb(188,153,87) q:rgb(190,117,68)"
+					},
+					"coverArt16X9": {
+						"width": 1920,
+						"height": 1080,
+						"url": "https://is4-ssl.mzstatic.com/image/thumb/0zyhCIacrZyWSuYf1Wmp2A/{w}x{h}.{f}",
+						"joeColor": "b:rgb(35,19,3) p:rgb(226,187,108) s:rgb(229,142,84) t:rgb(188,153,87) q:rgb(190,117,68)"
+					}
+				},
+				"url": "https://tv.apple.com/us/episode/anastasia/umc.cmc.4ymuw9cbngmowepvxiavvzf0c?showId=umc.cmc.38ljpgdyam8q0ufwla0e3n0g8",
+				"duration": 2460,
+				"seasonId": "umc.cmc.4angunllb6jwdljube67kaesc",
+				"showId": "umc.cmc.38ljpgdyam8q0ufwla0e3n0g8",
+				"showTitle": "Frankie Drake Mysteries",
+				"showImages": {
+					"coverArt": {
+						"width": 3000,
+						"height": 3000,
+						"url": "https://is1-ssl.mzstatic.com/image/thumb/Video113/v4/71/41/5c/71415cb2-6bc6-924c-ebdc-84cc16c216ed/mzl.hcxwizow.lsr/{w}x{h}.{f}",
+						"supportsLayeredImage": true,
+						"joeColor": "b:rgb(0,0,0) p:rgb(253,252,254) s:rgb(250,217,200) t:rgb(202,201,203) q:rgb(200,173,160)"
+					},
+					"keyframe": {
+						"width": 1920,
+						"height": 1080,
+						"url": "https://is1-ssl.mzstatic.com/image/thumb/c-9FYd8AMrUaBbJqeRxzMA/{w}x{h}.{f}",
+						"joeColor": "b:rgb(0,0,0) p:rgb(223,179,126) s:rgb(214,157,91) t:rgb(179,143,101) q:rgb(171,126,73)"
+					},
+					"coverArt16X9": {
+						"width": 3840,
+						"height": 2160,
+						"url": "https://is3-ssl.mzstatic.com/image/thumb/Video113/v4/2a/bc/a9/2abca978-4e08-1ef4-3d78-97bb0e0923a2/pr_source.lsr/{w}x{h}.{f}",
+						"supportsLayeredImage": true,
+						"joeColor": "b:rgb(0,0,0) p:rgb(249,238,248) s:rgb(245,237,221) t:rgb(199,191,198) q:rgb(196,189,177)"
+					}
+				},
+				"seasonImages": {
+					"coverArt": {
+						"width": 3000,
+						"height": 3000,
+						"url": "https://is2-ssl.mzstatic.com/image/thumb/Video128/v4/a4/f1/f2/a4f1f2cb-e1b7-b681-57c5-461c1dfb51ad/mzl.qvslahif.lsr/{w}x{h}.{f}",
+						"supportsLayeredImage": true,
+						"joeColor": "b:rgb(0,170,235) p:rgb(0,3,12) s:rgb(37,21,20) t:rgb(0,36,56) q:rgb(29,51,63)"
+					},
+					"bannerUberImage": {
+						"width": 4320,
+						"height": 1080,
+						"url": "https://is4-ssl.mzstatic.com/image/thumb/Features128/v4/2b/12/3c/2b123c5d-d03d-d1e2-1b28-29d92f814a88/mzl.phovwroy.png/{w}x{h}sr.{f}",
+						"joeColor": "b:rgb(1,1,0) p:rgb(225,210,174) s:rgb(209,205,194) t:rgb(180,168,139) q:rgb(167,164,155)"
+					}
+				},
+				"episodeNumber": 10,
+				"seasonNumber": 1,
+				"seasonUrl": "https://tv.apple.com/us/season/season-1/umc.cmc.4angunllb6jwdljube67kaesc?showId=umc.cmc.38ljpgdyam8q0ufwla0e3n0g8",
+				"showUrl": "https://tv.apple.com/us/show/frankie-drake-mysteries/umc.cmc.38ljpgdyam8q0ufwla0e3n0g8",
+				"episodeIndex": 9
+			},
+			{
+				"id": "umc.cmc.3r6jwkjkjaxlzob970b5tk77c",
+				"type": "Episode",
+				"isEntitledToPlay": false,
+				"title": "Once Burnt Twice Spied",
+				"description": "When Frankie gets a mysterious call from a British spy, Mary discovers how she and Trudy met, and how Drake Private Detectives was formed.",
+				"releaseDate": 1517788800000,
+				"ratingValue": 500,
+				"ratingSystemType": "tv",
+				"rating": {
+					"name": "TV_14",
+					"value": 500,
+					"system": "us_tv",
+					"systemType": "tv",
+					"displayName": "TV-14"
+				},
+				"images": {
+					"previewFrame": {
+						"width": 3840,
+						"height": 2160,
+						"url": "https://is5-ssl.mzstatic.com/image/thumb/TM0T8KwzDyUheWBVtjMCQQ/{w}x{h}.{f}",
+						"joeColor": "b:rgb(38,18,9) p:rgb(216,176,120) s:rgb(224,154,106) t:rgb(180,144,98) q:rgb(187,127,87)"
+					},
+					"coverArt16X9": {
+						"width": 3840,
+						"height": 2160,
+						"url": "https://is5-ssl.mzstatic.com/image/thumb/TM0T8KwzDyUheWBVtjMCQQ/{w}x{h}.{f}",
+						"joeColor": "b:rgb(38,18,9) p:rgb(216,176,120) s:rgb(224,154,106) t:rgb(180,144,98) q:rgb(187,127,87)"
+					}
+				},
+				"url": "https://tv.apple.com/us/episode/once-burnt-twice-spied/umc.cmc.3r6jwkjkjaxlzob970b5tk77c?showId=umc.cmc.38ljpgdyam8q0ufwla0e3n0g8",
+				"duration": 2460,
+				"seasonId": "umc.cmc.4angunllb6jwdljube67kaesc",
+				"showId": "umc.cmc.38ljpgdyam8q0ufwla0e3n0g8",
+				"showTitle": "Frankie Drake Mysteries",
+				"showImages": {
+					"coverArt": {
+						"width": 3000,
+						"height": 3000,
+						"url": "https://is1-ssl.mzstatic.com/image/thumb/Video113/v4/71/41/5c/71415cb2-6bc6-924c-ebdc-84cc16c216ed/mzl.hcxwizow.lsr/{w}x{h}.{f}",
+						"supportsLayeredImage": true,
+						"joeColor": "b:rgb(0,0,0) p:rgb(253,252,254) s:rgb(250,217,200) t:rgb(202,201,203) q:rgb(200,173,160)"
+					},
+					"keyframe": {
+						"width": 1920,
+						"height": 1080,
+						"url": "https://is1-ssl.mzstatic.com/image/thumb/c-9FYd8AMrUaBbJqeRxzMA/{w}x{h}.{f}",
+						"joeColor": "b:rgb(0,0,0) p:rgb(223,179,126) s:rgb(214,157,91) t:rgb(179,143,101) q:rgb(171,126,73)"
+					},
+					"coverArt16X9": {
+						"width": 3840,
+						"height": 2160,
+						"url": "https://is3-ssl.mzstatic.com/image/thumb/Video113/v4/2a/bc/a9/2abca978-4e08-1ef4-3d78-97bb0e0923a2/pr_source.lsr/{w}x{h}.{f}",
+						"supportsLayeredImage": true,
+						"joeColor": "b:rgb(0,0,0) p:rgb(249,238,248) s:rgb(245,237,221) t:rgb(199,191,198) q:rgb(196,189,177)"
+					}
+				},
+				"seasonImages": {
+					"coverArt": {
+						"width": 3000,
+						"height": 3000,
+						"url": "https://is2-ssl.mzstatic.com/image/thumb/Video128/v4/a4/f1/f2/a4f1f2cb-e1b7-b681-57c5-461c1dfb51ad/mzl.qvslahif.lsr/{w}x{h}.{f}",
+						"supportsLayeredImage": true,
+						"joeColor": "b:rgb(0,170,235) p:rgb(0,3,12) s:rgb(37,21,20) t:rgb(0,36,56) q:rgb(29,51,63)"
+					},
+					"bannerUberImage": {
+						"width": 4320,
+						"height": 1080,
+						"url": "https://is4-ssl.mzstatic.com/image/thumb/Features128/v4/2b/12/3c/2b123c5d-d03d-d1e2-1b28-29d92f814a88/mzl.phovwroy.png/{w}x{h}sr.{f}",
+						"joeColor": "b:rgb(1,1,0) p:rgb(225,210,174) s:rgb(209,205,194) t:rgb(180,168,139) q:rgb(167,164,155)"
+					}
+				},
+				"episodeNumber": 11,
+				"seasonNumber": 1,
+				"seasonUrl": "https://tv.apple.com/us/season/season-1/umc.cmc.4angunllb6jwdljube67kaesc?showId=umc.cmc.38ljpgdyam8q0ufwla0e3n0g8",
+				"showUrl": "https://tv.apple.com/us/show/frankie-drake-mysteries/umc.cmc.38ljpgdyam8q0ufwla0e3n0g8",
+				"episodeIndex": 10
+			},
+			{
+				"id": "umc.cmc.2es5chtpuuqmlcq59p5gns4b4",
+				"type": "Episode",
+				"isEntitledToPlay": false,
+				"title": "The Old Switcheroo",
+				"description": "An old rival turns up selling antiquities, but Frankie's convinced it's all a scam. Can the team prove it before she takes the money and runs?",
+				"releaseDate": 1537747200000,
+				"ratingValue": 400,
+				"ratingSystemType": "tv",
+				"rating": {
+					"name": "TV_PG",
+					"value": 400,
+					"system": "us_tv",
+					"systemType": "tv",
+					"displayName": "TV-PG"
+				},
+				"images": {
+					"previewFrame": {
+						"width": 1920,
+						"height": 1080,
+						"url": "https://is3-ssl.mzstatic.com/image/thumb/ebgB36K1CZxzilr1orEQSQ/{w}x{h}.{f}",
+						"joeColor": "b:rgb(78,69,52) p:rgb(251,245,229) s:rgb(218,232,213) t:rgb(217,210,194) q:rgb(190,200,181)"
+					},
+					"coverArt16X9": {
+						"width": 1920,
+						"height": 1080,
+						"url": "https://is3-ssl.mzstatic.com/image/thumb/ebgB36K1CZxzilr1orEQSQ/{w}x{h}.{f}",
+						"joeColor": "b:rgb(78,69,52) p:rgb(251,245,229) s:rgb(218,232,213) t:rgb(217,210,194) q:rgb(190,200,181)"
+					}
+				},
+				"url": "https://tv.apple.com/us/episode/the-old-switcheroo/umc.cmc.2es5chtpuuqmlcq59p5gns4b4?showId=umc.cmc.38ljpgdyam8q0ufwla0e3n0g8",
+				"duration": 2460,
+				"seasonId": "umc.cmc.71brjw5vsrgs5lkvwo78dh4dj",
+				"showId": "umc.cmc.38ljpgdyam8q0ufwla0e3n0g8",
+				"showTitle": "Frankie Drake Mysteries",
+				"showImages": {
+					"coverArt": {
+						"width": 3000,
+						"height": 3000,
+						"url": "https://is1-ssl.mzstatic.com/image/thumb/Video113/v4/71/41/5c/71415cb2-6bc6-924c-ebdc-84cc16c216ed/mzl.hcxwizow.lsr/{w}x{h}.{f}",
+						"supportsLayeredImage": true,
+						"joeColor": "b:rgb(0,0,0) p:rgb(253,252,254) s:rgb(250,217,200) t:rgb(202,201,203) q:rgb(200,173,160)"
+					},
+					"keyframe": {
+						"width": 1920,
+						"height": 1080,
+						"url": "https://is1-ssl.mzstatic.com/image/thumb/c-9FYd8AMrUaBbJqeRxzMA/{w}x{h}.{f}",
+						"joeColor": "b:rgb(0,0,0) p:rgb(223,179,126) s:rgb(214,157,91) t:rgb(179,143,101) q:rgb(171,126,73)"
+					},
+					"coverArt16X9": {
+						"width": 3840,
+						"height": 2160,
+						"url": "https://is3-ssl.mzstatic.com/image/thumb/Video113/v4/2a/bc/a9/2abca978-4e08-1ef4-3d78-97bb0e0923a2/pr_source.lsr/{w}x{h}.{f}",
+						"supportsLayeredImage": true,
+						"joeColor": "b:rgb(0,0,0) p:rgb(249,238,248) s:rgb(245,237,221) t:rgb(199,191,198) q:rgb(196,189,177)"
+					}
+				},
+				"seasonImages": {
+					"coverArt": {
+						"width": 3000,
+						"height": 3000,
+						"url": "https://is1-ssl.mzstatic.com/image/thumb/Video113/v4/71/41/5c/71415cb2-6bc6-924c-ebdc-84cc16c216ed/mzl.hcxwizow.lsr/{w}x{h}.{f}",
+						"supportsLayeredImage": true,
+						"joeColor": "b:rgb(0,0,0) p:rgb(253,252,254) s:rgb(250,217,200) t:rgb(202,201,203) q:rgb(200,173,160)"
+					},
+					"bannerUberImage": {
+						"width": 4320,
+						"height": 1080,
+						"url": "https://is5-ssl.mzstatic.com/image/thumb/Features113/v4/98/a1/39/98a1394d-e7e4-4db5-8d63-16d427304527/mzl.kezlcawy.png/{w}x{h}sr.{f}",
+						"joeColor": "b:rgb(0,0,0) p:rgb(255,202,102) s:rgb(244,164,137) t:rgb(203,161,81) q:rgb(195,131,109)"
+					}
+				},
+				"episodeNumber": 1,
+				"seasonNumber": 2,
+				"seasonUrl": "https://tv.apple.com/us/season/season-2/umc.cmc.71brjw5vsrgs5lkvwo78dh4dj?showId=umc.cmc.38ljpgdyam8q0ufwla0e3n0g8",
+				"showUrl": "https://tv.apple.com/us/show/frankie-drake-mysteries/umc.cmc.38ljpgdyam8q0ufwla0e3n0g8",
+				"episodeIndex": 11
+			},
+			{
+				"id": "umc.cmc.6ruidf9yrblcmcegv3fa9xcwr",
+				"type": "Episode",
+				"isEntitledToPlay": false,
+				"title": "Last Dance",
+				"description": "The team investigates a kidnapping gone wrong at the Palais Royale. They learn the victim is gravely ill and race to find him and save his life.",
+				"releaseDate": 1538352000000,
+				"ratingValue": 400,
+				"ratingSystemType": "tv",
+				"rating": {
+					"name": "TV_PG",
+					"value": 400,
+					"system": "us_tv",
+					"systemType": "tv",
+					"displayName": "TV-PG"
+				},
+				"images": {
+					"previewFrame": {
+						"width": 1920,
+						"height": 1080,
+						"url": "https://is1-ssl.mzstatic.com/image/thumb/XKAcURTm3bv9Aj5YA-piXw/{w}x{h}.{f}",
+						"joeColor": "b:rgb(36,30,13) p:rgb(242,234,203) s:rgb(201,177,154) t:rgb(201,193,165) q:rgb(167,147,126)"
+					},
+					"coverArt16X9": {
+						"width": 1920,
+						"height": 1080,
+						"url": "https://is1-ssl.mzstatic.com/image/thumb/XKAcURTm3bv9Aj5YA-piXw/{w}x{h}.{f}",
+						"joeColor": "b:rgb(36,30,13) p:rgb(242,234,203) s:rgb(201,177,154) t:rgb(201,193,165) q:rgb(167,147,126)"
+					}
+				},
+				"url": "https://tv.apple.com/us/episode/last-dance/umc.cmc.6ruidf9yrblcmcegv3fa9xcwr?showId=umc.cmc.38ljpgdyam8q0ufwla0e3n0g8",
+				"duration": 2460,
+				"seasonId": "umc.cmc.71brjw5vsrgs5lkvwo78dh4dj",
+				"showId": "umc.cmc.38ljpgdyam8q0ufwla0e3n0g8",
+				"showTitle": "Frankie Drake Mysteries",
+				"showImages": {
+					"coverArt": {
+						"width": 3000,
+						"height": 3000,
+						"url": "https://is1-ssl.mzstatic.com/image/thumb/Video113/v4/71/41/5c/71415cb2-6bc6-924c-ebdc-84cc16c216ed/mzl.hcxwizow.lsr/{w}x{h}.{f}",
+						"supportsLayeredImage": true,
+						"joeColor": "b:rgb(0,0,0) p:rgb(253,252,254) s:rgb(250,217,200) t:rgb(202,201,203) q:rgb(200,173,160)"
+					},
+					"keyframe": {
+						"width": 1920,
+						"height": 1080,
+						"url": "https://is1-ssl.mzstatic.com/image/thumb/c-9FYd8AMrUaBbJqeRxzMA/{w}x{h}.{f}",
+						"joeColor": "b:rgb(0,0,0) p:rgb(223,179,126) s:rgb(214,157,91) t:rgb(179,143,101) q:rgb(171,126,73)"
+					},
+					"coverArt16X9": {
+						"width": 3840,
+						"height": 2160,
+						"url": "https://is3-ssl.mzstatic.com/image/thumb/Video113/v4/2a/bc/a9/2abca978-4e08-1ef4-3d78-97bb0e0923a2/pr_source.lsr/{w}x{h}.{f}",
+						"supportsLayeredImage": true,
+						"joeColor": "b:rgb(0,0,0) p:rgb(249,238,248) s:rgb(245,237,221) t:rgb(199,191,198) q:rgb(196,189,177)"
+					}
+				},
+				"seasonImages": {
+					"coverArt": {
+						"width": 3000,
+						"height": 3000,
+						"url": "https://is1-ssl.mzstatic.com/image/thumb/Video113/v4/71/41/5c/71415cb2-6bc6-924c-ebdc-84cc16c216ed/mzl.hcxwizow.lsr/{w}x{h}.{f}",
+						"supportsLayeredImage": true,
+						"joeColor": "b:rgb(0,0,0) p:rgb(253,252,254) s:rgb(250,217,200) t:rgb(202,201,203) q:rgb(200,173,160)"
+					},
+					"bannerUberImage": {
+						"width": 4320,
+						"height": 1080,
+						"url": "https://is5-ssl.mzstatic.com/image/thumb/Features113/v4/98/a1/39/98a1394d-e7e4-4db5-8d63-16d427304527/mzl.kezlcawy.png/{w}x{h}sr.{f}",
+						"joeColor": "b:rgb(0,0,0) p:rgb(255,202,102) s:rgb(244,164,137) t:rgb(203,161,81) q:rgb(195,131,109)"
+					}
+				},
+				"episodeNumber": 2,
+				"seasonNumber": 2,
+				"seasonUrl": "https://tv.apple.com/us/season/season-2/umc.cmc.71brjw5vsrgs5lkvwo78dh4dj?showId=umc.cmc.38ljpgdyam8q0ufwla0e3n0g8",
+				"showUrl": "https://tv.apple.com/us/show/frankie-drake-mysteries/umc.cmc.38ljpgdyam8q0ufwla0e3n0g8",
+				"episodeIndex": 12
+			},
+			{
+				"id": "umc.cmc.5e7mwjyubhrp0vzop16fcei18",
+				"type": "Episode",
+				"isEntitledToPlay": false,
+				"title": "Radio Daze",
+				"description": "Mary is acting in a radio drama, but when she realizes the play is a cover for a heist, she must find a way to warn Frankie.",
+				"releaseDate": 1538956800000,
+				"ratingValue": 400,
+				"ratingSystemType": "tv",
+				"rating": {
+					"name": "TV_PG",
+					"value": 400,
+					"system": "us_tv",
+					"systemType": "tv",
+					"displayName": "TV-PG"
+				},
+				"images": {
+					"previewFrame": {
+						"width": 1920,
+						"height": 1080,
+						"url": "https://is4-ssl.mzstatic.com/image/thumb/a_y2AW0OnrmDDs3LIFbINw/{w}x{h}.{f}",
+						"joeColor": "b:rgb(18,29,20) p:rgb(208,185,149) s:rgb(231,178,110) t:rgb(170,154,123) q:rgb(188,148,92)"
+					},
+					"coverArt16X9": {
+						"width": 1920,
+						"height": 1080,
+						"url": "https://is4-ssl.mzstatic.com/image/thumb/a_y2AW0OnrmDDs3LIFbINw/{w}x{h}.{f}",
+						"joeColor": "b:rgb(18,29,20) p:rgb(208,185,149) s:rgb(231,178,110) t:rgb(170,154,123) q:rgb(188,148,92)"
+					}
+				},
+				"url": "https://tv.apple.com/us/episode/radio-daze/umc.cmc.5e7mwjyubhrp0vzop16fcei18?showId=umc.cmc.38ljpgdyam8q0ufwla0e3n0g8",
+				"duration": 2460,
+				"seasonId": "umc.cmc.71brjw5vsrgs5lkvwo78dh4dj",
+				"showId": "umc.cmc.38ljpgdyam8q0ufwla0e3n0g8",
+				"showTitle": "Frankie Drake Mysteries",
+				"showImages": {
+					"coverArt": {
+						"width": 3000,
+						"height": 3000,
+						"url": "https://is1-ssl.mzstatic.com/image/thumb/Video113/v4/71/41/5c/71415cb2-6bc6-924c-ebdc-84cc16c216ed/mzl.hcxwizow.lsr/{w}x{h}.{f}",
+						"supportsLayeredImage": true,
+						"joeColor": "b:rgb(0,0,0) p:rgb(253,252,254) s:rgb(250,217,200) t:rgb(202,201,203) q:rgb(200,173,160)"
+					},
+					"keyframe": {
+						"width": 1920,
+						"height": 1080,
+						"url": "https://is1-ssl.mzstatic.com/image/thumb/c-9FYd8AMrUaBbJqeRxzMA/{w}x{h}.{f}",
+						"joeColor": "b:rgb(0,0,0) p:rgb(223,179,126) s:rgb(214,157,91) t:rgb(179,143,101) q:rgb(171,126,73)"
+					},
+					"coverArt16X9": {
+						"width": 3840,
+						"height": 2160,
+						"url": "https://is3-ssl.mzstatic.com/image/thumb/Video113/v4/2a/bc/a9/2abca978-4e08-1ef4-3d78-97bb0e0923a2/pr_source.lsr/{w}x{h}.{f}",
+						"supportsLayeredImage": true,
+						"joeColor": "b:rgb(0,0,0) p:rgb(249,238,248) s:rgb(245,237,221) t:rgb(199,191,198) q:rgb(196,189,177)"
+					}
+				},
+				"seasonImages": {
+					"coverArt": {
+						"width": 3000,
+						"height": 3000,
+						"url": "https://is1-ssl.mzstatic.com/image/thumb/Video113/v4/71/41/5c/71415cb2-6bc6-924c-ebdc-84cc16c216ed/mzl.hcxwizow.lsr/{w}x{h}.{f}",
+						"supportsLayeredImage": true,
+						"joeColor": "b:rgb(0,0,0) p:rgb(253,252,254) s:rgb(250,217,200) t:rgb(202,201,203) q:rgb(200,173,160)"
+					},
+					"bannerUberImage": {
+						"width": 4320,
+						"height": 1080,
+						"url": "https://is5-ssl.mzstatic.com/image/thumb/Features113/v4/98/a1/39/98a1394d-e7e4-4db5-8d63-16d427304527/mzl.kezlcawy.png/{w}x{h}sr.{f}",
+						"joeColor": "b:rgb(0,0,0) p:rgb(255,202,102) s:rgb(244,164,137) t:rgb(203,161,81) q:rgb(195,131,109)"
+					}
+				},
+				"episodeNumber": 3,
+				"seasonNumber": 2,
+				"seasonUrl": "https://tv.apple.com/us/season/season-2/umc.cmc.71brjw5vsrgs5lkvwo78dh4dj?showId=umc.cmc.38ljpgdyam8q0ufwla0e3n0g8",
+				"showUrl": "https://tv.apple.com/us/show/frankie-drake-mysteries/umc.cmc.38ljpgdyam8q0ufwla0e3n0g8",
+				"episodeIndex": 13
+			},
+			{
+				"id": "umc.cmc.5dkpndeiulympf0rb2e1gzmsv",
+				"type": "Episode",
+				"isEntitledToPlay": false,
+				"title": "Emancipation Day",
+				"description": "When donations are taken from a colored girls' orphanage, civil rights hero Marcus Garvey hires the team to catch the thief and find the cash.",
+				"releaseDate": 1538956800000,
+				"ratingValue": 400,
+				"ratingSystemType": "tv",
+				"rating": {
+					"name": "TV_PG",
+					"value": 400,
+					"system": "us_tv",
+					"systemType": "tv",
+					"displayName": "TV-PG"
+				},
+				"images": {
+					"previewFrame": {
+						"width": 1920,
+						"height": 1080,
+						"url": "https://is3-ssl.mzstatic.com/image/thumb/RwPzuXnW-ZOFVkQ6OqSreQ/{w}x{h}.{f}",
+						"joeColor": "b:rgb(30,30,22) p:rgb(207,223,215) s:rgb(184,217,205) t:rgb(172,184,176) q:rgb(153,179,169)"
+					},
+					"coverArt16X9": {
+						"width": 1920,
+						"height": 1080,
+						"url": "https://is3-ssl.mzstatic.com/image/thumb/RwPzuXnW-ZOFVkQ6OqSreQ/{w}x{h}.{f}",
+						"joeColor": "b:rgb(30,30,22) p:rgb(207,223,215) s:rgb(184,217,205) t:rgb(172,184,176) q:rgb(153,179,169)"
+					}
+				},
+				"url": "https://tv.apple.com/us/episode/emancipation-day/umc.cmc.5dkpndeiulympf0rb2e1gzmsv?showId=umc.cmc.38ljpgdyam8q0ufwla0e3n0g8",
+				"duration": 2460,
+				"seasonId": "umc.cmc.71brjw5vsrgs5lkvwo78dh4dj",
+				"showId": "umc.cmc.38ljpgdyam8q0ufwla0e3n0g8",
+				"showTitle": "Frankie Drake Mysteries",
+				"showImages": {
+					"coverArt": {
+						"width": 3000,
+						"height": 3000,
+						"url": "https://is1-ssl.mzstatic.com/image/thumb/Video113/v4/71/41/5c/71415cb2-6bc6-924c-ebdc-84cc16c216ed/mzl.hcxwizow.lsr/{w}x{h}.{f}",
+						"supportsLayeredImage": true,
+						"joeColor": "b:rgb(0,0,0) p:rgb(253,252,254) s:rgb(250,217,200) t:rgb(202,201,203) q:rgb(200,173,160)"
+					},
+					"keyframe": {
+						"width": 1920,
+						"height": 1080,
+						"url": "https://is1-ssl.mzstatic.com/image/thumb/c-9FYd8AMrUaBbJqeRxzMA/{w}x{h}.{f}",
+						"joeColor": "b:rgb(0,0,0) p:rgb(223,179,126) s:rgb(214,157,91) t:rgb(179,143,101) q:rgb(171,126,73)"
+					},
+					"coverArt16X9": {
+						"width": 3840,
+						"height": 2160,
+						"url": "https://is3-ssl.mzstatic.com/image/thumb/Video113/v4/2a/bc/a9/2abca978-4e08-1ef4-3d78-97bb0e0923a2/pr_source.lsr/{w}x{h}.{f}",
+						"supportsLayeredImage": true,
+						"joeColor": "b:rgb(0,0,0) p:rgb(249,238,248) s:rgb(245,237,221) t:rgb(199,191,198) q:rgb(196,189,177)"
+					}
+				},
+				"seasonImages": {
+					"coverArt": {
+						"width": 3000,
+						"height": 3000,
+						"url": "https://is1-ssl.mzstatic.com/image/thumb/Video113/v4/71/41/5c/71415cb2-6bc6-924c-ebdc-84cc16c216ed/mzl.hcxwizow.lsr/{w}x{h}.{f}",
+						"supportsLayeredImage": true,
+						"joeColor": "b:rgb(0,0,0) p:rgb(253,252,254) s:rgb(250,217,200) t:rgb(202,201,203) q:rgb(200,173,160)"
+					},
+					"bannerUberImage": {
+						"width": 4320,
+						"height": 1080,
+						"url": "https://is5-ssl.mzstatic.com/image/thumb/Features113/v4/98/a1/39/98a1394d-e7e4-4db5-8d63-16d427304527/mzl.kezlcawy.png/{w}x{h}sr.{f}",
+						"joeColor": "b:rgb(0,0,0) p:rgb(255,202,102) s:rgb(244,164,137) t:rgb(203,161,81) q:rgb(195,131,109)"
+					}
+				},
+				"episodeNumber": 4,
+				"seasonNumber": 2,
+				"seasonUrl": "https://tv.apple.com/us/season/season-2/umc.cmc.71brjw5vsrgs5lkvwo78dh4dj?showId=umc.cmc.38ljpgdyam8q0ufwla0e3n0g8",
+				"showUrl": "https://tv.apple.com/us/show/frankie-drake-mysteries/umc.cmc.38ljpgdyam8q0ufwla0e3n0g8",
+				"episodeIndex": 14
+			},
+			{
+				"id": "umc.cmc.4fh1fxdxb3j6hromm344400ax",
+				"type": "Episode",
+				"isEntitledToPlay": false,
+				"title": "Dressed to Kill",
+				"description": "When famed French designer Coco Chanel is the target of a brazen assassination attempt, Drake Private Detectives are hired to protect her.",
+				"releaseDate": 1540166400000,
+				"ratingValue": 400,
+				"ratingSystemType": "tv",
+				"rating": {
+					"name": "TV_PG",
+					"value": 400,
+					"system": "us_tv",
+					"systemType": "tv",
+					"displayName": "TV-PG"
+				},
+				"images": {
+					"previewFrame": {
+						"width": 1920,
+						"height": 1080,
+						"url": "https://is2-ssl.mzstatic.com/image/thumb/Lz3xi40DEvt3Sm-vom5l5A/{w}x{h}.{f}",
+						"joeColor": "b:rgb(0,0,0) p:rgb(229,202,165) s:rgb(200,175,151) t:rgb(183,162,132) q:rgb(160,140,120)"
+					},
+					"coverArt16X9": {
+						"width": 1920,
+						"height": 1080,
+						"url": "https://is2-ssl.mzstatic.com/image/thumb/Lz3xi40DEvt3Sm-vom5l5A/{w}x{h}.{f}",
+						"joeColor": "b:rgb(0,0,0) p:rgb(229,202,165) s:rgb(200,175,151) t:rgb(183,162,132) q:rgb(160,140,120)"
+					}
+				},
+				"url": "https://tv.apple.com/us/episode/dressed-to-kill/umc.cmc.4fh1fxdxb3j6hromm344400ax?showId=umc.cmc.38ljpgdyam8q0ufwla0e3n0g8",
+				"duration": 2460,
+				"seasonId": "umc.cmc.71brjw5vsrgs5lkvwo78dh4dj",
+				"showId": "umc.cmc.38ljpgdyam8q0ufwla0e3n0g8",
+				"showTitle": "Frankie Drake Mysteries",
+				"showImages": {
+					"coverArt": {
+						"width": 3000,
+						"height": 3000,
+						"url": "https://is1-ssl.mzstatic.com/image/thumb/Video113/v4/71/41/5c/71415cb2-6bc6-924c-ebdc-84cc16c216ed/mzl.hcxwizow.lsr/{w}x{h}.{f}",
+						"supportsLayeredImage": true,
+						"joeColor": "b:rgb(0,0,0) p:rgb(253,252,254) s:rgb(250,217,200) t:rgb(202,201,203) q:rgb(200,173,160)"
+					},
+					"keyframe": {
+						"width": 1920,
+						"height": 1080,
+						"url": "https://is1-ssl.mzstatic.com/image/thumb/c-9FYd8AMrUaBbJqeRxzMA/{w}x{h}.{f}",
+						"joeColor": "b:rgb(0,0,0) p:rgb(223,179,126) s:rgb(214,157,91) t:rgb(179,143,101) q:rgb(171,126,73)"
+					},
+					"coverArt16X9": {
+						"width": 3840,
+						"height": 2160,
+						"url": "https://is3-ssl.mzstatic.com/image/thumb/Video113/v4/2a/bc/a9/2abca978-4e08-1ef4-3d78-97bb0e0923a2/pr_source.lsr/{w}x{h}.{f}",
+						"supportsLayeredImage": true,
+						"joeColor": "b:rgb(0,0,0) p:rgb(249,238,248) s:rgb(245,237,221) t:rgb(199,191,198) q:rgb(196,189,177)"
+					}
+				},
+				"seasonImages": {
+					"coverArt": {
+						"width": 3000,
+						"height": 3000,
+						"url": "https://is1-ssl.mzstatic.com/image/thumb/Video113/v4/71/41/5c/71415cb2-6bc6-924c-ebdc-84cc16c216ed/mzl.hcxwizow.lsr/{w}x{h}.{f}",
+						"supportsLayeredImage": true,
+						"joeColor": "b:rgb(0,0,0) p:rgb(253,252,254) s:rgb(250,217,200) t:rgb(202,201,203) q:rgb(200,173,160)"
+					},
+					"bannerUberImage": {
+						"width": 4320,
+						"height": 1080,
+						"url": "https://is5-ssl.mzstatic.com/image/thumb/Features113/v4/98/a1/39/98a1394d-e7e4-4db5-8d63-16d427304527/mzl.kezlcawy.png/{w}x{h}sr.{f}",
+						"joeColor": "b:rgb(0,0,0) p:rgb(255,202,102) s:rgb(244,164,137) t:rgb(203,161,81) q:rgb(195,131,109)"
+					}
+				},
+				"episodeNumber": 5,
+				"seasonNumber": 2,
+				"seasonUrl": "https://tv.apple.com/us/season/season-2/umc.cmc.71brjw5vsrgs5lkvwo78dh4dj?showId=umc.cmc.38ljpgdyam8q0ufwla0e3n0g8",
+				"showUrl": "https://tv.apple.com/us/show/frankie-drake-mysteries/umc.cmc.38ljpgdyam8q0ufwla0e3n0g8",
+				"episodeIndex": 15
+			},
+			{
+				"id": "umc.cmc.2685tp8xb18z1dciyedvspzfe",
+				"type": "Episode",
+				"isEntitledToPlay": false,
+				"title": "Extra Innings",
+				"description": "Frankie suspects sabotage when a baseball player dies mid-game. Her investigation puts her at odds with ruthless mobster Bessie Starkman.",
+				"releaseDate": 1540771200000,
+				"ratingValue": 400,
+				"ratingSystemType": "tv",
+				"rating": {
+					"name": "TV_PG",
+					"value": 400,
+					"system": "us_tv",
+					"systemType": "tv",
+					"displayName": "TV-PG"
+				},
+				"images": {
+					"previewFrame": {
+						"width": 5317,
+						"height": 2991,
+						"url": "https://is5-ssl.mzstatic.com/image/thumb/I9jXerCQrEvugocH5ZAvIg/{w}x{h}.{f}",
+						"joeColor": "b:rgb(227,220,214) p:rgb(33,38,22) s:rgb(38,40,39) t:rgb(72,74,60) q:rgb(76,76,74)"
+					},
+					"coverArt16X9": {
+						"width": 5317,
+						"height": 2991,
+						"url": "https://is5-ssl.mzstatic.com/image/thumb/I9jXerCQrEvugocH5ZAvIg/{w}x{h}.{f}",
+						"joeColor": "b:rgb(227,220,214) p:rgb(33,38,22) s:rgb(38,40,39) t:rgb(72,74,60) q:rgb(76,76,74)"
+					}
+				},
+				"url": "https://tv.apple.com/us/episode/extra-innings/umc.cmc.2685tp8xb18z1dciyedvspzfe?showId=umc.cmc.38ljpgdyam8q0ufwla0e3n0g8",
+				"duration": 2460,
+				"seasonId": "umc.cmc.71brjw5vsrgs5lkvwo78dh4dj",
+				"showId": "umc.cmc.38ljpgdyam8q0ufwla0e3n0g8",
+				"showTitle": "Frankie Drake Mysteries",
+				"showImages": {
+					"coverArt": {
+						"width": 3000,
+						"height": 3000,
+						"url": "https://is1-ssl.mzstatic.com/image/thumb/Video113/v4/71/41/5c/71415cb2-6bc6-924c-ebdc-84cc16c216ed/mzl.hcxwizow.lsr/{w}x{h}.{f}",
+						"supportsLayeredImage": true,
+						"joeColor": "b:rgb(0,0,0) p:rgb(253,252,254) s:rgb(250,217,200) t:rgb(202,201,203) q:rgb(200,173,160)"
+					},
+					"keyframe": {
+						"width": 1920,
+						"height": 1080,
+						"url": "https://is1-ssl.mzstatic.com/image/thumb/c-9FYd8AMrUaBbJqeRxzMA/{w}x{h}.{f}",
+						"joeColor": "b:rgb(0,0,0) p:rgb(223,179,126) s:rgb(214,157,91) t:rgb(179,143,101) q:rgb(171,126,73)"
+					},
+					"coverArt16X9": {
+						"width": 3840,
+						"height": 2160,
+						"url": "https://is3-ssl.mzstatic.com/image/thumb/Video113/v4/2a/bc/a9/2abca978-4e08-1ef4-3d78-97bb0e0923a2/pr_source.lsr/{w}x{h}.{f}",
+						"supportsLayeredImage": true,
+						"joeColor": "b:rgb(0,0,0) p:rgb(249,238,248) s:rgb(245,237,221) t:rgb(199,191,198) q:rgb(196,189,177)"
+					}
+				},
+				"seasonImages": {
+					"coverArt": {
+						"width": 3000,
+						"height": 3000,
+						"url": "https://is1-ssl.mzstatic.com/image/thumb/Video113/v4/71/41/5c/71415cb2-6bc6-924c-ebdc-84cc16c216ed/mzl.hcxwizow.lsr/{w}x{h}.{f}",
+						"supportsLayeredImage": true,
+						"joeColor": "b:rgb(0,0,0) p:rgb(253,252,254) s:rgb(250,217,200) t:rgb(202,201,203) q:rgb(200,173,160)"
+					},
+					"bannerUberImage": {
+						"width": 4320,
+						"height": 1080,
+						"url": "https://is5-ssl.mzstatic.com/image/thumb/Features113/v4/98/a1/39/98a1394d-e7e4-4db5-8d63-16d427304527/mzl.kezlcawy.png/{w}x{h}sr.{f}",
+						"joeColor": "b:rgb(0,0,0) p:rgb(255,202,102) s:rgb(244,164,137) t:rgb(203,161,81) q:rgb(195,131,109)"
+					}
+				},
+				"episodeNumber": 6,
+				"seasonNumber": 2,
+				"seasonUrl": "https://tv.apple.com/us/season/season-2/umc.cmc.71brjw5vsrgs5lkvwo78dh4dj?showId=umc.cmc.38ljpgdyam8q0ufwla0e3n0g8",
+				"showUrl": "https://tv.apple.com/us/show/frankie-drake-mysteries/umc.cmc.38ljpgdyam8q0ufwla0e3n0g8",
+				"episodeIndex": 16
+			}
+		],
+		"version": "7ec332b9",
+		"isWatchlistable": true,
+		"isWatchlisted": false,
+		"seasonSummaries": [
+			{
+				"label": "Season 1",
+				"episodeCount": 11
+			},
+			{
+				"label": "Season 2",
+				"episodeCount": 10
+			}
+		],
+		"totalEpisodeCount": 21,
+		"seasons": [
+			{
+				"id": "umc.cmc.4angunllb6jwdljube67kaesc",
+				"type": "Season",
+				"isEntitledToPlay": false,
+				"title": "Frankie Drake Mysteries",
+				"ratingValue": 500,
+				"ratingSystemType": "tv",
+				"rating": {
+					"name": "TV_14",
+					"value": 500,
+					"system": "us_tv",
+					"systemType": "tv",
+					"displayName": "TV-14"
+				},
+				"images": {
+					"coverArt": {
+						"width": 3000,
+						"height": 3000,
+						"url": "https://is2-ssl.mzstatic.com/image/thumb/Video128/v4/a4/f1/f2/a4f1f2cb-e1b7-b681-57c5-461c1dfb51ad/mzl.qvslahif.lsr/{w}x{h}.{f}",
+						"supportsLayeredImage": true,
+						"joeColor": "b:rgb(0,170,235) p:rgb(0,3,12) s:rgb(37,21,20) t:rgb(0,36,56) q:rgb(29,51,63)"
+					},
+					"singleColorContentLogo": {
+						"width": 1662,
+						"height": 1259,
+						"url": "https://is1-ssl.mzstatic.com/image/thumb/Features113/v4/65/60/c1/6560c124-7565-f1a6-dabc-2cc37a25ca3b/snm5228753051486730976.png/{w}x{h}.{f}",
+						"joeColor": "b:rgb(0,0,0) p:rgb(255,255,255) s:rgb(202,202,202) t:rgb(203,203,203) q:rgb(162,162,162)"
+					},
+					"fullColorContentLogo": {
+						"width": 1662,
+						"height": 1259,
+						"url": "https://is1-ssl.mzstatic.com/image/thumb/Features123/v4/d6/b1/9f/d6b19f22-0307-06d1-d703-9496d37f75fa/pcl6602046211594951666.png/{w}x{h}.{f}",
+						"joeColor": "b:rgb(0,0,0) p:rgb(242,242,242) s:rgb(229,229,229) t:rgb(193,193,193) q:rgb(183,183,183)"
+					},
+					"fullScreenBackground": {
+						"width": 4320,
+						"height": 2160,
+						"url": "https://is3-ssl.mzstatic.com/image/thumb/Features118/v4/59/58/ce/5958ced2-7cb4-40b4-6467-bf5a77333b97/temp..vakyyvei.png/{w}x{h}sr.{f}",
+						"joeColor": "b:rgb(0,1,0) p:rgb(226,185,140) s:rgb(214,163,118) t:rgb(180,148,112) q:rgb(171,130,95)"
+					},
+					"bannerUberImage": {
+						"width": 4320,
+						"height": 1080,
+						"url": "https://is4-ssl.mzstatic.com/image/thumb/Features128/v4/2b/12/3c/2b123c5d-d03d-d1e2-1b28-29d92f814a88/mzl.phovwroy.png/{w}x{h}sr.{f}",
+						"joeColor": "b:rgb(1,1,0) p:rgb(225,210,174) s:rgb(209,205,194) t:rgb(180,168,139) q:rgb(167,164,155)"
+					},
+					"contentLogo": {
+						"width": 2400,
+						"height": 390,
+						"url": "https://is5-ssl.mzstatic.com/image/thumb/Features123/v4/90/86/f4/9086f4c5-0234-4201-f8c9-ac4c731360c3/temp..mgsxhcyb.png/{w}x{h}.{f}",
+						"joeColor": "b:rgb(0,0,0) p:rgb(255,255,255) s:rgb(199,199,199) t:rgb(203,203,203) q:rgb(159,159,159)"
+					},
+					"coverArt16X9": {
+						"width": 1712,
+						"height": 964,
+						"url": "https://is2-ssl.mzstatic.com/image/thumb/Video124/v4/63/3e/14/633e144e-9e60-cbcf-fbbd-f85f0c39ebb7/1444794925-WW-AMP_SF.lsr/{w}x{h}.{f}",
+						"supportsLayeredImage": true,
+						"joeColor": "b:rgb(25,23,25) p:rgb(173,212,206) s:rgb(166,202,198) t:rgb(144,174,170) q:rgb(138,166,163)"
+					}
+				},
+				"url": "https://tv.apple.com/us/season/frankie-drake-mysteries/umc.cmc.4angunllb6jwdljube67kaesc?showId=umc.cmc.38ljpgdyam8q0ufwla0e3n0g8",
+				"seasonNumber": 1,
+				"showId": "umc.cmc.38ljpgdyam8q0ufwla0e3n0g8",
+				"showTitle": "Frankie Drake Mysteries",
+				"showImages": {
+					"coverArt": {
+						"width": 3000,
+						"height": 3000,
+						"url": "https://is1-ssl.mzstatic.com/image/thumb/Video113/v4/71/41/5c/71415cb2-6bc6-924c-ebdc-84cc16c216ed/mzl.hcxwizow.lsr/{w}x{h}.{f}",
+						"supportsLayeredImage": true,
+						"joeColor": "b:rgb(0,0,0) p:rgb(253,252,254) s:rgb(250,217,200) t:rgb(202,201,203) q:rgb(200,173,160)"
+					}
+				}
+			},
+			{
+				"id": "umc.cmc.71brjw5vsrgs5lkvwo78dh4dj",
+				"type": "Season",
+				"isEntitledToPlay": false,
+				"title": "Frankie Drake Mysteries",
+				"ratingValue": 500,
+				"ratingSystemType": "tv",
+				"rating": {
+					"name": "TV_14",
+					"value": 500,
+					"system": "us_tv",
+					"systemType": "tv",
+					"displayName": "TV-14"
+				},
+				"images": {
+					"coverArt": {
+						"width": 3000,
+						"height": 3000,
+						"url": "https://is1-ssl.mzstatic.com/image/thumb/Video113/v4/71/41/5c/71415cb2-6bc6-924c-ebdc-84cc16c216ed/mzl.hcxwizow.lsr/{w}x{h}.{f}",
+						"supportsLayeredImage": true,
+						"joeColor": "b:rgb(0,0,0) p:rgb(253,252,254) s:rgb(250,217,200) t:rgb(202,201,203) q:rgb(200,173,160)"
+					},
+					"singleColorContentLogo": {
+						"width": 4320,
+						"height": 772,
+						"url": "https://is4-ssl.mzstatic.com/image/thumb/Features113/v4/ed/69/e7/ed69e768-6dfd-7224-204d-5b28301b3196/cjz725624723400504178.png/{w}x{h}.{f}",
+						"joeColor": "b:rgb(0,0,0) p:rgb(255,255,255) s:rgb(255,255,255) t:rgb(203,203,203) q:rgb(203,203,203)"
+					},
+					"fullColorContentLogo": {
+						"width": 4308,
+						"height": 771,
+						"url": "https://is3-ssl.mzstatic.com/image/thumb/Features123/v4/40/a4/23/40a42389-366f-bf14-23d9-43480de4b0f4/lai16947670421323879669.png/{w}x{h}.{f}",
+						"joeColor": "b:rgb(0,0,0) p:rgb(255,255,255) s:rgb(214,176,67) t:rgb(203,203,203) q:rgb(171,140,54)"
+					},
+					"centeredFullScreenBackgroundImage": {
+						"width": 4320,
+						"height": 3240,
+						"url": "https://is5-ssl.mzstatic.com/image/thumb/Features123/v4/3b/ae/48/3bae4829-d31f-4c20-f72b-92f29883c732/mzl.pppoiurw.png/{w}x{h}{c}.{f}",
+						"joeColor": "b:rgb(0,0,0) p:rgb(251,217,193) s:rgb(241,188,161) t:rgb(201,174,154) q:rgb(192,150,129)"
+					},
+					"centeredFullScreenBackgroundSmallImage": {
+						"width": 1680,
+						"height": 3636,
+						"url": "https://is3-ssl.mzstatic.com/image/thumb/Features123/v4/32/59/be/3259be78-eb35-de17-0018-76eb8b561fa6/mzl.gwvtober.png/{w}x{h}{c}.{f}",
+						"joeColor": "b:rgb(0,0,0) p:rgb(248,228,207) s:rgb(218,148,131) t:rgb(198,182,166) q:rgb(174,119,104)"
+					},
+					"fullScreenBackground": {
+						"width": 4320,
+						"height": 2160,
+						"url": "https://is4-ssl.mzstatic.com/image/thumb/Features113/v4/12/4b/61/124b61ab-9dcc-209d-e76d-1a77578fed88/temp..jmvdtcof.png/{w}x{h}sr.{f}",
+						"joeColor": "b:rgb(0,0,0) p:rgb(236,150,119) s:rgb(204,158,158) t:rgb(189,120,95) q:rgb(163,126,126)"
+					},
+					"bannerUberImage": {
+						"width": 4320,
+						"height": 1080,
+						"url": "https://is5-ssl.mzstatic.com/image/thumb/Features113/v4/98/a1/39/98a1394d-e7e4-4db5-8d63-16d427304527/mzl.kezlcawy.png/{w}x{h}sr.{f}",
+						"joeColor": "b:rgb(0,0,0) p:rgb(255,202,102) s:rgb(244,164,137) t:rgb(203,161,81) q:rgb(195,131,109)"
+					},
+					"contentLogo": {
+						"width": 2400,
+						"height": 390,
+						"url": "https://is2-ssl.mzstatic.com/image/thumb/Features113/v4/c3/9a/68/c39a68fb-b328-a38e-5a55-218bcd0c0cab/temp..qhvwqesf.png/{w}x{h}.{f}",
+						"joeColor": "b:rgb(0,0,0) p:rgb(255,255,255) s:rgb(199,199,199) t:rgb(203,203,203) q:rgb(159,159,159)"
+					},
+					"coverArt16X9": {
+						"width": 3840,
+						"height": 2160,
+						"url": "https://is3-ssl.mzstatic.com/image/thumb/Video113/v4/2a/bc/a9/2abca978-4e08-1ef4-3d78-97bb0e0923a2/pr_source.lsr/{w}x{h}.{f}",
+						"supportsLayeredImage": true,
+						"joeColor": "b:rgb(0,0,0) p:rgb(249,238,248) s:rgb(245,237,221) t:rgb(199,191,198) q:rgb(196,189,177)"
+					}
+				},
+				"url": "https://tv.apple.com/us/season/frankie-drake-mysteries/umc.cmc.71brjw5vsrgs5lkvwo78dh4dj?showId=umc.cmc.38ljpgdyam8q0ufwla0e3n0g8",
+				"seasonNumber": 2,
+				"showId": "umc.cmc.38ljpgdyam8q0ufwla0e3n0g8",
+				"showTitle": "Frankie Drake Mysteries",
+				"showImages": {
+					"coverArt": {
+						"width": 3000,
+						"height": 3000,
+						"url": "https://is1-ssl.mzstatic.com/image/thumb/Video113/v4/71/41/5c/71415cb2-6bc6-924c-ebdc-84cc16c216ed/mzl.hcxwizow.lsr/{w}x{h}.{f}",
+						"supportsLayeredImage": true,
+						"joeColor": "b:rgb(0,0,0) p:rgb(253,252,254) s:rgb(250,217,200) t:rgb(202,201,203) q:rgb(200,173,160)"
+					}
+				}
+			}
+		],
+		"playables": {
+			"umc.cmc.2es5chtpuuqmlcq59p5gns4b4": [
+				{
+					"id": "tvs.sbd.9001:1472607562",
+					"title": "The Old Switcheroo",
+					"images": {
+						"coverArt": {
+							"width": 1920,
+							"height": 1080,
+							"url": "https://is5-ssl.mzstatic.com/image/thumb/Video123/v4/d6/7e/54/d67e5412-f04b-9aec-e8bd-abbb9155a3c9/Job994bcbae-735c-435e-beeb-1cd95a5dc2ec-103461709-PreviewImage_preview_image_8000_video_sdr-Time1562897248592.png/{w}x{h}.{f}",
+							"joeColor": "b:rgb(79,99,93) p:rgb(247,249,225) s:rgb(237,239,238) t:rgb(214,219,199) q:rgb(205,211,209)"
+						},
+						"coverArt16X9": {
+							"width": 1920,
+							"height": 1080,
+							"url": "https://is5-ssl.mzstatic.com/image/thumb/Video123/v4/d6/7e/54/d67e5412-f04b-9aec-e8bd-abbb9155a3c9/Job994bcbae-735c-435e-beeb-1cd95a5dc2ec-103461709-PreviewImage_preview_image_8000_video_sdr-Time1562897248592.png/{w}x{h}.{f}",
+							"joeColor": "b:rgb(79,99,93) p:rgb(247,249,225) s:rgb(237,239,238) t:rgb(214,219,199) q:rgb(205,211,209)"
+						}
+					},
+					"url": "https://tv.apple.com/us/episode/the-old-switcheroo/umc.cmc.2es5chtpuuqmlcq59p5gns4b4?playableId=tvs.sbd.9001%3A1472607562&showId=umc.cmc.38ljpgdyam8q0ufwla0e3n0g8",
+					"releaseDate": 1537772400000,
+					"type": "Vod",
+					"channelId": "tvs.sbd.9001",
+					"isEntitled": false,
+					"isEntitledToPlayOnDevice": false,
+					"isEntitledToPlay": false,
+					"isConsented": false,
+					"duration": 2580,
+					"ratingValue": 400,
+					"ratingSystemType": "tv",
+					"rating": {
+						"name": "TV_PG",
+						"value": 400,
+						"system": "us_tv",
+						"systemType": "tv",
+						"displayName": "TV-PG"
+					},
+					"contentId": "umc.cmr.its.ep.6uknby1qogyifetsy6zlw188i",
+					"canonicalId": "umc.cmc.2es5chtpuuqmlcq59p5gns4b4",
+					"contentType": "Episode",
+					"externalId": "1472607562",
+					"isItunes": true,
+					"punchoutUrls": {
+						"open": "itmss://itunes.apple.com/us/tv-season/the-old-switcheroo/id1472382102?i=1472607562"
+					},
+					"primaryLocale": {
+						"locale": "en_US",
+						"displayName": "English (United States)"
+					},
+					"closedCaptionedLocales": [
+						{
+							"locale": "en_US",
+							"displayName": "English (United States)"
+						}
+					],
+					"audioTrackFormats": [ "AAC", "Dolby5.1" ],
+					"videoQuality": "HD",
+					"videoColorRange": "SDR",
+					"itunesMediaApiData": {
+						"contentRatingsBySystem": {
+							"us-tv": {
+								"name": "TV-PG",
+								"value": 400,
+								"rank": 4
+							}
+						},
+						"id": "1472607562",
+						"offers": [
+							{
+								"buyParams": "productType=V&price=1990&salableAdamId=1472607562&pricingParameters=HCSD&pg=default",
+								"kind": "buy",
+								"variant": "SD",
+								"priceFormatted": "$1.99",
+								"price": 1.99,
+								"hlsUrl": "https://play.itunes.apple.com/WebObjects/MZPlay.woa/hls/playlist.m3u8?cc=US&a=1472607562&id=60651585&l=en&aec=SD",
+								"capabilities": [ "dolbySurround", "closedCaptioned" ],
+								"durationInMilliseconds": 2626655
+							},
+							{
+								"buyParams": "productType=V&price=2990&salableAdamId=1472607562&pricingParameters=HDBUY&pg=default",
+								"kind": "buy",
+								"variant": "HD",
+								"priceFormatted": "$2.99",
+								"price": 2.99,
+								"hlsUrl": "https://play.itunes.apple.com/WebObjects/MZPlay.woa/hls/playlist.m3u8?cc=US&a=1472607562&id=60651585&l=en&aec=HD",
+								"capabilities": [ "dolbySurround", "closedCaptioned" ],
+								"durationInMilliseconds": 2626655
+							}
+						],
+						"type": "tv-episodes"
+					},
+					"entitlementReason": "Unknown",
+					"isGeoRestricted": false
+				},
+				{
+					"id": "tvs.sbd.10080:e253b485-4909-441b-8d74-494a4abdfeef",
+					"title": "The Old Switcheroo",
+					"images": {
+						"coverArt": {
+							"width": 1920,
+							"height": 1080,
+							"url": "https://is5-ssl.mzstatic.com/image/thumb/OU4_OdRc3l-ug0lAgtYRYA/{w}x{h}.{f}",
+							"joeColor": "b:rgb(148,136,114) p:rgb(10,9,4) s:rgb(31,25,15) t:rgb(37,34,26) q:rgb(55,47,35)"
+						},
+						"coverArt16X9": {
+							"width": 1920,
+							"height": 1080,
+							"url": "https://is5-ssl.mzstatic.com/image/thumb/OU4_OdRc3l-ug0lAgtYRYA/{w}x{h}.{f}",
+							"joeColor": "b:rgb(148,136,114) p:rgb(10,9,4) s:rgb(31,25,15) t:rgb(37,34,26) q:rgb(55,47,35)"
+						}
+					},
+					"releaseDate": 1565568000000,
+					"type": "Vod",
+					"channelId": "tvs.sbd.10080",
+					"isEntitled": false,
+					"isEntitledToPlayOnDevice": false,
+					"isEntitledToPlay": false,
+					"isConsented": false,
+					"duration": 2580,
+					"ratingValue": 400,
+					"ratingSystemType": "tv",
+					"rating": {
+						"name": "TV_PG",
+						"value": 400,
+						"system": "us_tv",
+						"systemType": "tv",
+						"displayName": "TV-PG"
+					},
+					"contentId": "umc.cmr.pb2.ep.7er9acr8huma8cesl1s0r8pul",
+					"canonicalId": "umc.cmc.2es5chtpuuqmlcq59p5gns4b4",
+					"contentType": "Episode",
+					"externalId": "e253b485-4909-441b-8d74-494a4abdfeef",
+					"isItunes": false,
+					"punchoutUrls": {
+						"open": "https://www.pbs.org/video/the-old-switcheroo-xoz6of/?action=open&source=appleuniversalsearch",
+						"play": "https://www.pbs.org/video/the-old-switcheroo-xoz6of/?action=play&source=appleuniversalsearch"
+					},
+					"primaryLocale": {
+						"locale": "en_US",
+						"displayName": "English (United States)"
+					},
+					"closedCaptionedLocales": [
+						{
+							"locale": "en_US",
+							"displayName": "English (United States)"
+						}
+					],
+					"entitlementReason": "Unknown",
+					"isGeoRestricted": false
+				},
+				{
+					"id": "tvs.sbd.12962:amzn1.dv.gti.4cb5f635-d33e-d535-bffb-856b7f4531a3:US",
+					"title": "The Old Switcheroo",
+					"images": {
+						"coverArt": {
+							"width": 1600,
+							"height": 900,
+							"url": "https://is5-ssl.mzstatic.com/image/thumb/coz7xyrfAECESso2XaMc3w/{w}x{h}.{f}",
+							"joeColor": "b:rgb(37,14,8) p:rgb(255,254,251) s:rgb(205,186,167) t:rgb(211,205,202) q:rgb(172,151,135)"
+						},
+						"coverArt16X9": {
+							"width": 1600,
+							"height": 900,
+							"url": "https://is5-ssl.mzstatic.com/image/thumb/coz7xyrfAECESso2XaMc3w/{w}x{h}.{f}",
+							"joeColor": "b:rgb(37,14,8) p:rgb(255,254,251) s:rgb(205,186,167) t:rgb(211,205,202) q:rgb(172,151,135)"
+						}
+					},
+					"releaseDate": 1537747200000,
+					"type": "Vod",
+					"channelId": "tvs.sbd.12962",
+					"isEntitled": false,
+					"isEntitledToPlayOnDevice": false,
+					"isEntitledToPlay": false,
+					"isConsented": false,
+					"duration": 2580,
+					"ratingValue": 400,
+					"ratingSystemType": "tv",
+					"rating": {
+						"name": "TV_PG",
+						"value": 400,
+						"system": "us_tv",
+						"systemType": "tv",
+						"displayName": "TV-PG"
+					},
+					"contentId": "umc.cmr.aus.ep.6hzzgrcs3eh5w4ycxlx268ufe",
+					"canonicalId": "umc.cmc.2es5chtpuuqmlcq59p5gns4b4",
+					"contentType": "Episode",
+					"externalId": "amzn1.dv.gti.4cb5f635-d33e-d535-bffb-856b7f4531a3:US",
+					"isItunes": false,
+					"punchoutUrls": {
+						"open": "aiv://aiv/detail?gti=amzn1.dv.gti.4cb5f635-d33e-d535-bffb-856b7f4531a3&territory=US",
+						"play": "aiv://aiv/watch?gti=amzn1.dv.gti.4cb5f635-d33e-d535-bffb-856b7f4531a3&territory=US&time=auto"
+					},
+					"videoQuality": "HD",
+					"videoColorRange": "SDR",
+					"entitlementReason": "Unknown",
+					"isGeoRestricted": false
+				}
+			]
+		},
+		"selectedEpisodeIndex": 11,
+		"smartEpisodeIndex": 11,
+		"availableChannels": [
+			{
+				"channelId": "tvs.sbd.9001",
+				"seasonNumbers": [ 1, 2 ],
+				"punchoutUrls": {
+					"open": "itmss://itunes.apple.com/us/tv-season/frankie-drake-mysteries-season-2/id1472382102"
+				}
+			},
+			{
+				"channelId": "tvs.sbd.10080",
+				"seasonNumbers": [ 1, 2 ],
+				"punchoutUrls": {
+					"open": "https://www.pbs.org/show/frankie-drake-mysteries/?action=open&source=appleuniversalsearch"
+				}
+			},
+			{
+				"channelId": "tvs.sbd.12962",
+				"seasonNumbers": [ 1, 2 ],
+				"punchoutUrls": {
+					"open": "aiv://aiv/detail?gti=amzn1.dv.gti.c2b28821-2fcc-9654-ac59-29582e871d5a&territory=US",
+					"play": "aiv://aiv/watch?gti=amzn1.dv.gti.c2b28821-2fcc-9654-ac59-29582e871d5a&territory=US&time=auto"
+				}
+			}
+		],
+		"channels": [
+			{
+				"id": "tvs.sbd.10080",
+				"name": "PBS Video",
+				"isSubscribed": false,
+				"isConsented": false,
+				"isInstalled": false,
+				"appBundleIds": [ "org.pbs.playeripad" ],
+				"appAdamIds": [ "398349296" ],
+				"appName": "PBS Video",
+				"appStoreUrl": "https://itunes.apple.com/app/id398349296?mt=8",
+				"appAgeRestrictionRatingValue": 300,
+				"images": {
+					"logoGlyph": {
+						"width": 110,
+						"height": 58,
+						"url": "https://is2-ssl.mzstatic.com/image/thumb/kg-3ONKRWlfevke1eaON3w/{w}x{h}.{f}"
+					},
+					"appIcon": {
+						"width": 1280,
+						"height": 768,
+						"url": "https://is1-ssl.mzstatic.com/image/thumb/Purple113/v4/50/39/b7/5039b7c2-75b7-acc4-dd9b-b8b7338215ec/App_Icon_-_Small-marketing.lsr/{w}x{h}.{f}",
+						"supportsLayeredImage": true
+					},
+					"masterLockupImage": {
+						"width": 4320,
+						"height": 1080,
+						"url": "https://is2-ssl.mzstatic.com/image/thumb/Features71/v4/19/3d/73/193d73f9-ab64-4690-1ace-3e14237d0b11/pr_source.lsr/{w}x{h}sr.{f}",
+						"supportsLayeredImage": true,
+						"joeColor": "b:rgb(0,0,0) p:rgb(123,212,237) s:rgb(70,168,232) t:rgb(98,169,189) q:rgb(56,135,185)"
+					},
+					"heroImage": {
+						"width": 4320,
+						"height": 1080,
+						"url": "https://is2-ssl.mzstatic.com/image/thumb/Features71/v4/19/3d/73/193d73f9-ab64-4690-1ace-3e14237d0b11/pr_source.lsr/{w}x{h}sr.{f}",
+						"supportsLayeredImage": true,
+						"joeColor": "b:rgb(0,0,0) p:rgb(123,212,237) s:rgb(70,168,232) t:rgb(98,169,189) q:rgb(56,135,185)"
+					}
+				},
+				"isWatchlistEnabled": true,
+				"minWatchlistAppVersion": "3.1.2",
+				"isApSubscription": false,
+				"type": "Brand",
+				"url": "https://tv.apple.com/us/channel/pbs-video/tvs.sbd.10080",
+				"shortNote": "The perennial gold standard for intelligent nonfiction, arts, and drama programming.",
+				"shortNoteLines": [ "The perennial gold standard for intelligent nonfiction, arts, and drama programming." ]
+			},
+			{
+				"id": "tvs.sbd.12962",
+				"name": "Prime Video",
+				"isSubscribed": false,
+				"isConsented": false,
+				"isInstalled": false,
+				"appBundleIds": [ "com.amazon.aiv.AIVApp" ],
+				"appAdamIds": [ "545519333" ],
+				"appName": "Amazon Prime Video",
+				"appStoreUrl": "https://itunes.apple.com/app/id545519333?mt=8",
+				"appAgeRestrictionRatingValue": 300,
+				"images": {
+					"logoGlyph": {
+						"width": 110,
+						"height": 58,
+						"url": "https://is3-ssl.mzstatic.com/image/thumb/Yy7rAxOfn38w1NqwAO78Ng/{w}x{h}.{f}"
+					},
+					"appIcon": {
+						"width": 1280,
+						"height": 768,
+						"url": "https://is1-ssl.mzstatic.com/image/thumb/Purple113/v4/a1/4f/80/a14f80d9-4547-7382-5b07-25902a491581/App_Icon_-_Small-marketing.lsr/{w}x{h}.{f}",
+						"supportsLayeredImage": true
+					}
+				},
+				"isWatchlistEnabled": true,
+				"minWatchlistAppVersion": "",
+				"isApSubscription": false,
+				"type": "Brand",
+				"url": "https://tv.apple.com/us/channel/prime-video/tvs.sbd.12962"
+			},
+			{
+				"id": "tvs.sbd.9001",
+				"name": "iTunes",
+				"isSubscribed": false,
+				"isConsented": false,
+				"isInstalled": false,
+				"isFirstParty": true,
+				"isItunes": true,
+				"appBundleIds": [ "com.apple.MobileStore" ],
+				"appAdamIds": [ "915061235" ],
+				"appName": "iTunes Store",
+				"appStoreUrl": "https://itunes.apple.com/app/id915061235?mt=8",
+				"appAgeRestrictionRatingValue": 100,
+				"images": {
+					"logoGlyph": {
+						"width": 110,
+						"height": 58,
+						"url": "https://is4-ssl.mzstatic.com/image/thumb/WhXqsfA-8ecIKNZDdMZqWg/{w}x{h}.{f}"
+					}
+				},
+				"isWatchlistEnabled": true,
+				"minWatchlistAppVersion": "",
+				"isApSubscription": false,
+				"type": "Brand",
+				"url": "https://tv.apple.com/us/channel/itunes/tvs.sbd.9001"
+			}
+		],
+		"showHasPlayProgress": false
+	}
+}

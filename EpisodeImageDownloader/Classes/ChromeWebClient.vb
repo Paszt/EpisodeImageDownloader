@@ -65,7 +65,7 @@ Namespace Infrastructure
             Return PerformRemoteAction(AddressOf MyBase.DownloadString, uri)
         End Function
 
-        Public Shadows Sub DownloadFile(address As String, fileName As String)
+        Public Shadows Sub DownloadFile(address As Uri, fileName As String)
             Dim currentRetry As Integer = 0
             While True
                 Try
@@ -82,8 +82,12 @@ Namespace Infrastructure
                     End If
                 End Try
                 ' Wait to retry the operation.
-                System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1))
+                Threading.Thread.Sleep(TimeSpan.FromSeconds(1))
             End While
+        End Sub
+
+        Public Shadows Sub DownloadFile(address As String, fileName As String)
+            DownloadFile(New Uri(address), fileName)
         End Sub
 
 #Region " Retry on Transient Errors "
@@ -201,6 +205,12 @@ Namespace Infrastructure
                 Return _client.DownloadString(address)
             End Using
         End Function
+
+        Public Shared Sub DownloadFile(address As Uri, fileName As String)
+            Using _client As New ChromeWebClient() With {.AllowAutoRedirect = True}
+                _client.DownloadFile(address, fileName)
+            End Using
+        End Sub
 
         Public Shared Sub DownloadFile(address As String, fileName As String)
             Using _client As New ChromeWebClient() With {.AllowAutoRedirect = True}

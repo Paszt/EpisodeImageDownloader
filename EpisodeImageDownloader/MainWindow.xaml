@@ -15,15 +15,6 @@
     <Grid>
         <TabControl x:Name="MainTabControl"
                     TabStripPlacement="Left">
-            <!--Disney ABC-->
-            <TabItem>
-                <TabItem.Header>
-                    <Image Source="{DynamicResource DisneyABCDrawingImage}"
-                           Height="18"
-                           HorizontalAlignment="Left" />
-                </TabItem.Header>
-                <views:DisneyAbcSelectorView />
-            </TabItem>
             <!--A&E History Lifetime-->
             <TabItem>
                 <TabItem.Header>
@@ -61,6 +52,24 @@
                 </TabItem.Header>
                 <views:AandEView />
             </TabItem>-->
+            <!--Apple TV+-->
+            <TabItem>
+                <TabItem.Header>
+                    <Image Source="{DynamicResource AppleTvPlusDrawingImage}"
+                           Height="18"
+                           HorizontalAlignment="Left" />
+                </TabItem.Header>
+                <views:AppleTvPlusView />
+            </TabItem>
+            <!--Disney ABC-->
+            <TabItem>
+                <TabItem.Header>
+                    <Image Source="{DynamicResource DisneyABCDrawingImage}"
+                           Height="18"
+                           HorizontalAlignment="Left" />
+                </TabItem.Header>
+                <views:DisneyAbcSelectorView />
+            </TabItem>
             <!--BBC--> 
             <TabItem>
                 <TabItem.Header>

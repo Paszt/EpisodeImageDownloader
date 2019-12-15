@@ -94,7 +94,7 @@ Namespace ViewModels
                 }
                 Dim fileSuffix = String.Empty
                 If SeasonNumber.HasValue Then
-                    fileSuffix = " " & "Season " & SeasonNumber.Value.ToString("00")
+                    fileSuffix = " " & "Season " & SeasonNumber.Value.ToString("00", Globalization.CultureInfo.InvariantCulture)
                 End If
                 tvdata.SaveToFile(ShowDownloadFolder, ShowName & fileSuffix)
             Else
@@ -107,7 +107,7 @@ Namespace ViewModels
             Dim episodeNumber As Integer = 1
             Do
                 Dim epUrl = EpisodeUrl(seasonNo, episodeNumber)
-                Dim epHtml = String.Empty
+                Dim epHtml As String
                 Try
                     epHtml = WebResources.DownloadString(epUrl)
                 Catch ex As Exception
@@ -138,7 +138,7 @@ Namespace ViewModels
         Private Sub DownloadEpisodeImages(seasonNo As Integer, episodeNumber As Integer, epImgSrc As String)
             Dim imgSrcBase = Regex.Replace(epImgSrc, "\d{2}_(\d+x\d+).jpg", String.Empty)
             For imageNumber As Integer = 1 To 30
-                Dim imgUrl = imgSrcBase & imageNumber.ToString("00") & "_" & ImageSize & ".jpg"
+                Dim imgUrl = imgSrcBase & imageNumber.ToString("00", Globalization.CultureInfo.InvariantCulture) & "_" & ImageSize & ".jpg"
                 DownloadImageAddResult(imgUrl, LocalEpisodeImagePath(seasonNo, episodeNumber, imageNumber))
             Next
         End Sub
@@ -159,7 +159,7 @@ Namespace ViewModels
 
         Public ReadOnly Property OpenFolderCommand As ICommand
             Get
-                Return New Infrastructure.RelayCommand(
+                Return New RelayCommand(
                     Sub()
                         Process.Start(ShowDownloadFolder())
                     End Sub,
@@ -174,7 +174,7 @@ Namespace ViewModels
 
         Private Function SeasonDownloadFolder(seasonNo As Integer) As String
             Return IO.Path.Combine(ShowDownloadFolder,
-                                   "Season " & seasonNo.ToString("00"))
+                                   "Season " & seasonNo.ToString("00", Globalization.CultureInfo.InvariantCulture))
         End Function
 
         'Private Function EpisodeDownloadFolder(episodeNumber As Integer) As String
@@ -193,12 +193,12 @@ Namespace ViewModels
 
         Private Function ShowUrl() As String
             Dim urlFormat = "http://www.sho.com/{0}"
-            Return String.Format(urlFormat, ShowName.ToSlug())
+            Return String.Format(Globalization.CultureInfo.InvariantCulture, urlFormat, ShowName.ToSlug())
         End Function
 
         Private Function EpisodeUrl(seasonNumber As Integer, episodeNumber As Integer) As String
             Dim urlFormat = "http://www.sho.com/{0}/season/{1}/episode/{2}"
-            Return String.Format(urlFormat, ShowName.ToSlug(), seasonNumber, episodeNumber)
+            Return String.Format(Globalization.CultureInfo.InvariantCulture, urlFormat, ShowName.ToSlug(), seasonNumber, episodeNumber)
         End Function
 
         'Private Function LocalEpisodeImagePath(episodeNumber As Integer, imageNumber As Integer) As String
@@ -206,7 +206,7 @@ Namespace ViewModels
         'End Function
 
         Private Function LocalEpisodeImagePath(seasonNo As Integer, episodeNumber As Integer, imageNumber As Integer) As String
-            Return IO.Path.Combine(EpisodeDownloadFolder(seasonNo, episodeNumber), SeasonEpisodeString(seasonNo, episodeNumber) & "_" & imageNumber.ToString("00") & ".jpg")
+            Return IO.Path.Combine(EpisodeDownloadFolder(seasonNo, episodeNumber), SeasonEpisodeString(seasonNo, episodeNumber) & "_" & imageNumber.ToString("00", Globalization.CultureInfo.InvariantCulture) & ".jpg")
         End Function
 
         'Private Function SeasonEpisodeString(episodeNumber As Integer) As String
@@ -214,7 +214,7 @@ Namespace ViewModels
         'End Function
 
         Private Function SeasonEpisodeString(seasonNo As Integer, episodeNumber As Integer) As String
-            Return "S" & seasonNo.ToString("00") & "E" & episodeNumber.ToString("00")
+            Return "S" & seasonNo.ToString("00", Globalization.CultureInfo.InvariantCulture) & "E" & episodeNumber.ToString("00", Globalization.CultureInfo.InvariantCulture)
         End Function
 
 #End Region

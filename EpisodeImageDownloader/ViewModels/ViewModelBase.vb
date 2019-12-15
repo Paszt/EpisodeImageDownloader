@@ -71,15 +71,16 @@ Namespace ViewModels
         ''' <param name="localPath">The name of the local file that is to receive the data.</param>
         ''' <param name="FileNameToAdd">The filename to add to the result message which is added to the EpisodeImageResults list.</param>
         Protected Overloads Sub DownloadImageAddResult(Url As String, localPath As String, FileNameToAdd As String)
-            'Dim Filename = IO.Path.GetFileName(localPath)
+            DownloadImageAddResult(New Uri(Url), localPath, FileNameToAdd)
+        End Sub
+
+        Protected Overloads Sub DownloadImageAddResult(Uri As Uri, localPath As String, FileNameToAdd As String)
             If Not IO.File.Exists(localPath) Then
                 If Not IO.Directory.Exists(IO.Path.GetDirectoryName(localPath)) Then
                     IO.Directory.CreateDirectory(IO.Path.GetDirectoryName(localPath))
                 End If
                 Try
-                    Using _client As New Infrastructure.ChromeWebClient With {.AllowAutoRedirect = True}
-                        _client.DownloadFile(Url, localPath)
-                    End Using
+                    WebResources.DownloadFile(Uri, localPath)
                     AddEpisodeImageResult(New EpisodeImageResult() With {.FileName = FileNameToAdd, .HasError = False, .NewDownload = True, .Message = "Downloaded"})
                 Catch ex As Exception
                     AddEpisodeImageResult(New EpisodeImageResult() With {.FileName = FileNameToAdd, .HasError = True, .NewDownload = False, .Message = "Error: " & ex.Message})
