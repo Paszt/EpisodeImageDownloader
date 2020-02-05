@@ -37,7 +37,7 @@ Namespace ViewModels
                 If String.IsNullOrEmpty(value) Then
                     SetProperty(_showId, value)
                 Else
-                    Dim match = Text.RegularExpressions.Regex.Match(value, "(umc\.cmc\.\w{25})")
+                    Dim match = Text.RegularExpressions.Regex.Match(value, "(umc\.cmc\.\w{20,})")
                     If match.Success Then
                         SetProperty(_showId, match.Groups(1).Value)
                     End If
@@ -86,15 +86,18 @@ Namespace ViewModels
         End Property
 
         'Apple Country Codes & Storefront IDs: https://affiliate.itunes.apple.com/resources/documentation/linking-to-the-itunes-music-store/#appendix
+        '  https://gist.github.com/theiostream/5871770
         Public Shared ReadOnly Property CountryInfos As List(Of AppleCountryInformation)
             Get
                 Return New List(Of AppleCountryInformation) From {
                     New AppleCountryInformation() With {.Name = "USA", .CountryCode = "us", .Locale = "en-US", .StorefrontID = 143441},
+                    New AppleCountryInformation() With {.Name = "Australia", .CountryCode = "au", .Locale = "en-AU", .StorefrontID = 143460},
                     New AppleCountryInformation() With {.Name = "Brazil", .CountryCode = "br", .Locale = "pt-BR", .StorefrontID = 143503},
                     New AppleCountryInformation() With {.Name = "Canada", .CountryCode = "ca", .Locale = "en-CA", .StorefrontID = 143455},
                     New AppleCountryInformation() With {.Name = "France", .CountryCode = "fr", .Locale = "fr-FR", .StorefrontID = 143442},
                     New AppleCountryInformation() With {.Name = "Germany", .CountryCode = "de", .Locale = "de-DE", .StorefrontID = 143443},
                     New AppleCountryInformation() With {.Name = "Greece", .CountryCode = "gr", .Locale = "el-GR", .StorefrontID = 143448},
+                    New AppleCountryInformation() With {.Name = "Lebanon", .CountryCode = "lb", .Locale = "ar-LB", .StorefrontID = 143497},
                     New AppleCountryInformation() With {.Name = "Mexico", .CountryCode = "mx", .Locale = "es-MX", .StorefrontID = 143468},
                     New AppleCountryInformation() With {.Name = "Netherlands", .CountryCode = "nl", .Locale = "nl-NL", .StorefrontID = 143452},
                     New AppleCountryInformation() With {.Name = "Norway", .CountryCode = "no", .Locale = "no-NO", .StorefrontID = 143457},
@@ -173,7 +176,7 @@ Namespace ViewModels
                 If String.IsNullOrWhiteSpace(ShowName) Then
                     ShowName = showInfo.Data.Seasons(0).ShowTitle
                 End If
-                If showInfo.Data.Seasons IsNot Nothing Then
+                If showInfo IsNot Nothing AndAlso showInfo.Data IsNot Nothing AndAlso showInfo.Data.Seasons IsNot Nothing Then
                     'For Each season In showInfo.Data.Seasons
                     '    Dim type As Type = season.Images.GetType()
                     '    Dim properties As PropertyInfo() = type.GetProperties(flags)
@@ -298,7 +301,9 @@ Namespace ViewModels
             Dim localPath = IO.Path.Combine(SeasonDownloadFolder(ep.SeasonNumber), localFileName)
             If Not SkipEpisodeImgs Then
                 'TODO: Create an overvload of DownloadImageAddResult that accepts Uri
-                DownloadImageAddResult(ep.Images.PreviewFrame.GetMaxUrl().ToString(), localPath)
+                If ep.Images.PreviewFrame IsNot Nothing Then
+                    DownloadImageAddResult(ep.Images.PreviewFrame.GetMaxUrl().ToString(), localPath)
+                End If
             Else
                 AddEpisodeImageResult(New EpisodeImageResult() With {
                                       .FileName = localFileName,
