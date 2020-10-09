@@ -140,7 +140,7 @@ Namespace ViewModels
         Protected Overrides Sub DownloadImages()
             If Not SkipMainSeasonImgs Then
                 'Main Images
-                Dim apiUrlFormat = "https://tv.apple.com/api/uts/v2/view/show/{0}?utsk=6e3013c6d6fae3c2%3A%3A%3A%3A%3A%3A235656c069bb0efb&caller=web&sf={1}&v=36&pfm=web&locale={2}"
+                Dim apiUrlFormat = "https://tv.apple.com/api/uts/v2/view/show/{0}?utsk=6e3013c6d6fae3c2%3A%3A%3A%3A%3A%3A235656c069bb0efb&caller=web&sf={1}&v=42&pfm=web&locale={2}"
                 Dim apiUrl = String.Format(Globalization.CultureInfo.InvariantCulture, apiUrlFormat, ShowId, Country.StorefrontID, Country.Locale)
                 Dim json As String = String.Empty
                 Dim flags As BindingFlags = BindingFlags.Public Or BindingFlags.Instance
@@ -165,7 +165,7 @@ Namespace ViewModels
                 End If
 
                 'Season Images
-                apiUrlFormat = "https://tv.apple.com/api/uts/v2/view/show/{0}/episodes?utsk=6e3013c6d6fae3c2%3A%3A%3A%3A%3A%3A235656c069bb0efb&caller=web&sf={1}&v=36&pfm=web&locale={2}"
+                apiUrlFormat = "https://tv.apple.com/api/uts/v2/view/show/{0}/episodes?utsk=6e3013c6d6fae3c2%3A%3A%3A%3A%3A%3A235656c069bb0efb&caller=web&sf={1}&v=42&pfm=web&locale={2}"
                 apiUrl = String.Format(Globalization.CultureInfo.InvariantCulture, apiUrlFormat, ShowId, Country.StorefrontID, Country.Locale)
                 Try
                     json = WebResources.DownloadString(apiUrl)
@@ -205,7 +205,7 @@ Namespace ViewModels
             End If
 
             'Episodes
-            Dim episodesUrlFormat = "https://tv.apple.com/api/uts/v2/view/show/{0}/episodes?skip=0&count=10000&utsk=6e3013c6d6fae3c2%3A%3A%3A%3A%3A%3A235656c069bb0efb&caller=web&sf={1}&v=36&pfm=web&locale={2}"
+            Dim episodesUrlFormat = "https://tv.apple.com/api/uts/v2/view/show/{0}/episodes?skip=0&count=10000&utsk=6e3013c6d6fae3c2%3A%3A%3A%3A%3A%3A235656c069bb0efb&caller=web&sf={1}&v=42&pfm=web&locale={2}"
             Dim episodesUrl = String.Format(Globalization.CultureInfo.InvariantCulture, episodesUrlFormat, ShowId, Country.StorefrontID, Country.Locale)
             Dim epJson = String.Empty
             Try
