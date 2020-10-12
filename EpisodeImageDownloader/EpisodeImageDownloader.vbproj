@@ -118,6 +118,7 @@
     </Compile>
     <Compile Include="Classes\RateGate.vb" />
     <Compile Include="DataStructures\AppleTvPlusDataStructures.vb" />
+    <Compile Include="DataStructures\HboMaxDataStructures.vb" />
     <Compile Include="GlobalSuppressions.vb" />
     <Compile Include="ViewModels\AandE_NetworksViewModel.vb" />
     <Compile Include="ViewModels\AppleTvPlusViewModel.vb" />
@@ -125,6 +126,7 @@
     <Compile Include="ViewModels\BravoViewModel.vb" />
     <Compile Include="ViewModels\CbsCarouselsViewModel.vb" />
     <Compile Include="ViewModels\DisneyAbcGoViewModel.vb" />
+    <Compile Include="ViewModels\HboMaxViewModel.vb" />
     <Compile Include="ViewModels\NbcEpisodesViewModel.vb" />
     <Compile Include="ViewModels\NprTinyDeskViewModel.vb" />
     <Compile Include="ViewModels\PbsViewModel.vb" />
@@ -305,6 +307,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\FarFarAwaySiteView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\HboMaxView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

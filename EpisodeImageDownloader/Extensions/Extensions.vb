@@ -114,7 +114,7 @@ Public Module ExtensionHelpers
         Return Integer.TryParse(str, out)
     End Function
 
-    Private timeZones As Dictionary(Of String, String) = New Dictionary(Of String, String)() From {
+    Private ReadOnly timeZones As Dictionary(Of String, String) = New Dictionary(Of String, String)() From {
         {"ACDT", "+1030"},
         {"ACST", "+0930"},
         {"ADT", "-0300"},

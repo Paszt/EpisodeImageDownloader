@@ -70,7 +70,7 @@
                 </TabItem.Header>
                 <views:DisneyAbcSelectorView />
             </TabItem>
-            <!--BBC--> 
+            <!--BBC-->
             <TabItem>
                 <TabItem.Header>
                     <StackPanel Orientation="Horizontal">
@@ -198,6 +198,15 @@
                 </TabItem.Header>
                 <views:HboView MaxWidth="600" />
             </TabItem>
+            <!--HBO Max-->
+            <TabItem>
+                <TabItem.Header>
+                    <Image Source="{DynamicResource HBOMaxDrawingImage}"
+                           Height="16"
+                           HorizontalAlignment="Left" />
+                </TabItem.Header>
+                <views:HboMaxView MaxWidth="600" />
+            </TabItem>
             <!--Hulu-->
             <TabItem>
                 <TabItem.Header>
@@ -225,7 +234,7 @@
                 </TabItem.Header>
                 <views:NprTinyDeskView />
             </TabItem>
-            <!--Netflix--> 
+            <!--Netflix-->
             <TabItem>
                 <TabItem.Header>
                     <Image Source="{DynamicResource NetflixDrawingImage}"
@@ -300,7 +309,7 @@
                 </TabItem.Header>
                 <views:YouTubePlaylistView />
             </TabItem>
-            
+
             <TabItem>
                 <TabItem.Header>
                     <StackPanel Orientation="Horizontal">
