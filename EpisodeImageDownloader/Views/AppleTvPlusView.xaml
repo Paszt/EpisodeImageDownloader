@@ -18,11 +18,14 @@
             <RowDefinition />
         </Grid.RowDefinitions>
         <!--Row 0-->
-        <Image Height="35"
+        <Button BorderThickness="0" 
+                Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}"
+                Command="{Binding BrowseToShowCommand}">
+            <Image Height="35"
                HorizontalAlignment="Center"
                VerticalAlignment="Center"
                Source="{DynamicResource AppleTvPlusDrawingImage}" />
-
+        </Button>
         <!--Row 1-->
         <StackPanel Grid.Row="1"
                     Margin="10"

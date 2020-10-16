@@ -185,7 +185,6 @@
                         <Image Source="{DynamicResource HBODrawingImage}"
                                Height="16"
                                HorizontalAlignment="Left" />
-                        <TextBlock Text=" (New)" />
                     </StackPanel>
                 </TabItem.Header>
                 <views:HboNewView MaxWidth="600" />

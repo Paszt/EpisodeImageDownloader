@@ -94,6 +94,7 @@ Namespace ViewModels
                     New AppleCountryInformation() With {.Name = "Australia", .CountryCode = "au", .Locale = "en-AU", .StorefrontID = 143460},
                     New AppleCountryInformation() With {.Name = "Brazil", .CountryCode = "br", .Locale = "pt-BR", .StorefrontID = 143503},
                     New AppleCountryInformation() With {.Name = "Canada", .CountryCode = "ca", .Locale = "en-CA", .StorefrontID = 143455},
+                    New AppleCountryInformation() With {.Name = "Czech Republic", .CountryCode = "cz", .Locale = "cs-CZ", .StorefrontID = 143489},
                     New AppleCountryInformation() With {.Name = "France", .CountryCode = "fr", .Locale = "fr-FR", .StorefrontID = 143442},
                     New AppleCountryInformation() With {.Name = "Germany", .CountryCode = "de", .Locale = "de-DE", .StorefrontID = 143443},
                     New AppleCountryInformation() With {.Name = "Greece", .CountryCode = "gr", .Locale = "el-GR", .StorefrontID = 143448},
@@ -402,6 +403,22 @@ Namespace ViewModels
         End Property
 
 #End Region
+
+        Public ReadOnly Property BrowseToShowCommand As ICommand
+            Get
+                Return New RelayCommand(
+                    Sub()
+                        If Not String.IsNullOrWhiteSpace(ShowId) Then
+                            Process.Start("https://tv.apple.com/show/" & ShowId)
+                        Else
+                            Process.Start("https://www.google.com/search?q=site%3Atv.apple.com+" & Uri.EscapeDataString(ShowName))
+                        End If
+                    End Sub,
+                    Function() As Boolean
+                        Return Not (String.IsNullOrWhiteSpace(ShowName) And String.IsNullOrWhiteSpace(ShowId))
+                    End Function)
+            End Get
+        End Property
 
         Public ReadOnly Property ClearInputsCommand As ICommand
             Get
