@@ -18,13 +18,13 @@
             <RowDefinition />
         </Grid.RowDefinitions>
         <!--Row 0-->
-        <Button BorderThickness="0" 
+        <Button BorderThickness="0"
                 Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}"
                 Command="{Binding BrowseToShowCommand}">
             <Image Height="35"
-               HorizontalAlignment="Center"
-               VerticalAlignment="Center"
-               Source="{DynamicResource AppleTvPlusDrawingImage}" />
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"
+                   Source="{DynamicResource AppleTvPlusDrawingImage}" />
         </Button>
         <!--Row 1-->
         <StackPanel Grid.Row="1"
@@ -41,9 +41,14 @@
                     <RowDefinition />
                     <RowDefinition />
                 </Grid.RowDefinitions>
-                <TextBlock Text="Show ID:"
-                           VerticalAlignment="Center"
-                           HorizontalAlignment="Right" />
+                <Button BorderThickness="0"
+                        Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}"
+                        Command="{Binding BrowseToShowCommand}">
+                    <TextBlock Text="Show ID:"
+                               VerticalAlignment="Center"
+                               HorizontalAlignment="Right"
+                               Foreground="{StaticResource Foreground}"  />
+                </Button>
                 <TextBox Text="{Binding ShowId}"
                          Grid.Column="1"
                          Margin="5,2" />
@@ -70,10 +75,15 @@
                     </Button>
                 </StackPanel>
 
-                <TextBlock Text="Show Name:"
-                           Margin="0,7"
-                           VerticalAlignment="Center"
-                           Grid.Row="1" />
+                <Button BorderThickness="0"
+                        Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}"
+                        Command="{Binding BrowseToShowCommand}"
+                        Grid.Row="1">
+                    <TextBlock Text="Show Name:"
+                               Margin="0,7"
+                               VerticalAlignment="Center"
+                               Foreground="{StaticResource Foreground}" />
+                </Button>
                 <!--<TextBox Text="{Binding ShowName, UpdateSourceTrigger=PropertyChanged}" 
 						 HorizontalAlignment="Stretch" 
 						 Grid.Column="1" 
