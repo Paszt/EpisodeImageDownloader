@@ -303,7 +303,7 @@ Namespace ViewModels
             If Not SkipEpisodeImgs Then
                 'TODO: Create an overvload of DownloadImageAddResult that accepts Uri
                 If ep.Images.PreviewFrame IsNot Nothing Then
-                    DownloadImageAddResult(ep.Images.PreviewFrame.GetMaxUrl().ToString(), localPath)
+                    DownloadImageAddResult(ep.Images.PreviewFrame.GetImageUrl(ImageSize).ToString(), localPath)
                 End If
             Else
                 AddEpisodeImageResult(New EpisodeImageResult() With {

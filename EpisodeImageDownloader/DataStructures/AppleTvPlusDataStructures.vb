@@ -199,6 +199,11 @@ Namespace DataStructures
             Return New Uri(Text.RegularExpressions.Regex.Replace(Url, "\{w\}x\{h\}(\{c\})?(sr)?\.\{f\}", "9999x9999." & imageExtension))
         End Function
 
+        Function GetImageUrl(size As String, Optional imageExtension As String = "jpg") As Uri
+            If size = "Max" Then Return GetMaxUrl()
+            Return New Uri(Text.RegularExpressions.Regex.Replace(Url, "\{w\}x\{h\}(\{c\})?(sr)?\.\{f\}", size & "." & imageExtension))
+        End Function
+
     End Class
 
 End Namespace
