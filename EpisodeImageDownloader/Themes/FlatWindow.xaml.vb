@@ -112,7 +112,7 @@ Public Class FlatWindow
             Dim x = Convert.ToInt16(wpfPoint.X)
             Dim y = Convert.ToInt16(wpfPoint.Y)
             Dim lParam = x Or (y << 16)
-            UnsafeNativeMethods.SendMessage(windowHandle, Constants.WM_NCLBUTTONDOWN, CType(Constants.HT_CAPTION, IntPtr), CType(lParam, IntPtr))
+            UnsafeNativeMethods.SendMessage(windowHandle, Constants.WMNCLBUTTONDOWN, CType(Constants.HTCAPTION, IntPtr), CType(lParam, IntPtr))
 
             If e.ClickCount = 2 AndAlso (Me.ResizeMode = ResizeMode.CanResizeWithGrip OrElse Me.ResizeMode = ResizeMode.CanResize) AndAlso mPoint.Y <= TitlebarHeight AndAlso TitlebarHeight > 0 Then
                 If WindowState = WindowState.Maximized Then
@@ -168,7 +168,7 @@ Public Class FlatWindow
 
     Private Function WindowProc(hwnd As IntPtr, msg As Integer, wParam As IntPtr, lParam As IntPtr, ByRef handled As Boolean) As IntPtr
         Select Case msg
-            Case Constants.WM_GETMINMAXINFO
+            Case Constants.WMGETMINMAXINFO
                 Dim mmi = CType(Marshal.PtrToStructure(lParam, GetType(MINMAXINFO)), MINMAXINFO)
                 Dim nearestScreen = Screen
 
@@ -301,7 +301,7 @@ Public Class FlatWindow
         Dim resizeRect As Rectangle = TryCast(sender, Rectangle)
         Cursor = resizeRect.Cursor
         If WindowState <> WindowState.Maximized Then
-            UnsafeNativeMethods.SendMessage(New WindowInteropHelper(Me).Handle, Constants.WM_SYSCOMMAND, CType(61440 + CInt(CType(sender, Rectangle).Tag), IntPtr), IntPtr.Zero)
+            UnsafeNativeMethods.SendMessage(New WindowInteropHelper(Me).Handle, Constants.WMSYSCOMMAND, CType(61440 + CInt(CType(sender, Rectangle).Tag), IntPtr), IntPtr.Zero)
         End If
     End Sub
 

@@ -10,12 +10,18 @@ Namespace Behaviors
 
 #Region " Attached Property "
 
-        Public Shared Function GetSelectAllButtonTemplate(obj As DataGrid) As ControlTemplate
-            Return DirectCast(obj.GetValue(SelectAllButtonTemplateProperty), ControlTemplate)
+        Public Shared Function GetSelectAllButtonTemplate(grid As DataGrid) As ControlTemplate
+            If grid Is Nothing Then
+                Throw New ArgumentNullException(NameOf(grid), "grid can't be null")
+            End If
+            Return DirectCast(grid.GetValue(SelectAllButtonTemplateProperty), ControlTemplate)
         End Function
 
-        Public Shared Sub SetSelectAllButtonTemplate(obj As DataGrid, value As ControlTemplate)
-            obj.SetValue(SelectAllButtonTemplateProperty, value)
+        Public Shared Sub SetSelectAllButtonTemplate(grid As DataGrid, value As ControlTemplate)
+            If grid Is Nothing Then
+                Throw New ArgumentNullException(NameOf(grid), "grid can't be null")
+            End If
+            grid.SetValue(SelectAllButtonTemplateProperty, value)
         End Sub
 
         Public Shared ReadOnly SelectAllButtonTemplateProperty As DependencyProperty =

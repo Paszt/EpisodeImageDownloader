@@ -116,6 +116,7 @@
     <Compile Include="Classes\GetShowInfo.xaml.vb">
       <DependentUpon>GetShowInfo.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Classes\HuluCollection.vb" />
     <Compile Include="Classes\RateGate.vb" />
     <Compile Include="DataStructures\AppleTvPlusDataStructures.vb" />
     <Compile Include="DataStructures\HboMaxDataStructures.vb" />
@@ -134,7 +135,6 @@
     <Compile Include="ViewModels\StarzViewModel.vb" />
     <Compile Include="ViewModels\Support\SeasonNumberUrlInfo.vb" />
     <Compile Include="Extensions\Extensions.vb" />
-    <Compile Include="Classes\HuluEpisodes.vb" />
     <Compile Include="Classes\MessageWindow.xaml.vb" />
     <Compile Include="Classes\RelayCommand.vb" />
     <Compile Include="Classes\TmdbWebClient.vb">

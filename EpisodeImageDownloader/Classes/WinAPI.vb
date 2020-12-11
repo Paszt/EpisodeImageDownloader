@@ -46,22 +46,22 @@ Namespace WinApi
 
     Public NotInheritable Class Constants
 
-        Public Const WM_SYSCOMMAND As Integer = &H112
-        Public Const WM_SETTEXT As Integer = &HC
-        Public Const WM_INITMENU As Integer = &H116
-        Public Const WM_MOVE As Integer = &H3
-        Public Const WM_NCHITTEST As Integer = &H84
-        Public Const WM_NCLBUTTONDOWN As Integer = &HA1
-        Public Const WM_NCCALCSIZE As Integer = &H83
-        Public Const WM_NCPAINT As Integer = &H85
-        Public Const WM_NCACTIVATE As Integer = &H86
-        Public Const WM_GETMINMAXINFO As Integer = &H24
-        Public Const WM_WINDOWPOSCHANGING = &H46
-        Public Const WM_CREATE As Integer = &H1
+        Public Const WMSYSCOMMAND As Integer = &H112
+        Public Const WMSETTEXT As Integer = &HC
+        Public Const WMINITMENU As Integer = &H116
+        Public Const WMMOVE As Integer = &H3
+        Public Const WMNCHITTEST As Integer = &H84
+        Public Const WMNCLBUTTONDOWN As Integer = &HA1
+        Public Const WMNCCALCSIZE As Integer = &H83
+        Public Const WMNCPAINT As Integer = &H85
+        Public Const WMNCACTIVATE As Integer = &H86
+        Public Const WMGETMINMAXINFO As Integer = &H24
+        Public Const WMWINDOWPOSCHANGING = &H46
+        Public Const WMCREATE As Integer = &H1
 
-        Public Const WS_MAXIMIZE As Long = &H1000000
-        Public Const GCLP_HBRBACKGROUND As Integer = -&HA
-        Public Const HT_CAPTION As Integer = &H2
+        Public Const WSMAXIMIZE As Long = &H1000000
+        Public Const GCLPHBRBACKGROUND As Integer = -&HA
+        Public Const HTCAPTION As Integer = &H2
         Public Const HTLEFT As Integer = &HA
         Public Const HTRIGHT As Integer = &HB
         Public Const HTTOP As Integer = &HC
@@ -70,13 +70,13 @@ Namespace WinApi
         Public Const HTBOTTOM As Integer = &HF
         Public Const HTBOTTOMLEFT As Integer = &H10
         Public Const HTBOTTOMRIGHT As Integer = &H11
-        Public Const TPM_RETURNCMD As UInteger = &H100
-        Public Const TPM_LEFTBUTTON As UInteger = &H0
-        Public Const SW_SHOWNORMAL As Integer = 1
-        Public Const SW_SHOWMINIMIZED As Integer = 2
+        Public Const TPMRETURNCMD As UInteger = &H100
+        Public Const TPMLEFTBUTTON As UInteger = &H0
+        Public Const SWSHOWNORMAL As Integer = 1
+        Public Const SWSHOWMINIMIZED As Integer = 2
         Public Const SYSCOMMAND As UInteger = &H112
 
-        Public Const MONITOR_DEFAULTTONEAREST As Integer = &H2
+        Public Const MONITORDEFAULTTONEAREST As Integer = &H2
 
         Public Const SC_MAXIMIZE As Integer = &HF030
         Public Const SC_SIZE As Integer = &HF000

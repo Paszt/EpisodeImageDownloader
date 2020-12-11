@@ -2,23 +2,20 @@
 Imports System.Text
 Imports System.Runtime.Serialization.Json
 Imports System.Xml.Serialization
+Imports System.Runtime.Serialization
+Imports EpisodeImageDownloader.Infrastructure
 
 Namespace ViewModels
 
     Public Class HuluViewModel
         Inherits ViewModels.ViewModelBase
 
-        Private _client As Infrastructure.ChromeWebClient
-
-        Public Sub New()
-            IsJsonInputVisible = True
-            ShowName = String.Empty
-            ImageSize = "640x360"
-        End Sub
+        Private Const apiUrlFormat = "https://discover.hulu.com/content/v5/hubs/series/{0}/collections/94"
 
 #Region " Properties "
 
         Private _showName As String
+        <DataMember(Order:=1)>
         Public Property ShowName As String
             Get
                 Return _showName
@@ -28,156 +25,197 @@ Namespace ViewModels
             End Set
         End Property
 
-        Private _imageSize As String
-        Public Property ImageSize As String
+        Private _showId As String
+        <DataMember(Order:=2)>
+        Public Property ShowId As String
             Get
-                Return _imageSize
+                Return _showId
             End Get
             Set(value As String)
-                SetProperty(_imageSize, value)
-            End Set
-        End Property
-
-        Private _jsonText As String
-        Public Property JsonText As String
-            Get
-                Return _jsonText
-            End Get
-            Set(value As String)
-                SetProperty(_jsonText, value)
-            End Set
-        End Property
-
-        Private _isJsonInputVisible As Boolean
-        Public Property IsJsonInputVisible As Boolean
-            Get
-                Return _isJsonInputVisible
-            End Get
-            Set(value As Boolean)
-                SetProperty(_isJsonInputVisible, value)
-                OnPropertyChanged("IsJsonInputNotVisible")
-            End Set
-        End Property
-
-        Public ReadOnly Property IsJsonInputNotVisible As Boolean
-            Get
-                Return Not _isJsonInputVisible
-            End Get
-        End Property
-
-        Public ReadOnly Property DownloadFolder() As String
-            Get
-                Dim shownameSafe = ShowName.MakeFileNameSafe()
-                If Not String.IsNullOrWhiteSpace(shownameSafe) Then
-                    shownameSafe = shownameSafe.Substring(0, Math.Min(shownameSafe.Length, 40))
+                If String.IsNullOrEmpty(value) Then
+                    SetProperty(_showId, value)
+                Else
+                    Dim match = Text.RegularExpressions.Regex.Match(value, "series\/\w+-([\w-]+)")
+                    If match.Success Then
+                        SetProperty(_showId, match.Groups(1).Value)
+                    End If
                 End If
+            End Set
+        End Property
 
-                Return IO.Path.Combine(My.Settings.DownloadFolder,
-                                       shownameSafe)
+        Private _seasonNumber As Integer?
+        <DataMember(Order:=3, EmitDefaultValue:=False), ComponentModel.DefaultValue(GetType(Integer?), Nothing)>
+        Public Property SeasonNumber As Integer?
+            Get
+                Return _seasonNumber
             End Get
+            Set(value As Integer?)
+                SetProperty(_seasonNumber, value)
+            End Set
         End Property
 
 #End Region
 
         Protected Overrides Function CanDownloadImages() As Boolean
-            Return Not String.IsNullOrWhiteSpace(ShowName) AndAlso
-                   Not String.IsNullOrWhiteSpace(JsonText)
+            Return Not String.IsNullOrWhiteSpace(ShowId)
         End Function
 
         Protected Overrides Sub DownloadImages()
-            IsJsonInputVisible = False
-
-            Dim huluEps As New HuluEpisodes()
-
+            Dim apiUrl = String.Format(Globalization.CultureInfo.InvariantCulture, apiUrlFormat, ShowId)
+            Dim json As String
             Try
-                Using ms = New MemoryStream(Encoding.UTF8.GetBytes(JsonText.ToCharArray()))
-                    Dim ser = New DataContractJsonSerializer(GetType(HuluEpisodes))
-                    huluEps = DirectCast(ser.ReadObject(ms), HuluEpisodes)
+                Using client As New ChromeWebClient
+                    client.Accept = "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9"
+                    json = client.DownloadString(apiUrl)
                 End Using
+                'json = WebResources.DownloadString(apiUrl)
             Catch ex As Exception
-                MessageWindow.ShowDialog(ex.Message, "Error parsing Json")
+                MessageWindow.ShowDialog("Error downloading episode information: " & apiUrl & Environment.NewLine & ex.Message, "Error getting episode info")
                 NotBusy = True
                 Exit Sub
             End Try
-
-            If huluEps.Data IsNot Nothing Then
-                _client = New Infrastructure.ChromeWebClient()
-                Dim tvData As New TvDataSeries()
-                For Each vidDatum In huluEps.Data
-                    tvData.Episodes.Add(New TvDataEpisode() With {.SeasonNumber = vidDatum.Video.SeasonNumber,
-                                                                  .EpisodeNumber = vidDatum.Video.EpisodeNumber,
-                                                                  .EpisodeName = vidDatum.Video.Title,
-                                                                  .FirstAired = vidDatum.Video.FirstAired,
-                                                                  .Overview = vidDatum.Video.Description})
-                    DownloadImage(vidDatum.Video)
-                Next
-                _client.Dispose()
-                tvData.SaveToFile(DownloadFolder, ShowName)
-            Else
-                MessageWindow.ShowDialog("No videos found in Json", "No Videos")
+            Dim collection = json.FromJSON(Of HuluCollection)
+            If String.IsNullOrWhiteSpace(ShowName) Then
+                ShowName = collection.Items(0).SeriesName()
             End If
+            Dim episodesBag As New Concurrent.ConcurrentBag(Of TvDataEpisode)
 
+            For Each item In collection.Items
+                If Not SeasonNumber.HasValue OrElse item.SeasonNumber.Value = SeasonNumber.Value Then
+                    DownloadEpisodeImage(item, episodesBag)
+                End If
+            Next
+
+            'Parallel.ForEach(collection.Items,
+            '                 Sub(item As HuluCollectionItem)
+            '                     If Not SeasonNumber.HasValue OrElse item.SeasonNumber.Value = SeasonNumber.Value Then
+            '                         DownloadEpisodeImage(item, episodesBag)
+            '                     End If
+            '                 End Sub)
+
+            If episodesBag.Count > 0 Then
+                Dim tvdata As New TvDataSeries With {
+                    .Episodes = episodesBag.OrderBy(Function(e) e.SeasonNumber).ThenBy(Function(e) e.EpisodeNumber).ToList()
+                }
+                Dim fileSuffix = String.Empty
+                If SeasonNumber.HasValue Then
+                    fileSuffix = " " & "Season " & SeasonNumber.Value.ToString("00", Globalization.CultureInfo.InvariantCulture)
+                End If
+                tvdata.SaveToFile(ShowDownloadFolder, ShowName & fileSuffix)
+            Else
+                MessageWindow.ShowDialog("No episodes were found in HTML", "No Episodes Found")
+            End If
         End Sub
 
-        Private Sub DownloadImage(vid As HuluVideo)
-            Dim filename = "S" & vid.SeasonNumber.ToString("00") & "E" & vid.EpisodeNumber.ToString("000") & "_" & vid.Title.MakeFileNameSafeNoSpaces() & "_" & ImageSize & ".jpg"
-            Dim localPath = IO.Path.Combine(DownloadFolder, "Season " & vid.SeasonNumber.ToString("00"), filename)
-            MyBase.DownloadImageAddResult(vid.ImageUrl(ImageSize), localPath)
-
-            'If Not IO.File.Exists(localPath) Then
-            '    If Not IO.Directory.Exists(IO.Path.GetDirectoryName(localPath)) Then
-            '        IO.Directory.CreateDirectory(IO.Path.GetDirectoryName(localPath))
-            '    End If
-            '    Try
-            '        _client.DownloadFile(vid.ImageUrl(ImageSize), localPath)
-            '        AddEpisodeImageResult(New EpisodeImageResult() With {.FileName = filename, .HasError = False, .NewDownload = True, .Message = "Downloaded"})
-            '    Catch ex As Exception
-            '        AddEpisodeImageResult(New EpisodeImageResult() With {.FileName = filename, .HasError = True, .NewDownload = False, .Message = "Error: " & ex.Message})
-            '    End Try
-            'Else
-            '    AddEpisodeImageResult(New EpisodeImageResult() With {.FileName = filename, .HasError = False, .NewDownload = False, .Message = "Already Downloaded"})
-            'End If
+        <CodeAnalysis.SuppressMessage("Globalization", "CA1305:Specify IFormatProvider", Justification:="No Localization")>
+        Private Sub DownloadEpisodeImage(ep As HuluCollectionItem, episodesBag As Concurrent.ConcurrentBag(Of TvDataEpisode))
+            If Not ep.SeasonNumber.HasValue OrElse Not ep.EpisodeNumber.HasValue Then
+                Exit Sub
+            End If
+            Dim tvDataEp As New TvDataEpisode() With {
+                .EpisodeName = ep.Name,
+                .Overview = ep.Description,
+                .SeasonNumber = ep.SeasonNumber.Value,
+                .EpisodeNumber = ep.EpisodeNumber.Value,
+                .FirstAired = ep.PremiereDate.ToIso8601DateString
+                }
+            episodesBag.Add(tvDataEp)
+            Dim localFileName = "S" & ep.SeasonNumber.Value.ToString("00") & "E" & ep.EpisodeNumber.Value.ToString("00") & ".jpg"
+            Dim localPath = IO.Path.Combine(SeasonDownloadFolder(ep.SeasonNumber.Value), localFileName)
+            DownloadImageAddResult(GetRemotePath(ep.Artwork.VideoHorizontalHero), localPath)
         End Sub
 
-        'Private Sub SaveTvDataXml(tvData As TvDataSeries)
-        '    Dim savePath As String = IO.Path.Combine(DownloadFolder, ShowName & ".tvxml")
-        '    If Not IO.Directory.Exists(DownloadFolder) Then
-        '        IO.Directory.CreateDirectory(DownloadFolder)
-        '    End If
-        '    If IO.File.Exists(savePath) Then
-        '        If MessageWindow.ShowDialog("File " & savePath & " exists." & Environment.NewLine & Environment.NewLine & "Overwrite existing File?",
-        '                                    "Overwrite existing?", True) = False Then
-        '            Exit Sub
-        '        End If
-        '    End If
-        '    Using objStreamWriter As New StreamWriter(savePath)
-        '        Dim x As New XmlSerializer(tvData.GetType())
-        '        x.Serialize(objStreamWriter, tvData)
-        '        objStreamWriter.Close()
-        '    End Using
-        'End Sub
+        Private Function GetRemotePath(artDetails As HuluArtworkDetails) As String
+            Return artDetails.Path & "&size=" & artDetails.Width & "x" & artDetails.Height & "&format=jpeg"
+        End Function
 
-        Public Function DownloadFolderExists() As Boolean
-            Return IO.Directory.Exists(DownloadFolder)
+
+#Region " Folder Functions "
+        Public Function ShowDownloadFolder() As String
+            If Not String.IsNullOrWhiteSpace(ShowName) Then
+                Return IO.Path.Combine(My.Settings.DownloadFolder, ShowName.MakeFileNameSafe())
+            Else
+                Return String.Empty
+            End If
+        End Function
+
+        Public Function ShowDownloadFolderExists() As Boolean
+            Return IO.Directory.Exists(ShowDownloadFolder())
         End Function
 
         Public ReadOnly Property OpenFolderCommand As ICommand
             Get
-                Return New Infrastructure.RelayCommand(Sub()
-                                                           If IO.Directory.Exists(DownloadFolder) Then
-                                                               Process.Start(DownloadFolder)
-                                                           End If
-                                                       End Sub, AddressOf DownloadFolderExists)
+                Return New RelayCommand(
+                    Sub()
+                        Process.Start(ShowDownloadFolder())
+                    End Sub,
+                    AddressOf ShowDownloadFolderExists)
             End Get
         End Property
 
-        Public ReadOnly Property ShowJsonInputCommand() As ICommand
+        Private Function SeasonDownloadFolder(seasonNo As Integer) As String
+            Return IO.Path.Combine(ShowDownloadFolder,
+                                   "Season " & seasonNo.ToString("00", Globalization.CultureInfo.InvariantCulture))
+        End Function
+
+#End Region
+
+#Region " Save/Load Season Infos "
+
+        Public Function ConfigInfoFileName() As String
+            Return IO.Path.Combine(ShowDownloadFolder, ShowName.MakeFileNameSafe & ".eid")
+        End Function
+        Public Function ConfigInfoFileExists() As Boolean
+            Return IO.File.Exists(ConfigInfoFileName)
+        End Function
+
+        Public ReadOnly Property SaveConfigInfoCommand As ICommand
             Get
-                Return New Infrastructure.RelayCommand(Sub()
-                                                           IsJsonInputVisible = True
-                                                       End Sub)
+                Return New RelayCommand(
+                    Sub()
+                        If Not IO.Directory.Exists(ShowDownloadFolder) Then
+                            IO.Directory.CreateDirectory(ShowDownloadFolder)
+                        End If
+                        ' if file has a greater length (of characters) than what is about to be written, the file will contain
+                        '  a mix of the two files.  WriteAllText will clear the file first to overcome this.
+                        If IO.File.Exists(ConfigInfoFileName) Then
+                            IO.File.WriteAllText(ConfigInfoFileName, String.Empty)
+                        End If
+                        Using siFile As IO.FileStream = IO.File.OpenWrite(ConfigInfoFileName)
+                            Dim jsonSerializer As New DataContractJsonSerializer(GetType(HuluViewModel))
+                            jsonSerializer.WriteObject(siFile, Me)
+                        End Using
+                    End Sub,
+                    Function() As Boolean
+                        Return ComponentModel.DesignerProperties.GetIsInDesignMode(New DependencyObject) OrElse
+                               (CanDownloadImages() AndAlso Not String.IsNullOrWhiteSpace(ShowName))
+                    End Function)
             End Get
         End Property
+
+        Public ReadOnly Property LoadConfigInfoCommand As ICommand
+            Get
+                Return New RelayCommand(
+                    Sub()
+                        Dim vm As New HuluViewModel()
+                        Using stream As New IO.MemoryStream(Text.Encoding.UTF8.GetBytes(My.Computer.FileSystem.ReadAllText(ConfigInfoFileName)))
+                            Dim jsonSerializer As New DataContractJsonSerializer(GetType(HuluViewModel))
+                            vm = CType(jsonSerializer.ReadObject(stream), HuluViewModel)
+                        End Using
+                        If vm IsNot Nothing AndAlso Not String.IsNullOrEmpty(vm.ShowId) Then
+                            ShowId = vm.ShowId
+                            SeasonNumber = vm.SeasonNumber
+                        Else
+                            MessageWindow.ShowDialog("Unable to read configuration file " & ConfigInfoFileName(), "Error reading config")
+                        End If
+                    End Sub,
+                    Function() As Boolean
+                        Return ComponentModel.DesignerProperties.GetIsInDesignMode(New DependencyObject) OrElse ConfigInfoFileExists()
+                    End Function)
+            End Get
+        End Property
+
+#End Region
 
     End Class
 

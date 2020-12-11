@@ -123,7 +123,7 @@ Namespace ViewModels
                 End If
 
                 Dim ep As New TvDataEpisode() With {
-                    .EpisodeName = epDoc("h1.hero__headline").Text().Trim(),
+                    .EpisodeName = epDoc("h1.hero__headline span:last").Text().Trim(),
                     .Overview = epDoc(".hero__description").Text().Trim(),
                     .FirstAired = epDoc(".hero__subtitle").Text().Replace("Original Air Date: ", "").ToIso8601DateString(),
                     .SeasonNumber = seasonNo,
