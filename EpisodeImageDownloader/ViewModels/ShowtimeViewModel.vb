@@ -39,7 +39,7 @@ Namespace ViewModels
             Dim episodeNumber As Integer = 1
             Do
                 Dim epUrl = EpisodeUrl(SeasonNumber.Value, episodeNumber)
-                Dim epHtml = String.Empty
+                Dim epHtml As String
                 Try
                     epHtml = WebResources.DownloadString(epUrl)
                 Catch ex As Exception

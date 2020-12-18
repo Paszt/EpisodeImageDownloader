@@ -46,7 +46,7 @@ Namespace ViewModels
         ''' <summary>Download an image and add the result message to the EpisodeImageResults list</summary>
         ''' <param name="Url">The URL from which to download the image.</param>
         ''' <param name="localPath">The name of the local file that is to receive the data.</param>
-        Protected Overloads Sub DownloadImageAddResult(Url As String, localPath As String)
+        Protected Overloads Function DownloadImageAddResult(Url As String, localPath As String) As Net.HttpStatusCode
             Dim Filename = IO.Path.GetFileName(localPath)
             If Not IO.File.Exists(localPath) Then
                 If Not IO.Directory.Exists(IO.Path.GetDirectoryName(localPath)) Then
@@ -54,27 +54,34 @@ Namespace ViewModels
                 End If
                 Try
                     WebResources.DownloadFile(Url, localPath)
-                    'Using _client As New Infrastructure.ChromeWebClient With {.AllowAutoRedirect = True}
-                    '    _client.DownloadFile(Url, localPath)
-                    'End Using
                     AddEpisodeImageResult(New EpisodeImageResult() With {.FileName = Filename, .HasError = False, .NewDownload = True, .Message = "Downloaded"})
+                    Return Net.HttpStatusCode.OK
+                Catch webEx As Net.WebException
+                    Dim returnVal = Net.HttpStatusCode.Ambiguous
+                    If TypeOf webEx.Response Is Net.HttpWebResponse Then
+                        returnVal = CType(webEx.Response, Net.HttpWebResponse).StatusCode
+                    End If
+                    AddEpisodeImageResult(New EpisodeImageResult() With {.FileName = Filename, .HasError = True, .NewDownload = False, .Message = "Error: " & webEx.Message})
+                    Return returnval
                 Catch ex As Exception
                     AddEpisodeImageResult(New EpisodeImageResult() With {.FileName = Filename, .HasError = True, .NewDownload = False, .Message = "Error: " & ex.Message})
+                    Return Net.HttpStatusCode.Ambiguous
                 End Try
             Else
                 AddEpisodeImageResult(New EpisodeImageResult() With {.FileName = Filename, .HasError = False, .NewDownload = False, .Message = "Already Downloaded"})
+                Return Net.HttpStatusCode.PartialContent
             End If
-        End Sub
+        End Function
 
         ''' <summary>Download an image and add the result message to the EpisodeImageResults list</summary>
         ''' <param name="Url">The URL from which to download the image.</param>
         ''' <param name="localPath">The name of the local file that is to receive the data.</param>
         ''' <param name="FileNameToAdd">The filename to add to the result message which is added to the EpisodeImageResults list.</param>
-        Protected Overloads Sub DownloadImageAddResult(Url As String, localPath As String, FileNameToAdd As String)
-            DownloadImageAddResult(New Uri(Url), localPath, FileNameToAdd)
-        End Sub
+        Protected Overloads Function DownloadImageAddResult(Url As String, localPath As String, FileNameToAdd As String) As Net.HttpStatusCode
+            Return DownloadImageAddResult(New Uri(Url), localPath, FileNameToAdd)
+        End Function
 
-        Protected Overloads Sub DownloadImageAddResult(Uri As Uri, localPath As String, FileNameToAdd As String)
+        Protected Overloads Function DownloadImageAddResult(Uri As Uri, localPath As String, FileNameToAdd As String) As Net.HttpStatusCode
             If Not IO.File.Exists(localPath) Then
                 If Not IO.Directory.Exists(IO.Path.GetDirectoryName(localPath)) Then
                     IO.Directory.CreateDirectory(IO.Path.GetDirectoryName(localPath))
@@ -82,13 +89,23 @@ Namespace ViewModels
                 Try
                     WebResources.DownloadFile(Uri, localPath)
                     AddEpisodeImageResult(New EpisodeImageResult() With {.FileName = FileNameToAdd, .HasError = False, .NewDownload = True, .Message = "Downloaded"})
+                    Return Net.HttpStatusCode.OK
+                Catch webEx As Net.WebException
+                    Dim returnVal = Net.HttpStatusCode.Ambiguous
+                    If TypeOf webEx.Response Is Net.HttpWebResponse Then
+                        returnVal = CType(webEx.Response, Net.HttpWebResponse).StatusCode
+                    End If
+                    AddEpisodeImageResult(New EpisodeImageResult() With {.FileName = FileNameToAdd, .HasError = True, .NewDownload = False, .Message = "Error: " & webEx.Message})
+                    Return returnVal
                 Catch ex As Exception
                     AddEpisodeImageResult(New EpisodeImageResult() With {.FileName = FileNameToAdd, .HasError = True, .NewDownload = False, .Message = "Error: " & ex.Message})
+                    Return Net.HttpStatusCode.Ambiguous
                 End Try
             Else
                 AddEpisodeImageResult(New EpisodeImageResult() With {.FileName = FileNameToAdd, .HasError = False, .NewDownload = False, .Message = "Already Downloaded"})
+                Return Net.HttpStatusCode.PartialContent
             End If
-        End Sub
+        End Function
 
         Public Delegate Sub AddEpisodeDelegate(result As EpisodeImageResult)
 

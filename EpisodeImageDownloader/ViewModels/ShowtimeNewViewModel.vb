@@ -137,9 +137,13 @@ Namespace ViewModels
 
         Private Sub DownloadEpisodeImages(seasonNo As Integer, episodeNumber As Integer, epImgSrc As String)
             Dim imgSrcBase = Regex.Replace(epImgSrc, "\d{2}_(\d+x\d+).jpg", String.Empty)
+            Dim errorCounter As Integer = 0
             For imageNumber As Integer = 1 To 30
                 Dim imgUrl = imgSrcBase & imageNumber.ToString("00", Globalization.CultureInfo.InvariantCulture) & "_" & ImageSize & ".jpg"
-                DownloadImageAddResult(imgUrl, LocalEpisodeImagePath(seasonNo, episodeNumber, imageNumber))
+                If CInt(DownloadImageAddResult(imgUrl, LocalEpisodeImagePath(seasonNo, episodeNumber, imageNumber))) >= 300 Then
+                    errorCounter += 1
+                End If
+                If errorCounter > 3 Then Exit For
             Next
         End Sub
 
