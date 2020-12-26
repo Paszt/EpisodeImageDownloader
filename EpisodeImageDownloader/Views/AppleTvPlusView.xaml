@@ -47,9 +47,9 @@
                     <TextBlock Text="Show ID:"
                                VerticalAlignment="Center"
                                HorizontalAlignment="Right"
-                               Foreground="{StaticResource Foreground}"  />
+                               Foreground="{StaticResource Foreground}" />
                 </Button>
-                <TextBox Text="{Binding ShowId}"
+                <TextBox Text="{Binding ShowId, UpdateSourceTrigger=PropertyChanged}"
                          Grid.Column="1"
                          Margin="5,2" />
                 <StackPanel Orientation="Horizontal"

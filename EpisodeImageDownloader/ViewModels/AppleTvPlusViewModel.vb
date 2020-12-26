@@ -155,6 +155,7 @@ Namespace ViewModels
                     If String.IsNullOrWhiteSpace(ShowName) Then
                         ShowName = mainShowInfo.Data.Content.Title
                     End If
+                    '' Main Images
                     Dim type As Type = mainShowInfo.Data.Content.Images.GetType()
                     Dim properties As PropertyInfo() = type.GetProperties(flags)
                     'For Each [property] As PropertyInfo In properties
@@ -163,6 +164,13 @@ Namespace ViewModels
                     Parallel.ForEach(properties, Sub(prop As PropertyInfo)
                                                      DownloadMainImage(prop, mainShowInfo.Data.Content.Images)
                                                  End Sub)
+
+                    '' Character Images
+                    Dim characterIndex As Integer = 1
+                    For Each role As AppleTvPlusRole In mainShowInfo.Data.Roles
+                        DownloadCharacterImage(role, characterIndex)
+                        characterIndex += 1
+                    Next
                 End If
 
                 'Season Images
@@ -283,6 +291,13 @@ Namespace ViewModels
             DownloadImageAddResult(imgInfo.GetMaxUrl(extension.Replace(".", String.Empty)),
                                    IO.Path.Combine(ShowDownloadFolder, filename & extension),
                                    filename)
+        End Sub
+
+        Private Sub DownloadCharacterImage(role As AppleTvPlusRole, index As Integer)
+            If role.Type = "Actor" AndAlso role.Images.CastInCharacter IsNot Nothing Then
+                Dim localFile = IO.Path.Combine(ShowDownloadFolder, "Characters", index & " " & role.PersonName & " as " & role.CharacterName & ".jpg")
+                DownloadImageAddResult(role.Images.CastInCharacter.GetMaxUrl, localFile)
+            End If
         End Sub
 
         <CodeAnalysis.SuppressMessage("Globalization", "CA1305:Specify IFormatProvider", Justification:="<Pending>")>

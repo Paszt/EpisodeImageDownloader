@@ -73,6 +73,11 @@ Namespace ViewModels
             End If
         End Function
 
+        Protected Overloads Function DownloadImageAddResult(Uri As Uri, localPath As String) As Net.HttpStatusCode
+            Dim fileNameToAdd = IO.Path.GetFileName(localPath)
+            Return DownloadImageAddResult(Uri, localPath, fileNameToAdd)
+        End Function
+
         ''' <summary>Download an image and add the result message to the EpisodeImageResults list</summary>
         ''' <param name="Url">The URL from which to download the image.</param>
         ''' <param name="localPath">The name of the local file that is to receive the data.</param>

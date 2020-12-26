@@ -16,6 +16,9 @@ Namespace DataStructures
         <DataMember(Name:="content")>
         Public Property Content As AppleTvPlusContent
 
+        <DataMember(Name:="roles")>
+        Public Property Roles As List(Of AppleTvPlusRole)
+
     End Class
 
     <DataContract>
@@ -32,6 +35,32 @@ Namespace DataStructures
 
     End Class
 
+    <DataContract>
+    Public Class AppleTvPlusRole
+
+        <DataMember(Name:="type")>
+        Public Property Type As String
+
+        <DataMember(Name:="roleTitle")>
+        Public Property RoleTitle As String
+
+        <DataMember(Name:="characterName")>
+        Public Property CharacterName As String
+
+        <DataMember(Name:="images")>
+        Public Property Images As AppleTvPlusImages
+
+        <DataMember(Name:="personName")>
+        Public Property PersonName As String
+
+        <DataMember(Name:="personId")>
+        Public Property PersonId As String
+
+        <DataMember(Name:="url")>
+        <CodeAnalysis.SuppressMessage("Design", "CA1056:Uri properties should not be strings",
+                                      Justification:="Serialization requires property to be String")>
+        Public Property Url As String
+    End Class
 
     <DataContract>
     Public Class AppleTvPlusShowData
@@ -179,6 +208,9 @@ Namespace DataStructures
         <DataMember(Name:="contentLogo")>
         Public Property ContentLogo As AppleTvPlusImageInformation
 
+        <DataMember(Name:="castInCharacter")>
+        Public Property CastInCharacter As AppleTvPlusImageInformation
+
     End Class
 
     <DataContract>
@@ -196,12 +228,12 @@ Namespace DataStructures
         Public Property Url As String
 
         Function GetMaxUrl(Optional imageExtension As String = "jpg") As Uri
-            Return New Uri(Text.RegularExpressions.Regex.Replace(Url, "\{w\}x\{h\}(\{c\})?(sr)?\.\{f\}", "9999x9999." & imageExtension))
+            Return New Uri(Text.RegularExpressions.Regex.Replace(Url, "\{w\}x\{h\}(\{c\})?(\w+)?\.\{f\}", "9999x9999." & imageExtension))
         End Function
 
         Function GetImageUrl(size As String, Optional imageExtension As String = "jpg") As Uri
             If size = "Max" Then Return GetMaxUrl()
-            Return New Uri(Text.RegularExpressions.Regex.Replace(Url, "\{w\}x\{h\}(\{c\})?(sr)?\.\{f\}", size & "." & imageExtension))
+            Return New Uri(Text.RegularExpressions.Regex.Replace(Url, "\{w\}x\{h\}(\{c\})?(\w+)?\.\{f\}", size & "." & imageExtension))
         End Function
 
     End Class
