@@ -111,6 +111,12 @@
                            ToolTip="Leave blank for all seasons" />
                 <TextBox Text="{Binding SeasonNumber, TargetNullValue={x:Static sys:String.Empty}, UpdateSourceTrigger=PropertyChanged}"
                          Width="50" />
+                <TextBlock Text="Year: "
+                           VerticalAlignment="Center"
+                           Margin="15,0,5,0"
+                           ToolTip="Leave blank for all years" />
+                <TextBox Text="{Binding Year, TargetNullValue={x:Static sys:String.Empty}, UpdateSourceTrigger=PropertyChanged}"
+                         Width="56" />
                 <TextBlock Text="Image Size:"
                            VerticalAlignment="Center"
                            Margin="20,0,5,0" />
@@ -126,7 +132,7 @@
                 <ComboBox ItemsSource="{Binding CountryInfos}"
                           SelectedValue="{Binding Country}"
                           DisplayMemberPath="Name"
-                          Width="120"
+                          Width="90"
                           Height="30" />
             </StackPanel>
             <StackPanel Orientation="Horizontal"

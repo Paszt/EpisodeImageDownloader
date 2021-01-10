@@ -22,8 +22,8 @@ Namespace ViewModels
             Get
                 Return _showName
             End Get
-            Set(value As String)
-                SetProperty(_showName, value)
+            Set
+                SetProperty(_showName, Value)
             End Set
         End Property
 
@@ -33,11 +33,11 @@ Namespace ViewModels
             Get
                 Return _showId
             End Get
-            Set(value As String)
-                If String.IsNullOrEmpty(value) Then
-                    SetProperty(_showId, value)
+            Set
+                If String.IsNullOrEmpty(Value) Then
+                    SetProperty(_showId, Value)
                 Else
-                    Dim match = Text.RegularExpressions.Regex.Match(value, "(umc\.cmc\.\w{20,})")
+                    Dim match = Text.RegularExpressions.Regex.Match(Value, "(umc\.cmc\.\w{20,})")
                     If match.Success Then
                         SetProperty(_showId, match.Groups(1).Value)
                     End If
@@ -52,10 +52,21 @@ Namespace ViewModels
             Get
                 Return _seasonNumber
             End Get
-            Set(value As Integer?)
-                SetProperty(_seasonNumber, value)
+            Set
+                SetProperty(_seasonNumber, Value)
             End Set
         End Property
+
+        Private _year As Integer?
+        Public Property Year As Integer?
+            Get
+                Return _year
+            End Get
+            Set
+                SetProperty(_year, Value)
+            End Set
+        End Property
+
 
         Private _ImageSize As String = "Max"
         <DataMember(Order:=4, EmitDefaultValue:=False), ComponentModel.DefaultValue("Max")>
@@ -63,8 +74,8 @@ Namespace ViewModels
             Get
                 Return _ImageSize
             End Get
-            Set(value As String)
-                SetProperty(_ImageSize, value)
+            Set
+                SetProperty(_ImageSize, Value)
             End Set
         End Property
 
@@ -80,8 +91,8 @@ Namespace ViewModels
             Get
                 Return _country
             End Get
-            Set(value As AppleCountryInformation)
-                SetProperty(_country, value)
+            Set
+                SetProperty(_country, Value)
             End Set
         End Property
 
@@ -116,8 +127,8 @@ Namespace ViewModels
             Get
                 Return _skipMainSeasonImgs
             End Get
-            Set(value As Boolean)
-                SetProperty(_skipMainSeasonImgs, value)
+            Set
+                SetProperty(_skipMainSeasonImgs, Value)
             End Set
         End Property
 
@@ -127,8 +138,8 @@ Namespace ViewModels
             Get
                 Return _skipEpisodeImgs
             End Get
-            Set(value As Boolean)
-                SetProperty(_skipEpisodeImgs, value)
+            Set
+                SetProperty(_skipEpisodeImgs, Value)
             End Set
         End Property
 
@@ -229,7 +240,6 @@ Namespace ViewModels
                 ShowName = epInfo.Data.Episodes(0).ShowTitle
             End If
 
-
             Dim episodesBag As New Concurrent.ConcurrentBag(Of TvDataEpisode)
             'If epInfo IsNot Nothing AndAlso epInfo.Data.Episodes IsNot Nothing Then
             '    For Each ep In epInfo.Data.Episodes
@@ -253,6 +263,8 @@ Namespace ViewModels
                 Dim fileSuffix = String.Empty
                 If SeasonNumber.HasValue Then
                     fileSuffix = " " & "Season " & SeasonNumber.Value.ToString("00", Globalization.CultureInfo.InvariantCulture)
+                ElseIf Year.HasValue Then
+                    fileSuffix = " " & "Year " & Year.Value.ToString(Globalization.CultureInfo.InvariantCulture)
                 End If
                 tvdata.SaveToFile(ShowDownloadFolder, ShowName & fileSuffix & "_" & Country.CountryCode)
             Else
@@ -302,6 +314,12 @@ Namespace ViewModels
 
         <CodeAnalysis.SuppressMessage("Globalization", "CA1305:Specify IFormatProvider", Justification:="<Pending>")>
         Private Sub DownloadEpisodeImage(ep As AppleTvPlusEpisode, episodesBag As Concurrent.ConcurrentBag(Of TvDataEpisode))
+            Dim firstAired = DateTimeOffset.FromUnixTimeMilliseconds(ep.ReleaseDate.Value).Date
+
+            If Year.HasValue AndAlso Year.Value <> firstAired.Year Then
+                Exit Sub
+            End If
+
             Dim tvDataEp As New TvDataEpisode() With {
                 .EpisodeName = ep.Title,
                 .Overview = ep.Description,
@@ -309,20 +327,19 @@ Namespace ViewModels
                 .EpisodeNumber = ep.EpisodeNumber
                 }
             If ep.ReleaseDate.HasValue Then
-                tvDataEp.FirstAired = DateTimeOffset.FromUnixTimeMilliseconds(ep.ReleaseDate.Value).Date.ToIso8601DateString()
+                tvDataEp.FirstAired = firstAired.ToIso8601DateString()
             End If
             episodesBag.Add(tvDataEp)
 
-            Dim localFileName = "S" & ep.SeasonNumber.ToString("00") & "E" & ep.EpisodeNumber.ToString("00") & ".jpg"
-            Dim localPath = IO.Path.Combine(SeasonDownloadFolder(ep.SeasonNumber), localFileName)
+            Dim localPath = IO.Path.Combine(SeasonDownloadFolder(ep.SeasonNumber), tvDataEp.ToFilename())
             If Not SkipEpisodeImgs Then
                 'TODO: Create an overvload of DownloadImageAddResult that accepts Uri
                 If ep.Images.PreviewFrame IsNot Nothing Then
-                    DownloadImageAddResult(ep.Images.PreviewFrame.GetImageUrl(ImageSize).ToString(), localPath)
+                    DownloadImageAddResult(ep.Images.PreviewFrame.GetImageUrl(ImageSize), localPath)
                 End If
             Else
                 AddEpisodeImageResult(New EpisodeImageResult() With {
-                                      .FileName = localFileName,
+                                      .FileName = tvDataEp.ToFilename(),
                                       .HasError = True,
                                       .NewDownload = False,
                                       .Message = "Image Download Skipped"})

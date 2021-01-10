@@ -1,5 +1,6 @@
 ﻿Option Strict On
 
+Imports System.Globalization
 Imports System.Xml.Serialization
 
 <Serializable(),
@@ -99,7 +100,7 @@ Partial Public Class TvDataEpisode
             Return episodeNameField
         End Get
         Set(value As String)
-            episodeNameField = value.Trim()
+            episodeNameField = value?.Trim()
         End Set
     End Property
 
@@ -161,5 +162,11 @@ Partial Public Class TvDataEpisode
     Public Property ImageUrl As String
 
 #End Region
+
+    Public Function ToFilename(Optional fileExtension As String = "jpg") As String
+        Return "S" & SeasonNumber.ToString("00", CultureInfo.InvariantCulture) &
+               "E" & EpisodeNumber.ToString("00", CultureInfo.InvariantCulture) & "_" &
+               EpisodeName.MakeFileNameSafe() & "." & fileExtension
+    End Function
 
 End Class
