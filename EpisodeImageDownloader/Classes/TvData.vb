@@ -22,7 +22,7 @@ Partial Public Class TvDataSeries
     Public Property Episodes As List(Of TvDataEpisode)
 
     Public Sub SaveToFile(Directory As String, ShowName As String)
-        Dim savePath As String = IO.Path.Combine(Directory, ShowName.MakeFileNameSafe() & ".tvxml")
+        Dim savePath As String = IO.Path.Combine(Directory, ShowName?.MakeFileNameSafe() & ".tvxml")
         If Not IO.Directory.Exists(Directory) Then
             IO.Directory.CreateDirectory(Directory)
         End If
@@ -166,7 +166,7 @@ Partial Public Class TvDataEpisode
     Public Function ToFilename(Optional fileExtension As String = "jpg") As String
         Return "S" & SeasonNumber.ToString("00", CultureInfo.InvariantCulture) &
                "E" & EpisodeNumber.ToString("00", CultureInfo.InvariantCulture) & "_" &
-               EpisodeName.MakeFileNameSafe() & "." & fileExtension
+               EpisodeName.MakeFileNameSafeNoSpaces() & "." & fileExtension
     End Function
 
 End Class
