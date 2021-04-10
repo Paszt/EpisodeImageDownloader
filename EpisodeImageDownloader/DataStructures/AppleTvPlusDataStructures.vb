@@ -1,4 +1,5 @@
 ﻿Imports System.Runtime.Serialization
+Imports System.Text.RegularExpressions
 
 Namespace DataStructures
 
@@ -227,13 +228,20 @@ Namespace DataStructures
                                       Justification:="Serialization requires property to be String")>
         Public Property Url As String
 
+        <DataMember(Name:="supportsLayeredImage")>
+        Public Property SupportsLayeredImage As Boolean
+
         Function GetMaxUrl(Optional imageExtension As String = "jpg") As Uri
-            Return New Uri(Text.RegularExpressions.Regex.Replace(Url, "\{w\}x\{h\}(\{c\})?(\w+)?\.\{f\}", "9999x9999." & imageExtension))
+            Return New Uri(Regex.Replace(Url, "\{w\}x\{h\}(\{c\})?(\w+)?\.\{f\}", "9999x9999." & imageExtension))
         End Function
 
         Function GetImageUrl(size As String, Optional imageExtension As String = "jpg") As Uri
             If size = "Max" Then Return GetMaxUrl()
-            Return New Uri(Text.RegularExpressions.Regex.Replace(Url, "\{w\}x\{h\}(\{c\})?(\w+)?\.\{f\}", size & "." & imageExtension))
+            Return New Uri(Regex.Replace(Url, "\{w\}x\{h\}(\{c\})?(\w+)?\.\{f\}", size & "." & imageExtension))
+        End Function
+
+        Function GetLsrUrl() As Uri
+            Return New Uri(Regex.Replace(Url, "\{w\}x\{h\}(\{c\})?(\w+)?\.\{f\}", Width & "x" & Height & ".lsr"))
         End Function
 
     End Class

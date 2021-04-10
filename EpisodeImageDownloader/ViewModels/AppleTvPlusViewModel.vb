@@ -169,12 +169,12 @@ Namespace ViewModels
                     '' Main Images
                     Dim type As Type = mainShowInfo.Data.Content.Images.GetType()
                     Dim properties As PropertyInfo() = type.GetProperties(flags)
-                    'For Each [property] As PropertyInfo In properties
-                    '    DownloadMainImages([property], mainShowInfo.Data.Content.Images)
-                    'Next
-                    Parallel.ForEach(properties, Sub(prop As PropertyInfo)
-                                                     DownloadMainImage(prop, mainShowInfo.Data.Content.Images)
-                                                 End Sub)
+                    For Each prop As PropertyInfo In properties
+                        DownloadMainImage(prop, mainShowInfo.Data.Content.Images)
+                    Next
+                    'Parallel.ForEach(properties, Sub(prop As PropertyInfo)
+                    '                                 DownloadMainImage(prop, mainShowInfo.Data.Content.Images)
+                    '                             End Sub)
 
                     '' Character Images
                     Dim characterIndex As Integer = 1
@@ -303,6 +303,11 @@ Namespace ViewModels
             DownloadImageAddResult(imgInfo.GetMaxUrl(extension.Replace(".", String.Empty)),
                                    IO.Path.Combine(ShowDownloadFolder, filename & extension),
                                    filename)
+            If imgInfo.SupportsLayeredImage Then
+                DownloadImageAddResult(imgInfo.GetLsrUrl(),
+                                   IO.Path.Combine(ShowDownloadFolder, filename & ".lsr"),
+                                   filename & ".lsr")
+            End If
         End Sub
 
         Private Sub DownloadCharacterImage(role As AppleTvPlusRole, index As Integer)
